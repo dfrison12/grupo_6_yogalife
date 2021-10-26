@@ -6,7 +6,7 @@ Nuestro sitio estará abocado a la venta de indumentaria e accesorios para la pr
 El sitio va a estar orientado a adolescentes y adultos practicantes de yoga o docentes de dicha disciplina.
 
 Conoce nuestro equipo:
-DARIO:
+DARIO: Soy Contador Publico Nacional , y dedico al ejercicio de la prof. desde hace 5 años de forme independiente , ademas me desempeño en el sector admin. contable de una grupo economico comercial en la prov.de San Luis . Me encuentro descubriendo el mundo de la  programacion y el rubro IT en general, aunque en mis tiempos libres me gusta algo practicar ejercicio y meditar. 
 EZE: Soy Contador Publico , trabajo en el area contable de una empresa de salud y soy aficionado a el mundo IT, me interesa conocer el mundo de la big data.
 RODRI: Soy economista, hace 7 años trabajo en finanzas y recién estoy dando mis primeros pasos en el mundo de la programación. En mi tiempo libre me gusta salir a correr y estar al aire libre.  
 MARIANO: Soy contador público, trabajo hace 10 años en una .com muy conocida y siempre escuchando del back y front-end me decidí por hacer algo disitnto de mi profesión. Me gusta andar en bicicleta y cuando puedo nadar.
@@ -25,6 +25,6 @@ https://shop.lululemon.com/
 •   Esta bueno que tiene algunos productos en la página de inicio y debajo el botón que lleva a la página donde están los productos similares
 •   En la página dedicada a mostrar productos, al pasar la el cursor por la imagen, la imagen cambia
 https://en.puiatti.com/ 
-•   El navbar desaparece cuando se hace scroll pero vuelve a aparecer cuando el usuario deja quieta la página. Nos gustaría implementar algo similar.
+•   El natbar desaparece cuando se hace scroll pero vuelve a aparecer cuando el usuario deja quieta la página. Nos gustaría implementar algo similar.
 •   La página en si tiene muchas cosas interesantes, aunque no nos gusta como una página para vender productos ya es algo confusa
 
