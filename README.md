@@ -7,7 +7,7 @@ El sitio va a estar orientado a adolescentes y adultos practicantes de yoga o do
 
 Conoce nuestro equipo:
 DARIO:
-EZE:
+EZE: Soy Contador Publico , trabajo en el area contable de una empresa de salud y soy aficionado a el mundo IT, me interesa conocer el mundo de la big data.
 RODRI: Soy economista, hace 7 años trabajo en finanzas y recién estoy dando mis primeros pasos en el mundo de la programación. En mi tiempo libre me gusta salir a correr y estar al aire libre.  
 MARIANO:
 
