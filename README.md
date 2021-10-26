@@ -9,7 +9,7 @@ Conoce nuestro equipo:
 DARIO:
 EZE: Soy Contador Publico , trabajo en el area contable de una empresa de salud y soy aficionado a el mundo IT, me interesa conocer el mundo de la big data.
 RODRI: Soy economista, hace 7 años trabajo en finanzas y recién estoy dando mis primeros pasos en el mundo de la programación. En mi tiempo libre me gusta salir a correr y estar al aire libre.  
-MARIANO:
+MARIANO: Soy contador público, trabajo hace 10 años en una .com muy conocida y siempre escuchando del back y front-end me decidí por hacer algo disitnto de mi profesión. Me gusta andar en bicicleta y cuando puedo nadar.
 
 Sitios de referencia:
 https://www.runinrabbit.com/#   
