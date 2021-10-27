@@ -17,7 +17,7 @@ https://www.runinrabbit.com/#
 •   El diseño de la página es simple con mucho blanco (algo que tienen en común la mayoría de las páginas de venta de indumentaria)
 https://morningstartshirts.com/  
 •   Es interesante como aparece la imagen de la chica en la sección “Print the Difference”
-https://www.rapha.cc/rd/en/mens-products/cycling-jerseys/category/jerseys
+ys
 •   La forma en la que muestran los productos es muy simple, todo fondo blanco, nos gustaría hacer algo así pero destacar de alguna forma al producto cuando el cursor pasa por arriba
 •   La página de inicio tiene muy buenas imágenes y casi no muestran productos
 https://shop.lululemon.com/   
