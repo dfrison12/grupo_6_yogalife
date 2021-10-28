@@ -27,4 +27,3 @@ https://shop.lululemon.com/
 https://en.puiatti.com/ 
 •   El natbar desaparece cuando se hace scroll pero vuelve a aparecer cuando el usuario deja quieta la página. Nos gustaría implementar algo similar.
 •   La página en si tiene muchas cosas interesantes, aunque no nos gusta como una página para vender productos ya es algo confusa.
-
