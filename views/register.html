@@ -7,6 +7,10 @@
         <title>Registro</title>
         <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="CSS/registerStyles.CSS">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
     </head>
 <body>
     <header>
@@ -58,29 +62,30 @@
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
-  <h4>O</h4>  
+  <h4 class="o">O</h4>  
   <h4>TU NOMBRE</h4>
-  <form action="TBD" method="POST">
+  <form class="form" action="TBD" method="POST">
     <div id="registerForms">
-        <label for="name">Nombres:</label>
-        <input type="text"  id="name"   name="name">
+        <label for="name"></label>
+        <input type="text" class="box" id="name"   name="name" placeholder="Nombres">
 
-        <label for="lastname">Apellidos:</label>
-        <input type="text"  id="lastname"   name="lastname">
+        <label for="lastname"></label>
+        <input type="text" class="box" id="lastname"   name="lastname" placeholder="Apellidos">
     </div>
   <h4>FECHA DE NACIMIENTO</h4>
-        <label for="birtDate">Dia</label>
-        <input type="birthDate"  id="birthDate"  name="birthDate"    min="1900-01-01"    max="2021-01-01">
+        <label for="birtDate"></label>
+        <input type="birthDate" class="box" id="birthDate"  name="birthDate" placeholder="Seleccionar fecha de nacimiento"    min="1900-01-01"    max="2021-01-01">
 
    <h4>DATOS DE ACCESO</h4>
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email">
+        <label for="email"></label>
+        <input type="email" class="box" name="email" id="email" placeholder="E-mail">
         
-        <label for="password">Contraseña</label>
-        <input type="password"  name="passsword"    id="password">
+        <label for="password"></label>
+        <input type="password"  name="passsword"  class="box"  id="password" placeholder="Contraseña">
          
-        <label for="passwordConfirmation">Confirmar contraseña</label>
-        <input type="passwordConfirmation"  name="passwordConfirmation"    id="passwordConfirmation">
+        <label for="passwordConfirmation"></label>
+        <input type="passwordConfirmation"  name="passwordConfirmation"  class="box"  id="passwordConfirmation" placeholder="Confirmar contraseña">
+       
        
         <label for="T&C">Acepto terminos y condiciones</label>
         <input type="checkbox"  name="T&C"  id="T&C"    value="Accept T&C">
@@ -90,7 +95,7 @@
         
     <img src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="logo">
 
-    
+
     <footer>
         <section>
             <ul class="title1">
