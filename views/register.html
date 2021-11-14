@@ -18,15 +18,15 @@
             <h3>Mensaje de la tienda</h3>
         </div>
         <div>
-            <nav>
-                <img src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="logo"> <!--Preguntar si va dentro del nav la igamen --> 
-                <ul class="menu">
+            <nav class="navbar">  
+                 <ul class="menu">
                     <li><a href="*">menu1</a></li>
                     <li><a href="*">menu1</a></li>
                     <li><a href="*">menu1</a></li>
                 </ul>
-                <input type="search">
+                <img src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="logo"> <!--Preguntar si va dentro del nav la igamen -->
                 <div class="iconsnav"> <!--estilos iguales-->  
+                <input type="search">    
                 <i class="fas fa-search"></i>
                 <i class="fas fa-user"></i>
                 <i class="fas fa-shopping-cart"></i>
@@ -36,6 +36,8 @@
     </header>
 
     <main>
+
+    <section class="formSection">  
         <h2>REGISTRATE</h2>
         <h4>Registrate con</h4>
      <div id="signInGoogleFacebook">  
@@ -62,7 +64,7 @@
 
   <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
-  <h4">O</h4>  
+  <h4>O</h4>  
   <h4>TU NOMBRE</h4>
   <form class="form" action="TBD" method="POST">
     <div id="registerForms">
@@ -74,7 +76,7 @@
     </div>
   <h4>FECHA DE NACIMIENTO</h4>
         <label for="birtDate"></label>
-        <input type="birthDate" class="box" id="birthDate"  name="birthDate" placeholder="Seleccionar fecha de nacimiento"    min="1900-01-01"    max="2021-01-01">
+        <input type="date" class="box" id="birthDate"  name="birthDate" placeholder="Seleccionar fecha de nacimiento"    min="1900-01-01"    max="2021-01-01">
 
    <h4>DATOS DE ACCESO</h4>
         <label for="email"></label>
@@ -87,17 +89,19 @@
         <input type="passwordConfirmation"  name="passwordConfirmation"  class="box"  id="passwordConfirmation" placeholder="Confirmar contraseña">
        
        <div class="TC">
-        <label for="T&C">Acepto terminos y condiciones</label>
-        <input type="checkbox"  name="T&C"  id="T&C"    value="Accept T&C">
+        <label for="T&C"><input type="checkbox"  name="T&C"  id="T&C"    value="Accept T&C">Acepto terminos y condiciones</label>
+        
        </div> 
 
         <button type="submit"><a class="submit" href="/">Registrar</a></button>
     </form>
-        
+</section>  
+
+ <section class="imgSection">       
     <img id="registerImg" src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="logo">
+</section>  
 
-
-    <footer>
+    <footer class="footer"> 
         <section>
             <ul class="title1">
                 <li><a href="*">item1</a></li>
