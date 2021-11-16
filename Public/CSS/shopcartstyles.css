@@ -1,0 +1,44 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    color: lightslategrey;
+    font-family: 'Lato', sans-serif;
+
+}
+
+h2{
+    padding:15px 20px;
+    
+}
+
+
+h4{
+    padding:15px 20px;
+   
+}
+
+.slogan {
+    width: auto;
+    text-align: center;
+}
+
+.navbar{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer{
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.iconosfooter{
+    display: flex;
+    flex-direction: column;
+}
