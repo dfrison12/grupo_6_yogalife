@@ -12,5 +12,8 @@ app.get('/register', (req, res) => {
     res.sendFile(path.join(__dirname, "/views/register.html"))
 });
 
+app.get('/shoppingcart', (req, res) => {
+    res.sendFile(path.join(__dirname, "/views/shopcart.html"))
+});
 
 app.listen(3000, () => console.log('Servidor funcionando en puerto 3000'));
