@@ -30,19 +30,23 @@ main div.product-detail{
     display: flex;
     flex-direction: column;
 
-    border-style: double;
-    border-color: black;
 }
 
+main div section.product-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
 
 main div section.product-images img.main-picture {
     width: 100%;
-    height: 330px;;
-    padding: 5px 5px;
+    height: 60%;
     border-radius: 40px;
 }
 
-main div section.product-images div.img-box{
+main section.product-images div.img-box{
+    height: 25%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -50,28 +54,31 @@ main div section.product-images div.img-box{
     margin-top: 5px;
 }
 
-main div section.product-images div.img-box img{
+main section.product-images div.img-box img{
     width: 30%;
-    height: 140px;
-    border-radius: 40px;
+    height: 90%;
+    border-radius: 20px;
 }
 
 main div section.product-description{
-    margin: 50px 0px;
+    padding: 120px 0px 0px 0px;
+}
+
+main div div.product-description{
     border: black groove 1px;
     padding: 20px;
     border-radius: 6%;
     width: 100%;
 }
 
-main div section.product-description .price{
+main div div.product-description .price{
     margin: 10px 0px;
     font-style: bold;
     font-size: 25px;
 
 }
 
-section.product-description form{
+div.product-description form{
     margin: 10px 0px;
     display: flex;
     flex-direction: column;
@@ -108,8 +115,34 @@ section.product-description form{
 
     }
 
-
-
     article.product-description{
         font-variant: unset;
+    }
+
+    @media (min-width: 769px){
+
+        main div.product-detail{
+            border: solid red 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+        }
+
+        main div section.product-images{
+            width: 50%;
+        }
+
+        main div section.product-description{
+            width: 40%;
+            padding: 0px;
+        }
+
+        section.product-description div.product-description{
+            border:none;
+        }
+
+
+
+
     }
