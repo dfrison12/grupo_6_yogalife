@@ -2,70 +2,58 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Registo | yogalife</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Registro</title>
-        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-        <link rel="stylesheet" href="CSS/registerStyles.CSS">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3826f3919c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/registerStyles.CSS">
     </head>
 <body>
-    <header>
-        <div class="slogan">
-            <h3>Mensaje de la tienda</h3>
-        </div>
-        <div>
-            <nav class="navbar">  
-                 <ul class="menu">
-                    <li><a href="*">menu1</a></li>
-                    <li><a href="*">menu1</a></li>
-                    <li><a href="*">menu1</a></li>
-                </ul>
-                <img src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="logo"> <!--Preguntar si va dentro del nav la igamen -->
-                <div class="iconsnav"> <!--estilos iguales-->  
-                <input type="search">    
-                <i class="fas fa-search"></i>
-                <i class="fas fa-user"></i>
-                <i class="fas fa-shopping-cart"></i>
-                </div>   
-            </nav>
+    <header class="main-header">
+        <div class="top-header">
+            <div class="logo">
+                <a href="/">
+                    <i class="fas fa-hamsa"></i>
+                    <h1>yogalife</h1>
+                </a>
+                
+            </div>
+            <form class="search-form" action="#" method="GET">
+                <input type="text" class="search-input" name="search-input" placeholder="Busca tu coleccion favorita!">
+                <button type="submit" class="search-button" name="search-button"><i class="fa fa-search"></i></button>
+            </form>
+            </div>
+            
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li><a href="#">Catalogo</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a href="/login">Ingresá <i class="far fa-laugh"></i></a></li>
+                <li><a href="#">Shop <i class="fas fa-dolly"></i></a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+        <a href="#" class="burger-buttom">
+            <i class="fas fa-om"></i>
+        </a>
         </div>
     </header>
 
-    <main>
+<main>
 
-    <section class="formSection">  
-        <h2>REGISTRATE</h2>
-        <h4>Registrate con</h4>
-     <div id="signInGoogleFacebook">  
-        <div id="my-signin2"></div> <!--hast la linea 60 esta copiado de Google-->  
-  <script>
-    function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    }
-    function onFailure(error) {
-      console.log(error);
-    }
-    function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
-  </script>
-
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-
-  <h4>O</h4>  
-  <h4>TU NOMBRE</h4>
+<section class="formSection">   
+        <h2 class="text">REGISTRATE / <a href="/login" class="login">INGRESA</a> </h2>
+        <h4 class="text">Registrate con</h4>
+        <h4 class="text">TU NOMBRE</h4>
+   
   <form class="form" action="TBD" method="POST">
     <div id="registerForms">
         <label for="name"></label>
@@ -74,11 +62,11 @@
         <label for="lastname"></label>
         <input type="text" class="box" id="lastname"   name="lastname" placeholder="Apellidos">
     </div>
-  <h4>FECHA DE NACIMIENTO</h4>
-        <label for="birtDate"></label>
+  <h4 class="text">FECHA DE NACIMIENTO</h4>
+        <label for="birthDate"></label>
         <input type="date" class="box" id="birthDate"  name="birthDate" placeholder="Seleccionar fecha de nacimiento"    min="1900-01-01"    max="2021-01-01">
 
-   <h4>DATOS DE ACCESO</h4>
+   <h4 class="text">DATOS DE ACCESO</h4>
         <label for="email"></label>
         <input type="email" class="box" name="email" id="email" placeholder="E-mail">
         
@@ -87,46 +75,64 @@
          
         <label for="passwordConfirmation"></label>
         <input type="passwordConfirmation"  name="passwordConfirmation"  class="box"  id="passwordConfirmation" placeholder="Confirmar contraseña">
-       
-       <div class="TC">
+      
+        <div class="TC">
         <label for="T&C"><input type="checkbox"  name="T&C"  id="T&C"    value="Accept T&C">Acepto terminos y condiciones</label>
-        
-       </div> 
+        </div> 
 
+        <div class="button">
         <button type="submit"><a class="submit" href="/">Registrar</a></button>
+        </div>
+
     </form>
 </section>  
 
- <section class="imgSection">       
-    <img id="registerImg" src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="logo">
+<section class="imgSection">       
+   <!-- <img id="registerImg" src="/images/yogalifebackground.png" alt="ImageYogalife">-->
 </section>  
 
-    <footer class="footer"> 
-        <section>
-            <ul class="title1">
-                <li><a href="*">item1</a></li>
-                <li><a href="*">item2</a></li>
-                <li><a href="*">item3</a></li>
-                </ul>
-            <ul class="title2">
-                <li><a href="*">item4</a></li>
-                <li><a href="*">item5</a></li>
-                <li><a href="*">item6</a></li>
-        </section>
-        <section>
-            <div class="iconosfooter">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fas fa-map-marked-alt"></i>
-                <i class="far fa-envelope"></i>
-            </div>
-        </section>
-        <section>
-            <h4> News & updates </h4>
-            <input type="search">
-            <button type="follow">Follow</button>
-        </section>
-    </footer>
+</main>
+
+<footer>
+    <div>
+        <i class="fas fa-comment-dollar"></i>
+        <h4>¡Envío gratis!</h4>
+        <p>Envío gratis para compras por un monto superior a $ 4.500.</p>
+    </div>
+    <div>
+        <i class="fas fa-dolly-flatbed"></i>
+        <h4>¡Devolucion gratis !</h4>
+        <p>¿No te gusta? ¡ Devolvelo! Simplemente contacta tu vendedor.</p>
+    </div>
+    <div>
+        <i class="fas fa-credit-card"></i>
+        <h4>Pagá con tarjeta o en efectivo</h4>
+        <p>Recibimos tarjetas y cualquier medio de pago admitido por MercadoPago!</p>
+    </div>
+    <div class="footer-contact">
+        <h4>Seguinos!</h4>
+        <p>Somos yogalife, cuidamos cada detalle para que la experiencia dentro y fuera del mat contribuya a esa búsqueda que cada uno tiene. </p>
+        <span class="footer-contact">
+            <i class="fab fa-facebook"></i>
+            @yogalife
+        </span>
+        <span class="footer-contact">
+            <i class="fab fa-instagram"></i>
+            @yogalife
+        </span>
+        <span class="footer-contact">
+            <i class="far fa-envelope"></i>
+            contacto@yogalife.com
+        </span>
+        <div class="new-updates">
+            <form class="new-updates" action="#" method="GET">
+                <input type="text" class="new-updates" name="new-updates" placeholder="Dejanos tu mail aquí para mas noticias">
+                <button type="submit" class="new-updates" name="new-updates"><i class="far fa-paper-plane"></i></button>
+            </form>
+        </div>
+        
+    </div>
+</footer>      
     
 </body>
 </html>
