@@ -9,25 +9,31 @@
     <link rel="stylesheet" href="CSS/shopcartstyles.css">
 </head>
 <body>
-    <header>
-        <div class="slogan">
-            <h3>Mensaje de la tienda</h3>
+    <header class="main-header">
+        <div class="top-header">
+            <div class="logo">
+                <a href="/">
+                    <i class="fas fa-hamsa">
+                    <h1>yogalife</h1>
+                </a>
+            </div>
+            <form class="search-form" action="#" method="GET">
+                <input type="text" class="search-input" name="search-input" placeholder="Busca tu coleccion favorita!">
+                <button type="submit" class="search-button" name="search-button"><i class="fa fa-search"></i></button>
+            </form>
         </div>
-        <div>
-            <nav>
-                <img src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="logo"> <!--Preguntar si va dentro del nav la igamen --> 
-                <ul class="menu">
-                    <li><a href="*">menu1</a></li>
-                    <li><a href="*">menu1</a></li>
-                    <li><a href="*">menu1</a></li>
-                </ul>
-                <input type="search">
-                <div class="iconsnav"> <!--estilos iguales-->  
-                <i class="fas fa-search"></i>
-                <i class="fas fa-user"></i>
-                <i class="fas fa-shopping-cart"></i>
-                </div>   
-            </nav>
+        <nav class="main-navbar">
+            <ul class="left-navbar">
+                <li><a href="*">Catalogo</a></li>
+                <li><a href="*">Ofertas</a></li>
+                <li><a href="*">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+        <a href="#" class="burger-buttom">
+            <i class="fas fa-om"></i>
+        </a>
         </div>
     </header>
     <main>
@@ -35,7 +41,7 @@
             <h2>Carrito de Compras</h2>
             <article>
                 <div class="producto1">
-                    <img src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="">
+                    <img src="#" alt="imagen1">
                     <h4>Descripción del producto</h4>
                     <p>Filtros del producto</p>
                     <p>precio</p>
@@ -46,7 +52,7 @@
             </article>
             <article>
                 <div class="producto2">
-                    <img src="https://static3.mujerhoy.com/www/multimedia/202004/28/media/cortadas/posturas-de-yoga-para-adelgazar-guerrero-kFHG--644x483@MujerHoy.jpg" alt="">
+                    <img src="#" alt="imagen2">
                     <h4>Descripción del producto</h4>
                     <p>Filtros del producto</p>
                     <p>precio</p>
@@ -62,30 +68,44 @@
         </section>
     </main>
     <footer>
-        <section>
-            <ul class="title1">
-                <li><a href="*">item1</a></li>
-                <li><a href="*">item2</a></li>
-                <li><a href="*">item3</a></li>
-                </ul>
-            <ul class="title2">
-                <li><a href="*">item4</a></li>
-                <li><a href="*">item5</a></li>
-                <li><a href="*">item6</a></li>
-        </section>
-        <section>
-            <div class="iconosfooter">
+        <div>
+            <i class="fas fa-comment-dollar"></i>
+            <h4>¡Envío gratis!</h4>
+            <p>Envío gratis para compras por un monto superior a $ 4.500.</p>
+        </div>
+        <div>
+            <i class="fas fa-dolly-flatbed"></i>
+            <h4>¡Devolucion gratis !</h4>
+            <p>¿No te gusta? ¡ Devolvelo! Simplemente contacta tu vendedor.</p>
+        </div>
+        <div>
+            <i class="fas fa-credit-card"></i>
+            <h4>Pagá con tarjeta o en efectivo</h4>
+            <p>Recibimos tarjetas y cualquier medio de pago admitido por MercadoPago!</p>
+        </div>
+        <div class="footer-contact">
+            <h4>Seguinos!</h4>
+            <p>Somos yogalife, cuidamos cada detalle para que la experiencia dentro y fuera del mat contribuya a esa búsqueda que cada uno tiene. </p>
+            <span class="footer-contact">
+                <i class="fab fa-facebook"></i>
+                @yogalife
+            </span>
+            <span class="footer-contact">
                 <i class="fab fa-instagram"></i>
-                <i class="fab fa-facebook-square"></i>
-                <i class="fas fa-map-marked-alt"></i>
+                @yogalife
+            </span>
+            <span class="footer-contact">
                 <i class="far fa-envelope"></i>
+                contacto@yogalife.com
+            </span>
+            <div class="new-updates">
+                <form class="new-updates" action="#" method="GET">
+                    <input type="text" class="new-updates" name="new-updates" placeholder="Dejanos tu mail aquí para mas noticias">
+                    <button type="submit" class="new-updates" name="new-updates"><i class="far fa-paper-plane"></i></button>
+                </form>
             </div>
-        </section>
-        <section>
-            <h4> News & updates </h4>
-            <input type="search">
-            <button type="follow">Follow</button>
-        </section>
+            
+        </div>
     </footer>
 </body>
 </html>
