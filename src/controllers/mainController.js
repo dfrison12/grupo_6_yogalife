@@ -18,9 +18,24 @@ const mainController = {
     index: function (req,res) {
         res.render('index');
     },
+
     productDetail: function (req,res){
         res.render('productDetail')
+    },
+
+    login: function(req, res){
+        res.render('login')
+    },
+
+    register: function(req, res){
+        res.render('register')
+    },
+
+    shopcart: function (req, res) {
+        res.render('shopcart')
+        
     }
+
     
 }
 module.exports = mainController;
