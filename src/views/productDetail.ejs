@@ -10,60 +10,29 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/productDetailStyles.css">
+        <link rel="stylesheet" href="../css/productDetailStyles.css">
     </head>
 <body>
-    <header class="main-header">
-        <div class="top-header">
-            <div class="logo">
-                <a href="/">
-                    <i class="fas fa-hamsa"></i>
-                    <h1>yogalife</h1>
-                </a>
-                
-            </div>
-            <form class="search-form" action="#" method="GET">
-                <input type="text" class="search-input" name="search-input" placeholder="Busca tu coleccion favorita!">
-                <button type="submit" class="search-button" name="search-button"><i class="fa fa-search"></i></button>
-            </form>
-            </div>
-            
-        <nav class="main-navbar">
-            <ul class="left-navbar">
-                <li><a href="#">Catalogo</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-            <ul class="right-navbar">
-                <li><a href="/login">Ingresá <i class="far fa-laugh"></i></a></li>
-                <li><a href="#">Shop <i class="fas fa-dolly"></i></a></li>
-            </ul>
-        </nav>
-        <div class="burger-menu">
-        <a href="#" class="burger-buttom">
-            <i class="fas fa-om"></i>
-        </a>
-        </div>
-    </header>
+    <!-- Header -->
+    <%- include ('./partials/header') %>
 
     <main >
       <div class="product-detail">
         <section class="product-images">
             <div class="product-images">
-                <img class="main-picture" src="/images/productsImages/IMG_3924.JPG" alt="img">
+                <img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img">
                 <div class="img-box">
-                    <img class="img-inbox" src="/images/productsImages/IMG_3861.JPG" alt="img">
-                    <img class="img-inbox" src="/images/productsImages/IMG_3863.JPG" alt="img">
-                    <img class="img-inbox" src="/images/productsImages/IMG_3867.JPG" alt="img">
+                    <img class="img-inbox" src="/images/productsImages/<%= prenda.img2 %>" alt="img">
+                    <img class="img-inbox" src="/images/productsImages/<%= prenda.img3 %>" alt="img">
+                    <img class="img-inbox" src="/images/productsImages/<%= prenda.img4 %>" alt="img">
                 </div>
             </div>
         </section>
         <section class="product-description">
             <div class="product-description">
-                <h1 class="product-name">Legging 7/8 Cotton Swasti</h1>
-                <p class="price"> $ 5.400 </p>
-                <a href="/images/TABLA DE TALLES 2021 MUJER.jpg">ver tabla de talles</a>
+                <h1 class="product-name"><%= prenda.titulo %></h1>
+                <p class="price"> $ <%= prenda.precio %> </p>
+                <a href="/images/tabla-talles.jpg">ver tabla de talles</a>
                 <form action=# method="get">
                 <div class="color">
                     <p>Color:</p>
@@ -86,7 +55,7 @@
                 </form>
                 <article class="product-description">
                     <h4>Descripción del producto</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et similique tempora laborum magnam accusamus dolorem vel alias fugit reprehenderit. Dicta nam nesciunt cumque rerum error. Cumque itaque odio provident dolor aliquid corporis corrupti eum veritatis, nihil debitis praesentium in quidem laudantium maiores. Rerum ipsa non quo voluptate, molestiae at repellat, quia ipsum sed eum praesentium enim repellendus recusandae cupiditate. Ratione error tempora, perspiciatis nesciunt modi, inventore necessitatibus hic porro dolorum voluptate ipsam laudantium repellendus quae unde adipisci neque provident architecto quaerat culpa nemo vero incidunt. Commodi, rerum facilis deserunt quis in distinctio voluptate veniam cum perspiciatis provident tempora officiis animi?</p>
+                    <p><%= prenda.descripcion %></p>
                 </article>
             </div>
         </section>
@@ -94,45 +63,7 @@
          
     </main>
     
-    <footer>
-        <div>
-            <i class="fas fa-comment-dollar"></i>
-            <h4>¡Envío gratis!</h4>
-            <p>Envío gratis para compras por un monto superior a $ 4.500.</p>
-        </div>
-        <div>
-            <i class="fas fa-dolly-flatbed"></i>
-            <h4>¡Devolucion gratis !</h4>
-            <p>¿No te gusta? ¡ Devolvelo! Simplemente contacta tu vendedor.</p>
-        </div>
-        <div>
-            <i class="fas fa-credit-card"></i>
-            <h4>Pagá con tarjeta o en efectivo</h4>
-            <p>Recibimos tarjetas y cualquier medio de pago admitido por MercadoPago!</p>
-        </div>
-        <div class="footer-contact">
-            <h4>Seguinos!</h4>
-            <p>Somos yogalife, cuidamos cada detalle para que la experiencia dentro y fuera del mat contribuya a esa búsqueda que cada uno tiene. </p>
-            <span class="footer-contact">
-                <i class="fab fa-facebook"></i>
-                @yogalife
-            </span>
-            <span class="footer-contact">
-                <i class="fab fa-instagram"></i>
-                @yogalife
-            </span>
-            <span class="footer-contact">
-                <i class="far fa-envelope"></i>
-                contacto@yogalife.com
-            </span>
-            <div class="new-updates">
-                <form class="new-updates" action="#" method="GET">
-                    <input type="text" class="new-updates" name="new-updates" placeholder="Dejanos tu mail aquí para mas noticias">
-                    <button type="submit" class="new-updates" name="new-updates"><i class="far fa-paper-plane"></i></button>
-                </form>
-            </div>
-            
-        </div>
-    </footer>
+    <!-- Footer -->
+    <%- include('./partials/footer')%>
 </body>
 </html>

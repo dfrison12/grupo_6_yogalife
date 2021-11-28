@@ -1,94 +1,56 @@
 <!DOCTYPE html>
 <html>
-        /*HEAD*/
+        <!-- Head -->
         <%- include ('./partials/head')%>
     <body>
-        /*HEADER*/
+        <!-- Header -->
         <%- include ('./partials/header') %> 
         <section class="main-image">
             <img src="images/main-image.jpg" alt="main-image">
         </section>
         <main>
-            <section class="last-visit">
+            <section class="last-collection">
                 <h3>Ultima colección</h3>
                 <div class="products">
-                    <article>
-                        <a href="/product-detail"><img src="/images/productsImages/IMG_3867.JPG" alt="product" class="product_img"></a>
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">$5.200</p>
-                            <h4 class="description">Calza cotton swasti</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/productsImages/IMG_4614.JPG" alt="product" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">$3.200</p>
-                            <h4 class="description">Remera crop suma</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/productsImages/IMG_4333.JPG" alt="product" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">$5.000</p>
-                            <h4 class="description">Calza cotton 7/8</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/productsImages/IMG_4081.JPG" alt="product" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">$3.000</p>
-                            <h4 class="description">Crop X</h4>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <section class="offers">
+                    <% for (let i = 0; i < catalogo.length; i++) {
+                        if(catalogo[i].ultima_coleccion == true){ %>
+                            <article>
+                            <a href="/product-detail/<%= catalogo[i].id %>"><img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img"></a>
+                            <div class="main-article">
+                                <i class="fas fa-hamsa"></i>
+                                <p class="price"> $ <%= catalogo[i].precio %></p>
+                                <% if (catalogo[i].oferta > 0) { %>
+                                    <p class='sale'> <%= catalogo[i].oferta %>% off</p>
+                                    <% } %>
+                                <h4 class="description"><%= catalogo[i].titulo %></h4>
+                            </div>
+                        </article>
+                       <% } %>               
+                        <% } %>
+
+            <section class="sale" id='ofertas'>
                 <h3>Ofertas</h3>
                 <div class="products">
-                    <article>
-                        <img src="/images/productsImages/IMG_4275.JPG" alt="product" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">$4.800</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">Musculosa Moon</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/productsImages/IMG_4184.JPG" alt="product" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">$3.500</p>
-                            <p class="discount">20% off</p>
-                            <h4 class="description">Calza lulea classic</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/productsImages/IMG_4421.JPG" alt="product" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">$3.000</p>
-                            <p class="discount">10% off</p>
-                        <h4 class="description">Calza 7/8 Polisap lulea</h4>
-                        </div>
-                    </article>
-                    <article>
-                        <img src="/images/productsImages/IMG_4157.JPG" alt="product" class="product_img">
-                        <div class="main-article">
-                            <i class="fas fa-hamsa"></i>
-                            <p class="price">2.000</p>
-                            <p class="discount">5% off</p>
-                            <h4 class="description">Remera manga larga agni</h4>
-                        </div>
-                    </article>
+
+                    <% for (let i = 0; i < catalogo.length; i++) {
+                        if(catalogo[i].oferta > 0){ %>
+                            <article>
+                            <a href="/product-detail/<%= catalogo[i].id %>"><img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img"></a>
+                            <div class="main-article">
+                                <i class="fas fa-hamsa"></i>
+                                <p class="price"> $ <%= catalogo[i].precio %></p>
+                                <p class='sale'> <%= catalogo[i].oferta %>% off</p>
+                                <h4 class="description"><%= catalogo[i].titulo %></h4>
+                            </div>
+                        </article>
+                       <% } %>               
+                        <% } %>
+
+                   
                 </div>  
             </section>
         </main>
-        /*FOOTER*/
+        <!-- Footer -->
         <%- include('./partials/footer')%>      
     </body>
 </html>
