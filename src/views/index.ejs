@@ -15,7 +15,8 @@
                     <% for (let i = 0; i < catalogo.length; i++) {
                         if(catalogo[i].ultima_coleccion == true){ %>
                             <article>
-                            <a href="/product-detail/<%= catalogo[i].id %>"><img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img"></a>
+                            <a class="article" href="/product-detail/<%= catalogo[i].id %>">
+                            <img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">
                             <div class="main-article">
                                 <i class="fas fa-hamsa"></i>
                                 <p class="price"> $ <%= catalogo[i].precio %></p>
@@ -24,6 +25,7 @@
                                     <% } %>
                                 <h4 class="description"><%= catalogo[i].titulo %></h4>
                             </div>
+                            </a>
                         </article>
                        <% } %>               
                         <% } %>
@@ -34,19 +36,20 @@
 
                     <% for (let i = 0; i < catalogo.length; i++) {
                         if(catalogo[i].oferta > 0){ %>
+                            
                             <article>
-                            <a href="/product-detail/<%= catalogo[i].id %>"><img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img"></a>
-                            <div class="main-article">
-                                <i class="fas fa-hamsa"></i>
-                                <p class="price"> $ <%= catalogo[i].precio %></p>
-                                <p class='sale'> <%= catalogo[i].oferta %>% off</p>
-                                <h4 class="description"><%= catalogo[i].titulo %></h4>
-                            </div>
-                        </article>
+                                <a class="article" href="/product-detail/<%= catalogo[i].id %>"><img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">
+                                <div class="main-article">
+                                    <i class="fas fa-hamsa"></i>
+                                    <p class="price"> $ <%= catalogo[i].precio %></p>
+                                    <p class='sale'> <%= catalogo[i].oferta %>% off</p>
+                                    <h4 class="description"><%= catalogo[i].titulo %></h4>
+                                </div>
+                                </a>
+                            </article>
+                            
                        <% } %>               
                         <% } %>
-
-                   
                 </div>  
             </section>
         </main>
