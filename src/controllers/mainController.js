@@ -13,7 +13,8 @@ const catalogo = [
         img3:'maillot-yogaTrip-3.JPG',
         img4:'maillot-yogaTrip-4.JPG',
         talle:[1,2,3],
-        colors:['selva']
+        color:['selva'],
+        color_archivo:['selva.webp']
     },
     {
         id:2,
@@ -27,8 +28,9 @@ const catalogo = [
         img3:'legging-yogaFreestyle-3.JPG',
         img4:'legging-yogaFreestyle-4.JPG',
         talle:[1,2,3],
-        colors:['Hora Magica']
-    },
+        color:['blanco'],
+        color_archivo:['blanco.png']
+        },
     {
         id:3,
         ultima_coleccion: false,
@@ -41,7 +43,8 @@ const catalogo = [
         img3:'topO-vishnu-3.JPG',
         img4:'topO-vishnu-4.JPG',
         talle:[1,2,3],
-        colors:['Hora Magica']
+        color:['hora-magica'],
+        color_archivo:['hora-magica.jpg']
     },
     {
         id:4,
@@ -55,7 +58,9 @@ const catalogo = [
         img3:'legging38-yogaTrip-3.JPG',
         img4:'legging38-yogaTrip-4.JPG',
         talle:[1,2,3],
-        colors:['Tibet']
+        color:['tibet'],
+        color_archivo:['tibet.jpg']
+        
     },
     {
         id:5,
@@ -63,13 +68,14 @@ const catalogo = [
         titulo: 'Legging 7/8 Yoga Trip Arizona',
         descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et similique tempora laborum magnam accusamus dolorem vel alias fugit reprehenderit. Dicta nam nesciunt cumque rerum error. Cumque itaque odio provident dolor aliquid corporis corrupti eum veritatis, nihil debitis praesentium in quidem laudantium maiores. Rerum ipsa non quo voluptate, molestiae at repellat, quia ipsum sed eum praesentium enim repellendus recusandae cupiditate. Ratione error tempora, perspiciatis nesciunt modi, inventore necessitatibus hic porro dolorum voluptate ipsam laudantium repellendus quae unde adipisci neque provident architecto quaerat culpa nemo vero incidunt. Commodi, rerum facilis deserunt quis in distinctio voluptate veniam cum perspiciatis provident tempora officiis animi?',
         precio: 5400,
-        oferta: 10,
+        oferta: 0,
         img1:'legging78-yogaTripArizona-1.JPG',
         img2:'legging78-yogaTripArizona-2.JPG',
         img3:'legging78-yogaTripArizona-3.JPG',
         img4:'legging78-yogaTripArizona-4.JPG',
         talle:[1,2,3],
-        colors:['siena']
+        color:['siena', 'tibet'],
+        color_archivo:['siena.jpg', 'tibet.jpg']
     },
     {
         id:6,
@@ -77,12 +83,14 @@ const catalogo = [
         titulo: 'SS Legging Larga Cotton new swasti',
         descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et similique tempora laborum magnam accusamus dolorem vel alias fugit reprehenderit. Dicta nam nesciunt cumque rerum error. Cumque itaque odio provident dolor aliquid corporis corrupti eum veritatis, nihil debitis praesentium in quidem laudantium maiores. Rerum ipsa non quo voluptate, molestiae at repellat, quia ipsum sed eum praesentium enim repellendus recusandae cupiditate. Ratione error tempora, perspiciatis nesciunt modi, inventore necessitatibus hic porro dolorum voluptate ipsam laudantium repellendus quae unde adipisci neque provident architecto quaerat culpa nemo vero incidunt. Commodi, rerum facilis deserunt quis in distinctio voluptate veniam cum perspiciatis provident tempora officiis animi?',
         precio: '5.400',
+        oferta: 10,
         img1:'leggingLarga-CNS-1.JPG',
         img2:'leggingLarga-CNS-2.JPG',
         img3:'leggingLarga-CNS-3.JPG',
         img4:'leggingLarga-CNS-4.JPG',
         talle:[1,2,3],
-        colors:['Bosque Encantado','Hora Magica']
+        color:['bosque-encantado','hora-magica'],
+        color_archivo:['bosque-encantado.jpg','hora-magica.jpg']
     },
 ]
 
