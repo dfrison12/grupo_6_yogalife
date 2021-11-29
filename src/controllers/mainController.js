@@ -120,9 +120,16 @@ const mainController = {
     },
 
     shopcart: function (req, res) {
-        res.render('shopcart')
+        let item = req.params.id;
+        let prenda = {}
         
-    }
+        for (let i = 0; i < catalogo.length; i++){
+            if (item == catalogo[i].id){
+                prenda = catalogo[i]       
+                } 
+            }
+        res.render('shopcart', {'prenda':prenda},);
+       }
 
     
 }
