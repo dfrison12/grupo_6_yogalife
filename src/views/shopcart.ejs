@@ -1,111 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarritodeCompras</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!--Head-->
+    <%- include ('./partials/head')%>
+    <title>Tienda de Yoga | yogalife</title>
     <link rel="stylesheet" href="CSS/shopcartstyles.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="top-header">
-            <div class="logo">
-                <a href="/">
-                    <i class="fas fa-hamsa">
-                    <h1>yogalife</h1>
-                </a>
-            </div>
-            <form class="search-form" action="#" method="GET">
-                <input type="text" class="search-input" name="search-input" placeholder="Busca tu coleccion favorita!">
-                <button type="submit" class="search-button" name="search-button"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        <nav class="main-navbar">
-            <ul class="left-navbar">
-                <li><a href="*">Catalogo</a></li>
-                <li><a href="*">Ofertas</a></li>
-                <li><a href="*">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-        </nav>
-        <div class="burger-menu">
-        <a href="#" class="burger-buttom">
-            <i class="fas fa-om"></i>
-        </a>
-        </div>
-    </header>
-    <main>
-        <section>       
-            <h2>Carrito de Compras</h2>
-            <article>
-                <div class="producto1">
-                    <img src="#" alt="imagen1">
-                    <h4>Descripción del producto</h4>
-                    <p>Filtros del producto</p>
-                    <p>precio</p>
-                    <input type="number">Unidades</input>
-                    
-                    <button type="submit">Editar compra</button>
-                </div>
-            </article>
-            <article>
-                <div class="producto2">
-                    <img src="#" alt="imagen2">
-                    <h4>Descripción del producto</h4>
-                    <p>Filtros del producto</p>
-                    <p>precio</p>
-                    <input type="number">Unidades</input>
+    <!--Header-->
+    <%- include ('./partials/header')%>
 
-                    <button type="submit">Editar compra</button>
+    <main>     
+        <section><h3>Carrito de Compras</h3>
+            <article class="shop-detail">
+                <div class="product-detail1">
+                    <div class="product-description">
+                        <h1 class="product-name"><%= prenda.titulo %></h1>
+                        <div class="product-images">
+                            <a href="/images/productsImages/<%= prenda.img1 %>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
+                            <div class="img-box">
+                                <a href="/images/productsImages/<%= prenda.img2 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img2 %>" alt="img"></a>
+                                <a href="/images/productsImages/<%= prenda.img3 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img3 %>" alt="img"></a>
+                                <a href="/images/productsImages/<%= prenda.img4 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img4 %>" alt="img"></a>
+                            </div>
+                        </div>
+                        <p class="price"> $ <%= prenda.precio %> </p>
+                        <% if (prenda.oferta > 0) { %>
+                            <p class='sale'> <%= prenda.oferta %>% off</p>
+                            <% } %>
+                        <button type="submit">Editar compra</button>
+                    </div>    
                 </div>
-            </article>
-            <div class="Cierroelcarrito">
-                <button type="submit">Continuar comprando</button>
-                <button type="submit">Cerrar la compra</button>
-            </div>
-        </section>
+            </article>                    
+                <div class="Cierroelcarrito">
+                    <button type="submit">Continuar comprando</button>
+                    <button type="submit">Cerrar la compra</button>
+                </div>
+        </section>            
     </main>
-    <footer>
-        <div>
-            <i class="fas fa-comment-dollar"></i>
-            <h4>¡Envío gratis!</h4>
-            <p>Envío gratis para compras por un monto superior a $ 4.500.</p>
-        </div>
-        <div>
-            <i class="fas fa-dolly-flatbed"></i>
-            <h4>¡Devolucion gratis !</h4>
-            <p>¿No te gusta? ¡ Devolvelo! Simplemente contacta tu vendedor.</p>
-        </div>
-        <div>
-            <i class="fas fa-credit-card"></i>
-            <h4>Pagá con tarjeta o en efectivo</h4>
-            <p>Recibimos tarjetas y cualquier medio de pago admitido por MercadoPago!</p>
-        </div>
-        <div class="footer-contact">
-            <h4>Seguinos!</h4>
-            <p>Somos yogalife, cuidamos cada detalle para que la experiencia dentro y fuera del mat contribuya a esa búsqueda que cada uno tiene. </p>
-            <span class="footer-contact">
-                <i class="fab fa-facebook"></i>
-                @yogalife
-            </span>
-            <span class="footer-contact">
-                <i class="fab fa-instagram"></i>
-                @yogalife
-            </span>
-            <span class="footer-contact">
-                <i class="far fa-envelope"></i>
-                contacto@yogalife.com
-            </span>
-            <div class="new-updates">
-                <form class="new-updates" action="#" method="GET">
-                    <input type="text" class="new-updates" name="new-updates" placeholder="Dejanos tu mail aquí para mas noticias">
-                    <button type="submit" class="new-updates" name="new-updates"><i class="far fa-paper-plane"></i></button>
-                </form>
-            </div>
-            
-        </div>
-    </footer>
+
+    <!--Footer-->
+    <%- include('./partials/footer')%>
+
 </body>
 </html>
