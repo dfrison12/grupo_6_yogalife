@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: #f7ecb3f8;
+    background-color: #f7ecb361;
 }
 
 h3{
@@ -160,21 +160,17 @@ main section.product-images div.product-images{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #d7e2e0fa;
-    padding: 10px 5px 25px 5px;
+    background-color: #117a653d;
     border-radius: 20px;
-    box-shadow: 3px 3px 0px -1px #f79cf7e3;
-
-
-    
+    box-shadow: 3px 2px 3px 0px #117a65;
 }
 
 main div section.product-images img.main-picture {
     padding: 5px;
-    width: 92%;
+    width: 100%;
     margin:auto;
     height: auto;
-    border-radius: 20px;
+    border-radius: 8px;
     opacity: 0.9;
     
 }
@@ -183,15 +179,16 @@ main section.product-images div.img-box{
     width: 90%;
     margin:auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     opacity: 0.9;
 }
 
 main section.product-images div.img-box img{
-    width: 31%;
+    width: 100%;
+    padding: 5px;
     height: auto;
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 main div section.product-description{
@@ -199,19 +196,23 @@ main div section.product-description{
 }
 
 main div div.product-description{
-    background-color: #d7e2e0fa;
-    box-shadow: 3px 3px 0px -1px #f79cf7e3;
+    background-color: #117a653d;
+    box-shadow: 3px 2px 3px 0px #117a65;
     padding: 20px;
     border-radius: 15px;
     width: 100%;
+    height: 380px;
 }
 
-main div div.product-description .price{
-    margin: 10px 0px;
-    font-style: bold;
-    font-size: 25px;
+main div div.product-description .sale{
+    margin: 0px 0px 5px 0px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(23, 110, 69);
 
 }
+
+
 
 div.product-description form{
     margin: 10px 0px;
@@ -221,36 +222,66 @@ div.product-description form{
     font-size: 20px;
 }
 
-    form div select{
-        border: sienna groove 1px;
+    form div.color-button{
+        display: flex;
+        width: 35px;
+        position: relative;
+    }
+
+    form div.color-button input.color{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        
+    }
+
+    form div.color-button:hover img.color {
+        border: #000000 3px solid;
+
+
+    }
+
+    form div.color-button img.color{
+        width: 110%;
+        height: 100%;
         border-radius: 50%;
-        margin: 5px 0px;
-        width: 30px;
-        height: 30px;
-
+        border: 3px rgb(165, 162, 162) solid;
+        transition: all 150ms;
+        margin: 6px 3px 0px 3px;
     }
 
-    form div.color select{
-        background-color: darkred;
-        -webkit-appearance: none;
+
+
+     input.size{
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+        font-weight: 600;
+        color: rgb(75, 72, 72);
+        border-radius: 50%;
+        border: solid 1px rgb(77, 74, 74);
+        transition: all 450ms;
+        border: 3px rgb(165, 162, 162) solid;
+        
     }
 
-    form div.size select{
-        text-align: center;
-        font-size: 20px;
-        -webkit-appearance: none;
+    input.size:hover{
+        background-color: #04614e;
+        color:white; 
     }
 
     form input.amount, button.add {
         text-align: center;
         margin: 5px 0px;
-        width: 82px;
+        width: 60px;
         height: 35px;
         border-radius: 20px;
-        font-size: 17px;
-        background-color: #F7DC6F;
+        font-size: 12px;
         transition: all 450ms;
         border: 3px rgb(165, 162, 162) solid;
+        background-color: #E9F7EF;
+        font-weight: 600;
 
     }
 
@@ -259,11 +290,25 @@ div.product-description form{
         color:white;
     }
 
-
-
-    article.product-description{
-        font-variant: unset;
+    div.description {
+        margin: auto;
+        width: 80%;
+        padding: 20px 0px 0px 0px;
     }
+
+    div.description h4{
+        padding: 10px;
+        font-size: 25px;
+        font-weight: 600;
+        font-family: 'Raleway';
+    }
+
+    div.description p{
+        font-size: 15px;
+        font-weight: 500;
+        font-family: 'Raleway';
+    }
+
 
     /* FOOTER */
 
@@ -460,41 +505,39 @@ footer div form.new-updates button.new-updates i{
     /* MAIN 770 */
 
     main {
-        margin-top: 110px;    
+        margin-top: 140px;    
     }
 
     main div.product-detail{
+        margin: auto;
+        width: 80%;
         display: flex;
-        flex-direction: row;
+        flex-direction:row-reverse;
         justify-content: space-around;
         flex-wrap: nowrap;
-        margin:195px 60px 50px 150px;
-        background-color: #7bb698fa;
-        border-radius: 20px;
-        padding: 30px 40px 30px 20px;
+        padding: 0px;
+
     }
 
     main section.product-images{
         padding: 20px 20px 0px 20px;
         box-shadow: none;
-        border: solid 3px #F7DC6F;
-        border-radius: 20px;
-        background-color: #7bb698fa;
+        height: 490px;
     }
 
     main section.product-images div.product-images{
         flex-direction: row;
         box-shadow: none;
-        background-color: #7bb698fa;
+        background: none;
     }
 
 
     main div section.product-images img.main-picture{
         width: 276px;
-        height: 420px;
+        height: 427px;
         margin: 0px;
         padding: 0px;
-        border: 1px solid #F7DC6F
+        border: 1px solid #117A65
 
     }
 
@@ -508,7 +551,7 @@ footer div form.new-updates button.new-updates i{
         height: 136px;
         margin: 0px 0px 5px 10px;
         padding: 0;
-        border: 2px solid #F7DC6F;
+        border: 1px solid #117A65;
     }
 
 
@@ -520,7 +563,55 @@ footer div form.new-updates button.new-updates i{
     section.product-description div.product-description{
          border: none;
          box-shadow: none;
+         height: 470px;
     }
+
+    section.product-description div.product-description{
+    background-color:  #fbeb97 ;
+    padding: 35px;
+    }
+
+    section.product-description div.product-description h1{
+        font-size: 25px;
+        padding: 0px 0px 15px 0px;
+        color: rgba(41, 68, 64, 0.856);
+        font-weight: 600;
+    }
+
+    section.product-description div.product-description p.price{
+        font-size: 25px;
+        font-weight: 600;
+        padding: 5px 0px;
+        color: rgba(41, 68, 64, 0.856);
+    }
+
+    div.product-description form div{
+        font-size: 20px;
+        font-weight: 500;
+        color: #282828;
+        padding: 0px 0px 10px 0px;
+    }
+
+    div.product-description form div div.size-button{
+        padding: 10px 0px 0px 0px;
+    }
+
+    div.product-description form p{
+        font-size: 20px;
+        padding: 0px 0px 10px 0px;
+    }
+    
+
+
+
+    div.description {
+    background-color:  #fbeb97 ;
+    padding: 20px;
+    }
+
+
+
+
 
     /*FOOTER 770*/
 
