@@ -1,0 +1,106 @@
+    /* FOOTER */
+
+    footer{
+        margin-top: 25px;
+        background-color: #117A65;
+    }
+    
+    footer div{
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+    
+    footer div i{
+        color:#F7DC6F;
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    
+    footer div h4{
+        color: #F7DC6F;
+        font-style: bold;
+        margin:6px 0px;
+    
+    }
+    footer div p{
+        color: white;
+    }
+    
+    footer div.footer-contact{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding-top: 15px;
+    
+    }
+    
+    footer div span.footer-contact{
+        color: #F7DC6F;
+        font-size: 15px;
+        align-self: flex-start;
+        max-height: 50px;
+    }
+    
+    footer div span.footer-contact i{
+        font-size: 15px;;
+    }
+    
+    footer div.new-updates{
+        margin:0px;
+    }
+    
+    footer div form.new-updates{
+        display: flex;
+        flex-wrap: nowrap;
+        max-width: 300px;
+    }
+    
+    footer div form.new-updates input.new-updates{
+        background-color: #E9F7EF;
+        border: 1px solid #000;
+        outline: none;
+        color: #666;
+        padding: 5px;
+        border-style: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        width: 90%;
+        margin: 12px 0px;
+    }
+    
+    footer div form.new-updates button.new-updates{
+        background-color: #E9F7EF;
+        border: 1px solid #000;
+        color: #666;
+        width: 10%;
+        border-style: none;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        width: 10%;
+        margin: 12px 0px;
+    }
+    
+    footer div form.new-updates button.new-updates i{
+        color:#666;
+        font-size: 12px;
+        margin: auto;
+    }
+@media (min-width: 419px){   
+     /* FOOTER 420*/
+
+    footer div i:hover{
+        color: #E9F7EF;
+    }
+}
+
+@media (min-width: 769px){
+        /*FOOTER 770*/
+
+        footer{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 2fr;
+        }   
+    
+    }
