@@ -49,7 +49,7 @@ h3,
     padding:5px 0px 0px 0px;
     font-family: 'Raleway';
     font-weight: 600;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 section.main-image{
@@ -109,6 +109,10 @@ article div.main-article{
     width: 100%;
     border-top: 1px solid #117A65;
     padding: 15px;
+}
+
+section.empresa-b{
+    display: none;
 }
 
 @media (min-width: 419px){
@@ -175,6 +179,13 @@ article div.main-article{
 
     /* MAIN 770 */
 
+     h3.section-title{
+        color: rgba(41, 68, 64, 0.856);
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 40px;
+    }
+
     main section article{
         width: 23%;
     }
@@ -185,7 +196,45 @@ article div.main-article{
         flex-wrap: wrap;
     }
 
+    section.empresa-b{
+        display: inline-block;
+        margin: 20px;
+    }
 
+    section.empresa-b h3{
+        color: rgba(41, 68, 64, 0.856);
+        padding: 5px 0px 0px 0px;
+        font-family: 'Raleway';
+        font-weight: 600;
+        font-size: 40px;
+    }
 
+    div.empresa-b{
+        display: flex;
+    }
+
+    div.empresa-b img{
+        width: 73%;
+        opacity: 0.84;
+    }
+
+    div.empresa-b p{
+        width: 22%;
+        margin: auto;
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Raleway';
+        color: black;
+        padding: 30px 0px;
+
+    }
+
+    span.empresa-b {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+   
 
 }

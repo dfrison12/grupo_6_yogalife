@@ -16,7 +16,7 @@
         </section>
         <main>
             <section class="last-collection">
-                <h3>Ultima colección</h3>
+                <h3 class="section-title">Ultima colección</h3>
                 <div class="products">
                     <% for (let i = 0; i < catalogo.length; i++) {
                         if(catalogo[i].ultima_coleccion == true){ %>
@@ -37,7 +37,7 @@
                         <% } %>
 
             <section class="sale" id='ofertas'>
-                <h3>Ofertas</h3>
+                <h3 class="section-title">Ofertas</h3>
                 <div class="products">
 
                     <% for (let i = 0; i < catalogo.length; i++) {
@@ -57,6 +57,23 @@
                        <% } %>               
                         <% } %>
                 </div>  
+            </section>
+
+            <section class="empresa-b" id="empresa-b">
+            <h3 class="empresa-b"> Empresa B</h3>
+            <div class="empresa-b">
+            <img src="/images/empresa-b-img-1.jpg" alt="img">
+            <p>Las <span class="empresa-b">Empresas B</span> son empresas que redefinen el sentido del éxito empresarial, usando la fuerza del mercado para dar solución a problemas sociales y ambientales. Luego de pasar por un riguroso proceso de certificación, la ONG B Lab USA (Sistema B en Latinoamérica) nos ha otorgado la certificación de Empresa B a nivel global.</p>
+            </div>
+            <div class="empresa-b">
+            <p>Asumimos el compromiso de priorizar a las personas y el medio ambiente sobre las ganancias, adoptando las mejores decisiones en cuanto a producción, distribución y comercialización de nuestros productos. Además, nos sometemos a evaluación constante de terceros, para sostener indefectiblemente ese compromiso.</p>
+            </div>
+            <div class="empresa-b">
+            <p>
+                <span class="empresa-b">¿Qué medidas tomamos en el día a día?</span>
+            Sabemos que las decisiones que tomamos en todas nuestras acciones tienen impacto en nuestros clientes, colaboradores, comunidad y medio ambiente. Por eso, nos definimos como “mindful” que significa Atención Plena. Atención en el momento presente, en las pequeñas acciones, para decidir a conciencia cada detalle de nuestra comunicación, distribución y proceso productivo.</p>
+            <img src="/images/empresa-b-img-2.jpg" alt="img">
+            </div>
             </section>
         </main>
         <!-- Footer -->
