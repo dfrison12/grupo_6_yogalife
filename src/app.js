@@ -2,6 +2,7 @@
 const express = require ('express');
 const app = express();
 const mainRouter = require ('./routes/mainRouter')
+const userRouter = require ('./routes/userRouter')
 
 app.set('view engine','ejs');
 
@@ -15,7 +16,7 @@ app.use(express.static('../public'));
 app.use('/', mainRouter);
 app.use('/product-detail', mainRouter);
 app.use('/login', mainRouter);
-app.use('/register', mainRouter);
+app.use('/register', userRouter);
 app.use('/shopcart', mainRouter);
 
 
