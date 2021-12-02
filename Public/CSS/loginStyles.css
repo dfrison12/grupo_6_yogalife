@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+	margin:0px;
+	padding:0%;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+.loginWrap{
+	width:100%;
+	margin: 0 auto;
+	max-width:500px;
+	min-height:640px;
+	position: relative;
+	background-image: url(/images/yogalifebackground.png);
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.SiginHtml{
+	width: 100%;
+    max-width: 500px;;
+	min-height:640px;
+	position:absolute;
+    margin: 0 auto;
+    padding:15px 34px;
+    background:rgba(14, 143, 121, 0.39) ;
+    color: white;
+}
+.siginTitle{
+font-family: 'Raleway', sans-serif;
+ text-align: center;
+ margin-top: 15px;
+ margin-bottom: 50px;
+ color:rgba(10, 68, 59, 0.782) ;
+}
+/* DIV USER + ANIMATION*/
+.formUser{
+    width: 40%;
+    border:none;
+	padding:15px 34px;
+    margin: 0 auto;
+	border-radius:25px;
+	background:rgba(255, 255, 255, 0.13);
+    margin-top: 20px;
+    border: transparent;
+    font-family: 'Raleway', sans-serif;
+    transition: background-color , width 1.5s;
+    
+}
+.formUser:hover{
+     background-color:rgba(14, 143, 122, 0.364) ;
+     width: 100%;
+}
+
+::placeholder {
+    font-family: 'Raleway', sans-serif;
+    color:rgba(248, 248, 248, 0.9);
+    font-weight: bold;
+}
+/* DIV PASSWORD + ANIMATION*/
+.formPassword{
+    width: 38%;
+    border:none;
+    margin: 0 auto;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255, 255, 255, 0.205);
+    color: beige;
+    margin-top: 20px;
+    border: transparent;
+    transition: background-color , width 1.5s;
+}
+.formPassword:hover{
+    background-color:rgba(14, 143, 122, 0.364) ;
+    width: 100%;
+}
+.user{
+    border: none;
+    background: none;
+    display: block;
+    width: 100%;
+}
+.password {
+    border: none;
+    background: none;
+    display: block;
+    width: 100%;
+}
+.forgot{
+font-family: 'Raleway', sans-serif;
+ text-align: center;
+ margin-top: 25px;
+ margin-bottom: 50px;
+ color:rgba(13, 119, 102, 0.255) ;
+    
+}
+.button {
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    width: 32%; 
+    border:none;
+    margin-left: 35%;
+    border-radius:20px;
+    padding:15px 15px;
+	background:rgba(255, 255, 255, 0.205);
+    color:rgba(10, 79, 67, 0.782) ;
+    margin-top: 25px;
+    border: transparent;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: white;
+    top: 0;
+    left: 0;
+    background-color:rgba(14, 143, 122, 0.364) ;
+    background-size: cover;
+    transition: 0.5s;
+}
+button:after {
+    color: black;
+    top: 0;
+    left: 0;
+    background-color:rgba(14, 143, 122, 0.364) ;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+
+@media (min-width: 419px) {
+
+    body{
+        margin: 50px;
+        padding:0%;
+        color:#6a6f8c;
+        background:#c8c8c8;
+        font:600 16px/18px 'Open Sans',sans-serif;
+    }
+
+    .loginWrap{
+        width:100%;
+        margin: 0 auto;
+        max-width:419px;
+        min-height:570px;
+        position: relative;
+        background-image: url(/images/yogalifebackground.png);
+        box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    }
+    .SiginHtml{
+        width: 100%;
+        max-width:419px;
+        min-height:570px;
+        position:absolute;
+        margin: 0 auto;
+        padding:15px 20px;
+        background:rgba(14, 143, 121, 0.39) ;
+        color: white;
+    }
+    .formUser{
+        margin-top: 15px;
+        padding:15px 46px;
+    }
+    .siginTitle{
+         margin-top: 20px;
+    }
+}
+
+@media (min-width: 769px){
+
+    body{
+        margin: 50px;
+        padding:0%;
+        color:#6a6f8c;
+        background:#c8c8c8;
+        font:600 16px/18px 'Open Sans',sans-serif;
+    }
+
+    .loginWrap{
+        width:100%;
+        margin: 0 auto;
+        max-width:419px;
+        min-height:570px;
+        position: relative;
+        background-image: url(/images/yogalifebackground.png);
+        box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    }
+    .SiginHtml{
+        width: 100%;
+        max-width:419px;
+        min-height:570px;
+        position:absolute;
+        margin: 0 auto;
+        padding:15px 20px;
+        background:rgba(14, 143, 121, 0.39) ;
+        color: white;
+    }
+   
+    .siginTitle{
+         margin-top: 20px;
+    }
+    .formUser{
+        margin-top: 15px;
+        padding:15px 46px;  
+    }
+}
