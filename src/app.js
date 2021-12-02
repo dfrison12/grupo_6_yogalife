@@ -15,7 +15,7 @@ app.use(express.static('../public'));
 //Rutas
 app.use('/', mainRouter);
 app.use('/product-detail', mainRouter);
-app.use('/login', mainRouter);
+app.use('/login', userRouter);
 app.use('/register', userRouter);
 app.use('/shopcart', mainRouter);
 
