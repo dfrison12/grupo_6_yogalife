@@ -12,7 +12,7 @@ const catalogo = [
         img2:'maillot-yogaTrip-2.JPG',
         img3:'maillot-yogaTrip-3.JPG',
         img4:'maillot-yogaTrip-4.JPG',
-        talle:[1,2,3],
+        talle:[1,2,3,4],
         color:['selva'],
         color_archivo:['selva.webp']
     },
@@ -64,7 +64,7 @@ const catalogo = [
     },
     {
         id:5,
-        ultima_coleccion: true,
+        ultima_coleccion: false,
         titulo: 'Legging 7/8 Yoga Trip Arizona',
         descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et similique tempora laborum magnam accusamus dolorem vel alias fugit reprehenderit. Dicta nam nesciunt cumque rerum error. Cumque itaque odio provident dolor aliquid corporis corrupti eum veritatis, nihil debitis praesentium in quidem laudantium maiores. Rerum ipsa non quo voluptate, molestiae at repellat, quia ipsum sed eum praesentium enim repellendus recusandae cupiditate. Ratione error tempora, perspiciatis nesciunt modi, inventore necessitatibus hic porro dolorum voluptate ipsam laudantium repellendus quae unde adipisci neque provident architecto quaerat culpa nemo vero incidunt. Commodi, rerum facilis deserunt quis in distinctio voluptate veniam cum perspiciatis provident tempora officiis animi?',
         precio: 5400,
@@ -79,7 +79,7 @@ const catalogo = [
     },
     {
         id:6,
-        ultima_coleccion: false,
+        ultima_coleccion: true,
         titulo: 'SS Legging Larga Cotton new swasti',
         descripcion: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et similique tempora laborum magnam accusamus dolorem vel alias fugit reprehenderit. Dicta nam nesciunt cumque rerum error. Cumque itaque odio provident dolor aliquid corporis corrupti eum veritatis, nihil debitis praesentium in quidem laudantium maiores. Rerum ipsa non quo voluptate, molestiae at repellat, quia ipsum sed eum praesentium enim repellendus recusandae cupiditate. Ratione error tempora, perspiciatis nesciunt modi, inventore necessitatibus hic porro dolorum voluptate ipsam laudantium repellendus quae unde adipisci neque provident architecto quaerat culpa nemo vero incidunt. Commodi, rerum facilis deserunt quis in distinctio voluptate veniam cum perspiciatis provident tempora officiis animi?',
         precio: '5.400',
