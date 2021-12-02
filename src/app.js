@@ -2,11 +2,8 @@
 const express = require ('express');
 const app = express();
 const mainRouter = require ('./routes/mainRouter')
-<<<<<<< HEAD
 const productsRouter = require ('./routes/productsRouter')
-=======
 const userRouter = require ('./routes/userRouter')
->>>>>>> 278358fc120bbb001550fbc02ec1bff7efff5299
 
 app.set('view engine','ejs');
 
@@ -18,15 +15,9 @@ app.use(express.static('../public'));
 
 //Rutas
 app.use('/', mainRouter);
-<<<<<<< HEAD
 app.use('/products', productsRouter);
-app.use('/login', mainRouter);
-app.use('/register', mainRouter);
-=======
-app.use('/product-detail', mainRouter);
 app.use('/login', userRouter);
 app.use('/register', userRouter);
->>>>>>> 278358fc120bbb001550fbc02ec1bff7efff5299
 app.use('/shopcart', mainRouter);
 
 
