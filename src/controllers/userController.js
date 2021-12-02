@@ -1,3 +1,5 @@
+const fs = require ('fs')
+
 //DATOS PARA TRABAJAR
 
 const user = [
@@ -21,6 +23,18 @@ const userController = {
         res.render('register')
     },
 
-       
+    createUser: function (req, res) {
+       let user = {
+            name: req.body.name,
+            lastname: req.body.lastname,
+            birthDate: req.body.birthDate,
+            email: req.body.email,
+            password: req.body.password,
+       }
+
+       fs.appendFileSync('dataTest.json', user)
+
+       res.redirect('/') 
+  }
 }
 module.exports = userController;
