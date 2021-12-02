@@ -56,6 +56,10 @@ section.main-image{
     display: none;
 }
 
+section.every-collections{
+    margin-top: 130px
+}
+
 main{
     width: 90%;
     margin: 0 auto;

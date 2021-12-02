@@ -1,6 +1,14 @@
 //DATOS PARA TRABAJAR
 
-const catalogo = [
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+//DATOS PARA TRABAJAR
+
+/*const catalogo = [
     {
         id:1,
         titulo: 'Maillot Yoga Trip',
@@ -92,22 +100,13 @@ const catalogo = [
         color:['bosque-encantado','hora-magica'],
         color_archivo:['bosque-encantado.jpg','hora-magica.jpg']
     },
-]
+]*/
 
-const mainController = {
+const productsController = {
     index: function (req,res) {
-        res.render('index', {'catalogo':catalogo});
+        res.render('products', {'catalogo':catalogo});
     },
-
-    login: function(req, res){
-        res.render('login')
-    },
-
-    register: function(req, res){
-        res.render('register')
-    },
-
-    shopcart: function (req, res) {
+    productDetail: function (req,res){
         let item = req.params.id;
         let prenda = {}
         
@@ -116,9 +115,9 @@ const mainController = {
                 prenda = catalogo[i]       
                 } 
             }
-        res.render('shopcart', {'prenda':prenda},);
-       }
+        res.render('productDetail', {'prenda':prenda},);
+    }
+};
 
-    
-}
-module.exports = mainController;
+
+module.exports = productsController;
