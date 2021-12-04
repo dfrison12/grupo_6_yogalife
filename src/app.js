@@ -6,7 +6,7 @@ const mainRouter = require ('./routes/mainRouter')
 app.set('view engine','ejs');
 
 // Configuración
-app.use(express.static('../public'));
+app.use(express.static('../Public'));
 //Template engine
 
 
