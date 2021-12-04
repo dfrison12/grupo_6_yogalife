@@ -70,13 +70,6 @@ main section article div div div.product-images div.img-box{
     opacity: 0.9;
 }
 
-main section article div div div.product-images div.img-box img{
-    width: 100%;
-    padding: 5px;
-    height: auto;
-    border-radius: 8px;
-}
-
 main div div.product-description{
     background-color: #117a653d;
     box-shadow: 3px 2px 3px 0px #117a65;
@@ -107,4 +100,108 @@ main section div.Cierroelcarrito button {
     font-size: 10px;
     background-color: #04614e;
     border-radius:10%
+}
+
+@media (min-width: 419px){
+
+ 
+    /* MAIN 420 */
+
+    main {
+        margin-top: 90px;    
+    }
+
+}
+
+@media (min-width: 769px){
+
+    /* MAIN 770 */
+
+    main {
+        margin-top: 140px;    
+    }
+
+    main div.product-detail1{
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        padding: 0px;
+
+    }
+
+    main section.product-images{
+        padding: 20px 20px 0px 20px;
+        box-shadow: none;
+        height: 490px;
+    }
+
+    main section.product-images div.product-images{
+        flex-direction: row;
+        box-shadow: none;
+        background: none;
+    }
+
+
+    main div section.product-images img.main-picture{
+        width: 276px;
+        height: 427px;
+        margin: 0px;
+        padding: 0px;
+        border: 1px solid #117A65
+
+    }
+
+    main div section.product-description{
+        width: 60%;
+        padding: 0px;
+    }
+
+    section.product-description div.product-description{
+         border: none;
+         box-shadow: none;
+         height: 470px;
+    }
+
+    section.product-description div.product-description{
+    background-color:  #fbeb97 ;
+    padding: 35px;
+    }
+
+    section.product-description div.product-description h1{
+        font-size: 25px;
+        padding: 0px 0px 15px 0px;
+        color: rgba(41, 68, 64, 0.856);
+        font-weight: 600;
+    }
+
+    section.product-description div.product-description p.price{
+        font-size: 25px;
+        font-weight: 600;
+        padding: 5px 0px;
+        color: rgba(41, 68, 64, 0.856);
+    }
+
+    div.product-description form div{
+        font-size: 20px;
+        font-weight: 500;
+        color: #282828;
+        padding: 0px 0px 10px 0px;
+    }
+
+    div.product-description form div div.size-button{
+        padding: 10px 0px 0px 0px;
+    }
+
+    div.product-description form p{
+        font-size: 20px;
+        padding: 0px 0px 10px 0px;
+    }
+
+    div.description {
+    background-color:  #fbeb97 ;
+    padding: 20px;
+    }
 }

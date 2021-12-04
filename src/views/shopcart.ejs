@@ -17,17 +17,28 @@
                     <div class="product-description">
                         <h1 class="product-name"><%= prenda.titulo %></h1>
                         <div class="product-images">
-                            <a href="/images/productsImages/<%= prenda.img1 %>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
-                            <div class="img-box">
-                                <a href="/images/productsImages/<%= prenda.img2 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img2 %>" alt="img"></a>
-                                <a href="/images/productsImages/<%= prenda.img3 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img3 %>" alt="img"></a>
-                                <a href="/images/productsImages/<%= prenda.img4 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img4 %>" alt="img"></a>
-                            </div>
+                            <a href="images/productsImages/<%= prenda.img1 %>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
                         </div>
                         <p class="price"> $ <%= prenda.precio %> </p>
                         <% if (prenda.oferta > 0) { %>
                             <p class='sale'> <%= prenda.oferta %>% off</p>
                             <% } %>
+                            <form action=# method="get">
+                            <div class="color">
+                                <label for="color"> Color: </label>
+                                <div class='color-button'>         
+                                        <input class="color" type="button" name="color" value=<%= prenda.color%>>
+                                        <img class="color" src="images/colors/<%= prenda.color_archivo%>" atl="color">
+                                </div>
+                            </div>
+                            <div class="size">
+                                <label for="talle"> Talle: </label>
+                                <div class="size-button"></div>
+                                    <input class="size" type="button" name="talle" value=<%=prenda.talle%>>       
+                                </div>
+            
+                                <p>¡Casi es tuyo!</p>
+                            <input class="amount" type="number" value="1">
                         <button type="submit">Editar compra</button>
                     </div>    
                 </div>
