@@ -21,7 +21,7 @@
                     <% for (let i = 0; i < catalogo.length; i++) {
                         if(catalogo[i].ultima_coleccion == true){ %>
                             <article>
-                            <a class="article" href="/product-detail/<%= catalogo[i].id %>">
+                            <a class="article" href="/products/product-detail/<%= catalogo[i].id %>">
                             <img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">
                             <div class="main-article">
                                 <i class="fas fa-hamsa"></i>
@@ -44,7 +44,7 @@
                         if(catalogo[i].oferta > 0){ %>
                             
                             <article>
-                                <a class="article" href="/product-detail/<%= catalogo[i].id %>"><img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">
+                                <a class="article" href="/products/product-detail/<%= catalogo[i].id %>"><img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">
                                 <div class="main-article">
                                     <i class="fas fa-hamsa"></i>
                                     <p class="price"> $ <%= catalogo[i].precio %></p>
