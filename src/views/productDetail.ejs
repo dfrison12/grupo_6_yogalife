@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Head -->
-    <%- include ('./partials/head')%>
-    <title>Tienda de Yoga | yogalife</title>
-    <link rel="stylesheet" href="/CSS/productDetailStyles.css">  
-</head>
+<!-- Head -->
+<%- include ('./partials/head',{title: prenda.titulo , style:'productDetailStyles.css'}) %>
 <body>
     <!-- Header -->
     <%- include ('./partials/header') %>

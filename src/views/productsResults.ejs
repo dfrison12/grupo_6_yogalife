@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<%- include ('./partials/head',{title:'Busqueda', style:'indexStyles.css'}) %>
+ <body>
+        <!-- Header -->
+        <%- include ('./partials/header') %> 
+        <main>
+            <section class="every-collections">
+                <h3 class="section-title">Resultados de la busqueda: </h3>
+                <div class="products">
+                    
+                    <% if (productResults.length > 0){
+                        productResults.forEach(function(prenda) {%>
+                            <article>
+                            <a class="article" href="/products/product-detail/<%= prenda.id %>">
+                            <img src="/images/productsImages/<%= prenda.img1 %>" alt="product" class="product_img">
+                            <div class="main-article">
+                                <i class="fas fa-hamsa"></i>
+                                <p class="price"> $ <%= prenda.precio %></p>
+                                <% if (prenda.oferta > 0) { %>
+                                    <p class='sale'> <%= prenda.oferta %>% off</p>
+                                    <% } %>
+                                <h4 class="description"><%= prenda.titulo %></h4>
+                            </div>
+                            </a>
+                            </article>
+               
+                            
+                       <% })} else { %>
+                        <h2 class="section-title">Lo siento! no encontramos tus prendas- </h2>
+
+                       <% } %>              
+
+        </main>
+        <!-- Footer -->
+        <%- include('./partials/footer')%>      
+</body>
