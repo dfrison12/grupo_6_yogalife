@@ -110,8 +110,8 @@ div.product-description form{
         
     }
 
-    form div.color-button:hover img.color {
-        border: #000000 3px solid;
+    form div.color-button img.color:hover {
+        border: #059ab4 3px solid;
 
 
     }

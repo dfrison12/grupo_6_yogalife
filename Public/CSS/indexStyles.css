@@ -52,6 +52,10 @@ h3,
     font-size: 15px;
 }
 
+h2.section-title{
+    color: #807e76;
+}
+
 section.main-image{
     display: none;
 }
@@ -64,6 +68,8 @@ main{
     width: 90%;
     margin: 0 auto;
     margin-top: 160px;
+    min-height: 500px
+    ;
 }
 
 main section article{
@@ -100,7 +106,7 @@ main section article i{
     background-color: #117A65;
     border-radius: 50%;
     position: absolute;
-    right: auto;
+    right: 115px;
     top: -14px;   
 }
 
