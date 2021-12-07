@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%- include ('./partials/head',{title:'Ingresa tu nuevo producto', style:'productCreateForm.css'}) %>
+<body>
+    <!-- Header -->
+    <%- include ('./partials/header') %>
+
+ <main>
+    <div class="form-container">
+        <form action="/store" method="POST">
+        <div class="input-container">
+           <label for="titulo" class="form-label">Prenda</label>       
+            <input type="text" id="titulo" name="titulo" class="form-input">
+        </div>
+        <div class="input-container">
+            <label for="precio" class="form-label">Precio</label>       
+             <input type="number" id="precio" name="precio" class="form-input">
+         </div>
+         <div class="input-container">
+            <label for="oferta" class="form-label">Oferta</label>       
+             <input type="number" id="oferta" name="oferta" placeholder="- %" class="form-input">
+         </div>
+         <div class="input-container">
+            <label for="talle" class="form-label">Talle</label>
+            <input type="number" id="talle" name="talle" class="form-input">
+         </div>
+         <div class="input-container">
+            <label for="color" class="form-label">Color</label>
+            <input type="text" id="color" name="color" class="form-input">
+         </div>
+         <div class="input-container">
+             <label for="ultima_coleccion" class="form-label"> Pertenece a Ultima Coleccion?</label>
+             <select name="ultima_coleccion" id="ultima_coleccion" class="form-input">
+                 <option value="true"> Si </option>
+                 <option value="false"> No </option>
+             </select>
+         </div>
+         <div class="input-container">
+             <label for="descripcion" class="form-label"></label>
+             <textarea name="descripcion" id="descripcion"class="form-input"></textarea>
+          <div class="input-container">
+            <button type="submit" class="create-buttom">Guardar producto</button>
+          </div>   
+         </div>
+
+         
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+ </main>   
+    <!-- Footer -->
+    <%- include('./partials/footer')%>
+</body>
+</html>
