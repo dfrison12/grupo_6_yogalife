@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <!--Head-->
-    <%- include ('./partials/head')%>
-    <title>Tienda de Yoga | yogalife</title>
-    <link rel="stylesheet" href="CSS/shopcartstyles.css">
+    <%- include ('./partials/head',{title:'CarritodeCompra', style:'shopcartstyles.css'}) %>
 </head>
 <body>
     <!--Header-->
@@ -35,10 +33,10 @@
                                 <label for="talle"> Talle: </label>
                                 <div class="size-button"></div>
                                     <input class="size" type="button" name="talle" value=<%=prenda.talle%>>       
-                                </div>
-            
-                                <p>¡Casi es tuyo!</p>
+                            </div>
                             <input class="amount" type="number" value="1">
+                                <p>¡Casi es tuyo!</p>
+                            
                         <button type="submit">Editar compra</button>
                     </div>    
                 </div>
