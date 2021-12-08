@@ -15,7 +15,7 @@
                     <div class="product-description">
                         <h1 class="product-name"><%= prenda.titulo %></h1>
                         <div class="product-images">
-                            <a href="images/productsImages/<%= prenda.img1 %>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
+                            <a href="images/productsImages/<%=prenda.img1%>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
                         </div>
                         <p class="price"> $ <%= prenda.precio %> </p>
                         <% if (prenda.oferta > 0) { %>
