@@ -33,6 +33,13 @@ font-family: 'Raleway', sans-serif;
  margin-bottom: 50px;
  color:rgba(10, 68, 59, 0.782) ;
 }
+.register{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+
+}
 /* DIV USER + ANIMATION*/
 .formUser{
     width: 40%;
@@ -90,7 +97,7 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Raleway', sans-serif;
  text-align: center;
  margin-top: 25px;
- margin-bottom: 50px;
+ margin-bottom: 11px;
  color:rgba(13, 119, 102, 0.255) ;
  
  /*buttom*/
