@@ -30,8 +30,7 @@ const userController = {
 
     createUser: (req, res) => {
        let user = {
-            id:catalogo[catalogo.length - 1].id + 1,
-            ...req.body,
+            id:usuario[usuario.length - 1].id + 1,
             name: req.body.name,
             lastname: req.body.lastname,
             birthDate: req.body.birthDate,
@@ -40,8 +39,8 @@ const userController = {
             passwordConfirmation: req.body. passwordConfirmation,
 
        }  
-       usuario.push(nuevaprenda)
-       fs.writeFileSync(userFilePath, JSON.stringify(catalogo, null, ''))
+       usuario.push(user)
+       fs.writeFileSync(userFilePath, JSON.stringify(usuario, null, ''))
        res.redirect('/')
   }
 }
