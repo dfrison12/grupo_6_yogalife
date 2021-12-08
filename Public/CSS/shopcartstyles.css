@@ -48,7 +48,7 @@ main section article div.product-detail1 div.product-images{
     flex-direction: column;
     justify-content: space-between;
     background-color: #117a653d;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 3px 2px 3px 0px #117a65;
 }
 
