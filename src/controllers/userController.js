@@ -1,4 +1,9 @@
-const fs = require ('fs')
+const fs = require('fs');
+const path = require('path');
+
+const userFilePath = path.join(__dirname, '../data/userDataBase.json');
+let usuario = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 //DATOS PARA TRABAJAR
 
@@ -23,18 +28,21 @@ const userController = {
         res.render('register')
     },
 
-    createUser: function (req, res) {
+    createUser: (req, res) => {
        let user = {
+            id:catalogo[catalogo.length - 1].id + 1,
+            ...req.body,
             name: req.body.name,
             lastname: req.body.lastname,
             birthDate: req.body.birthDate,
             email: req.body.email,
             password: req.body.password,
-       }
+            passwordConfirmation: req.body. passwordConfirmation,
 
-       fs.appendFileSync('dataTest.json', user)
-
-       res.redirect('/') 
+       }  
+       usuario.push(nuevaprenda)
+       fs.writeFileSync(userFilePath, JSON.stringify(catalogo, null, ''))
+       res.redirect('/')
   }
 }
 module.exports = userController;
