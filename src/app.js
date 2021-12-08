@@ -5,12 +5,16 @@ const mainRouter = require ('./routes/mainRouter')
 const productsRouter = require ('./routes/productsRouter')
 const userRouter = require ('./routes/userRouter')
 
-app.set('view engine','ejs');
 
-// Configuración
-app.use(express.static('../Public'));
+// Configuración - Define carpeta estatica
+app.use(express.static('../public'));
+
+//Configutacion - Guardia de Seguridad para method POST
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+
 //Template engine
-
+app.set('view engine','ejs');
 
 
 //Rutas
