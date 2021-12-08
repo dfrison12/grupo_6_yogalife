@@ -83,6 +83,14 @@ const productsController = {
         res.redirect('/products')
     },
 
+    //Editar producto -- Mostrar Formulario
+    edit: (req,res) => {
+        let itemId = req.params.id;
+        let productToEdit = catalogo.find(prenda => prenda.id == itemId)
+
+        res.render('productEditForm', {productToEdit})
+    }
+
 };
 
 

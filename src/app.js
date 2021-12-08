@@ -23,8 +23,7 @@ app.set('view engine','ejs');
 //Rutas
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
-app.use('/login', userRouter);
-app.use('/register', userRouter);
+app.use('/user', userRouter);
 app.use('/shopcart', mainRouter);
 
 

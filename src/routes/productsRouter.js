@@ -44,6 +44,8 @@ router.get('/product-detail/:id', productsController.productDetail);
 
 // EDITAR PRODUCTO
 //Editar -- Mostrar formulario 
+router.get('/edit/:id', productsController.edit);
+
 //router.get('/edit/:id', productsController.edit);
 
 
