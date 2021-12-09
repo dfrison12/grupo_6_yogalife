@@ -75,7 +75,7 @@ main div div.product-description{
     padding: 20px;
     border-radius: 15px;
     width: 100%;
-    height: 380px;
+    height: 435px;
 }
 
 main div div.product-description .sale{
@@ -89,7 +89,7 @@ main div div.product-description .sale{
 
 
 div.product-description form{
-    margin: 10px 0px;
+    margin: 10px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -106,7 +106,7 @@ div.product-description form{
         width: 100%;
         height: 100%;
         position: absolute;
-        z-index: -1;
+        opacity: 0;
         
     }
 
@@ -148,7 +148,7 @@ div.product-description form{
     form input.amount, button.add {
         text-align: center;
         margin: 5px 0px;
-        width: 60px;
+        width: 70px;
         height: 35px;
         border-radius: 20px;
         font-size: 12px;
@@ -156,8 +156,13 @@ div.product-description form{
         border: 3px rgb(165, 162, 162) solid;
         background-color: #E9F7EF;
         font-weight: 600;
-
     }
+
+    form input.amount{
+        width: 38px
+    }
+
+
 
     form input.amount:hover, button.add:hover{
         background-color: #04614e;
@@ -183,6 +188,63 @@ div.product-description form{
         font-family: 'Raleway';
     }
 
+
+    div.buttons-container{
+        display: flex;
+    }
+
+    div.edit-button{
+        text-align: center;
+        margin: 5px 0px;
+        width: 70px;
+        height: 35px;
+        border-radius: 20px;  
+        transition: all 250ms;
+        border: 3px rgb(165, 162, 162) solid;
+        background-color: #E9F7EF;    
+        padding: 6px 0px 25px 0px;
+    }
+
+    div.edit-button a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        color: black;
+        transition: all 250ms;
+        background: none
+    }
+
+    div.edit-button:hover, .edit-button a:hover{
+        background-color: #04614e;
+        color:white;
+    }
+
+    div.edit-button button.edit-button{
+        background-color: #E9F7EF;
+        padding: 7px;
+        margin: 0px 0px 0px 7px;
+        border-radius: 20px;
+    }
+
+    button.delete-button{
+        width: 70px;
+        height: 35px;
+        margin: 0px 0px 0px 10px;
+        text-align: center;
+        border-radius: 20px;
+        font-weight: 600;
+        border: 3px rgb(165, 162, 162) solid;
+        background-color: #E9F7EF;    
+        transition: all 250ms;
+    }
+    button.delete-button:hover{
+        background-color: #04614e;
+        color:white;
+    }
+
+    div.product-description form.buttons-container{
+        margin: 7px 0px 0px 0px;
+    }
 
 @media (min-width: 419px){
 
@@ -215,7 +277,7 @@ div.product-description form{
     }
 
     main section.product-images{
-        padding: 20px 20px 0px 20px;
+        padding: 0px 35px 0px 25px;
         box-shadow: none;
         height: 490px;
     }
@@ -224,7 +286,14 @@ div.product-description form{
         flex-direction: row;
         box-shadow: none;
         background: none;
+        height: 520px;
     }
+
+    main section.product-images div.product-images a{
+        align-self: center;
+    }
+
+    
 
 
     main div section.product-images img.main-picture{
@@ -258,7 +327,7 @@ div.product-description form{
     section.product-description div.product-description{
          border: none;
          box-shadow: none;
-         height: 470px;
+         height: 540px;
     }
 
     section.product-description div.product-description{
@@ -302,5 +371,6 @@ div.product-description form{
     div.description {
     background-color:  #fbeb97 ;
     padding: 20px;
+    margin-top: 20px;
     } 
 }

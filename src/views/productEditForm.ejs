@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Editando: ' + '¿?', style:'productEditForm.css'}) %>
+<%- include('partials/head', {title: 'Editando Prenda' ,style:'productEditForm.css'}) %>
 <body>
 	 <!-- Header -->
      <%- include ('./partials/header') %>
@@ -11,48 +11,55 @@
 				<h2 class="product-title">Estás editando: <%=productToEdit.titulo%></h2>
 			</div>
 		<div class="form-container">
-			<form action="/products/edit/<%=productToEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+			<form action="/products/<%=productToEdit.id%>/update?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="product-detail-container">
 					<div class="input-container">
-						<label for="titulo" class="form-label">productToEdit</label>       
-                        <input type="text" id="titulo" name="titulo" class="form-input">
+						<label for="titulo" class="form-label">Prenda: </label>       
+                        <input type="text" id="titulo" name="titulo" class="form-input" value="<%=productToEdit.titulo%>">
 					</div>
 					<div class="input-container">
-                        <label for="precio" class="form-label">Precio</label>       
-                         <input type="number" id="precio" name="precio" class="form-input">
+                        <label for="precio" class="form-label">Precio: </label>       
+                         <input type="number" id="precio" name="precio" class="form-input" value="<%=productToEdit.precio%>" >
                     </div>
                     <div class="input-container">
-                        <label for="oferta" class="form-label">Descuento</label>       
-                         <input type="number" id="oferta" name="oferta" placeholder="- %" class="form-input">
+                        <label for="oferta" class="form-label">Descuento en %</label>       
+                         <input type="number" id="oferta" name="oferta" class="form-input" value="<%=productToEdit.oferta%>">
                     </div>
                     <div class="input-container">
                         <label for="ultima_coleccion" class="form-label"> Pertenece a Ultima Coleccion?</label>
                         <select name="ultima_coleccion" id="ultima_coleccion" class="form-input">
-                            <option value="true"> Si </option>
+                           <% if (productToEdit.ultima_coleccion == true) {%>
+                            <option value="true" selected> Si </option>
                             <option value="false"> No </option>
+                           <%} else {%> 
+                              <option value="true"> Si </option>
+                              <option value="false" selected> No </option>
+                              <%}%>
                         </select>
                     </div>
 
                     <div class="input-container">
-                        <label for="descripcion" class="form-label"></label>
-                        <textarea name="descripcion" id="descripcion" class="form-input"></textarea>
+                        <label for="descripcion" class="form-label"> Agregue aquí una breve Descripcion:</label>
+                        <textarea name="descripcion" id="descripcion" class="form-input" placeholder="<%=productToEdit.descripcion%>"></textarea>
                     </div>
+                    <div class="upload-img">
                     <div class="input-container">
                        <label for="img1" class="form-label">Imagen principal</label>
-                       <input type="file" name="img1" id="img1" class="form-input">
+                       <input type="file" name="img1" id="img1" class="form-input" value="<%=productToEdit.img1%>" required>
                     </div>
                     <div class="input-container">
                        <label for="img2" class="form-label">Imagen adicional</label>
-                       <input type="file" name="img2" id="img2" class="form-input">
+                       <input type="file" name="img2" id="img2" class="form-input" value="<%=productToEdit.img2%>" required>
                     </div>
                     <div class="input-container">
                        <label for="img3" class="form-label">Imagen adicional</label>
-                       <input type="file" name="img3" id="img3" class="form-input">
+                       <input type="file" name="img3" id="img3" class="form-input" value="<%=productToEdit.img3%>" required>
                     </div>
                     <div class="input-container">
                        <label for="img4" class="form-label">adicional adic</label>
-                       <input type="file" name="img4" id="img4" class="form-input">
+                       <input type="file" name="img4" id="img4" class="form-input" value="<%=productToEdit.img4%>" required>
                     </div>
+                     </div>
                     <div class="input-container">
                        <button type="submit" class="edit-buttom">Guardar producto</button>
                     </div>   
