@@ -34,7 +34,7 @@
                     <div class='color-button'>
                         <% for (let i = 0; i < prenda.color.length; i++) { %>             
                             <input class="color" type="button" name="color" value=<%=prenda.color[i]%>>
-                            <img class="color" src="/images/colors/<%= prenda.color_archivo[i]%>" atl="color">      
+                            <img class="color" src="/images/colors/<%= prenda.color[i]%>.jpg" atl="color">      
                         <% } %>
                     </div>
                 </div>
@@ -45,15 +45,24 @@
                             <input class="size" type="button" name="talle" value=<%=prenda.talle[i]%>>       
                         <% } %>
                     </div>
+                <label for="amount"> Cantidad</label>
+                <input class="amount" name="amount" id="amount" type="number" value="1">
 
-                    <p>¡Casi es tuyo!</p>
-                <input class="amount" type="number" value="1">
-                <button class= "add" type="submit" name="send">Comprar</button>
-            </div>
+                <h9>Agregar al carrito</h9>
+                <button class= "add" type="submit" name="send">Agregar</button>
+                
                 
                 </form>
-                    
+                <div class="buttons-container">
+                    <div class="edit-button">
+                        <a class= "edit-button" href="/products/<%=prenda.id%>/edit">Editar</a>
+                    </div>
+                    <form class="buttons-container" action="/products/<%=prenda.id%>/delete?_method=DELETE" method="POST">
+                    <button class= "delete-button" type="submit">Eliminar</button>
+                    </form>      
+                </div>
             </div>
+            
         </section>
         </div> 
         <div class="description" id="description">

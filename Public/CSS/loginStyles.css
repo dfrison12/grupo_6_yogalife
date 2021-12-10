@@ -3,11 +3,11 @@
 }
 
 body{
-	margin:0px;
-	padding:0%;
 	color:#6a6f8c;
-	background:#c8c8c8;
-	font:600 16px/18px 'Open Sans',sans-serif;
+	background:#f7dc6f94;
+	font-weight:600;
+    font-size: 16px;
+    font-family: 'Raleway', 'Open Sans','sans-serif';
 }
 .loginWrap{
 	width:100%;
@@ -16,7 +16,7 @@ body{
 	min-height:640px;
 	position: relative;
 	background-image: url(/images/yogalifebackground.png);
-	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.30);
 }
 .SiginHtml{
 	width: 100%;
@@ -34,6 +34,13 @@ font-family: 'Raleway', sans-serif;
  margin-top: 15px;
  margin-bottom: 50px;
  color:rgba(10, 68, 59, 0.782) ;
+}
+.register{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+
 }
 /* DIV USER + ANIMATION*/
 .formUser{
@@ -92,9 +99,11 @@ font-family: 'Raleway', sans-serif;
 font-family: 'Raleway', sans-serif;
  text-align: center;
  margin-top: 25px;
- margin-bottom: 50px;
+ margin-bottom: 11px;
  color:rgba(13, 119, 102, 0.255) ;
-    
+ 
+ /*buttom*/
+
 }
 .button {
     font-weight: bold;
@@ -132,10 +141,7 @@ button:after {
 @media (min-width: 419px) {
 
     body{
-        margin: 50px;
-        padding:0%;
         color:#6a6f8c;
-        background:#c8c8c8;
         font:600 16px/18px 'Open Sans',sans-serif;
     }
 
@@ -145,7 +151,7 @@ button:after {
         max-width:419px;
         min-height:570px;
         position: relative;
-        background-image: url(/images/yogalifebackground.png);
+        
         box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
     }
     .SiginHtml{
@@ -170,10 +176,7 @@ button:after {
 @media (min-width: 769px){
 
     body{
-        margin: 50px;
-        padding:0%;
         color:#6a6f8c;
-        background:#c8c8c8;
         font:600 16px/18px 'Open Sans',sans-serif;
     }
 
@@ -181,7 +184,7 @@ button:after {
         width:100%;
         margin: 0 auto;
         max-width:419px;
-        min-height:570px;
+        min-height:824px;
         position: relative;
         background-image: url(/images/yogalifebackground.png);
         box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
@@ -189,7 +192,7 @@ button:after {
     .SiginHtml{
         width: 100%;
         max-width:419px;
-        min-height:570px;
+        min-height:824px;
         position:absolute;
         margin: 0 auto;
         padding:15px 20px;
@@ -205,3 +208,4 @@ button:after {
         padding:15px 46px;  
     }
 }
+

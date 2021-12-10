@@ -1,4 +1,4 @@
-//Modulos
+//MODULOS
 const express = require ('express');
 const router = express.Router();
 const multer = require('multer');
@@ -7,7 +7,7 @@ const path = require('path');
 
 const productsController = require ('../controllers/productsController');
 
-//Configutacion Multer
+//CONFIGURACION MULTER
 let multerDiskStorage = multer.diskStorage({
     destination:(req, file, cb) => {
         let folder = path.join(__dirname,'../../public/images/productsImages')
@@ -22,23 +22,31 @@ let multerDiskStorage = multer.diskStorage({
 let upload =  multer({storage: multerDiskStorage});
 
 
-//Rutas
-
-//Mostrar Catalogo Completo//
+//-MOSTRAR CATALOGO COMPLETO
 router.get('/', productsController.index);
 
-//Buscar prendas en el catalogo//
+//-BUSCAR PRODUCTO SEGUN NOMBRE
 router.get('/search', productsController.search);
 
-//Registrar nueva prenda para el catalogo - Formulario
+//-CREAR NUEVO PRODUCTO
+//--Formulario
 router.get('/create', productsController.create)
-//Registrar nueva prenda para el catalogo - Guardar
+//--Guardar
 router.post('/store', upload.any(''), productsController.store)
 
 
-
-//Mostrar un producto en particular//
+//-MOSTRAR UN PRODUCTO PARTICULAR
 router.get('/product-detail/:id', productsController.productDetail);
+
+//-EDITAR PRODUCTO
+//--Mostrar formulario 
+router.get('/:id/edit', productsController.edit);
+//--Actualizar cambios
+router.put('/:id/update',upload.any(''), productsController.update);
+
+//-BORRAR PRENDA
+router.delete('/:id/delete', productsController.destroy)
+
 
 
 
