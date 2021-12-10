@@ -21,7 +21,10 @@
                         <% if (prenda.oferta > 0) { %>
                             <p class='sale'> <%= prenda.oferta %>% off</p>
                             <% } %>
-                            <form action=# method="get">
+                        <p class="color"> <%= prenda.color %> </p>
+                        <p class="talle"> <%= prenda.talle %> </p>
+                        <p class="cantidad"> <%= prenda.cantidad %> </p>
+                            <!--<form action=# method="get">
                             <div class="color">
                                 <label for="color"> Color: </label>
                                 <div class='color-button'>         
@@ -34,7 +37,7 @@
                                 <div class="size-button"></div>
                                     <input class="size" type="button" name="talle" value=<%=prenda.talle%>>       
                             </div>
-                            <input class="amount" type="number" value="1">
+                            <input class="amount" type="number" value="1">-->
                                 <p>¡Casi es tuyo!</p>
                             
                         <button type="submit">Editar compra</button>
