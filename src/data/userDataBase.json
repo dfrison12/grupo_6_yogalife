@@ -6,6 +6,7 @@
         "birthDate": "10/11/1992",
         "email": "alan@gmail.com",
         "passsword": "123",
-        "passwordConfirmation": "123"
+        "passwordConfirmation": "123",
+        "image": null
     }
 ]
