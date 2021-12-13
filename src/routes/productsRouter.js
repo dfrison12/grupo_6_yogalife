@@ -42,7 +42,7 @@ router.get('/product-detail/:id', productsController.productDetail);
 //--Mostrar formulario 
 router.get('/:id/edit', productsController.edit);
 //--Actualizar cambios
-router.put('/:id/update',upload.any(''), productsController.update);
+router.put('/:id/update',upload.any(), productsController.update);
 
 //-BORRAR PRENDA
 router.delete('/:id/delete', productsController.destroy)

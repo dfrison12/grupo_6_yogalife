@@ -7,6 +7,15 @@
         "email": "alan@gmail.com",
         "passsword": "123",
         "passwordConfirmation": "123",
-        "image": null
+        "image": "user-default.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dario",
+        "lastname": "Frison",
+        "birthDate": "1992-11-12",
+        "email": "dariohfrison@gmail.com",
+        "passwordConfirmation": "dariohfrison",
+        "image": "user-default.jpg"
     }
 ]
