@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Editando Prenda' ,style:'productEditForm.css'}) %>
+<%- include ('./partials/head',{title:'Editando', style:'productsForms.css'}) %>
 <body>
 	 <!-- Header -->
      <%- include ('./partials/header') %>
@@ -25,8 +25,9 @@
                         <label for="oferta" class="form-label">Descuento en %</label>       
                          <input type="number" id="oferta" name="oferta" class="form-input" value="<%=productToEdit.oferta%>">
                     </div>
-                    <div class="input-container">
-                        <label for="ultima_coleccion" class="form-label"> Pertenece a Ultima Coleccion?</label>
+                  <div class="ultima_coleccion-container">
+                    <div class="input-container" id="ultima_coleccion">
+                        <label for="ultima_coleccion" id="ultima_coleccion" class="form-label"> Pertenece a Ultima Coleccion?</label>
                         <select name="ultima_coleccion" id="ultima_coleccion" class="form-input">
                            <% if (productToEdit.ultima_coleccion == true) {%>
                             <option value="true" selected> Si </option>
@@ -37,6 +38,7 @@
                               <%}%>
                         </select>
                     </div>
+                  </div>
 
                     <div class="input-container">
                         <label for="descripcion" class="form-label"> Agregue aquí una breve Descripcion:</label>
@@ -61,7 +63,7 @@
                     </div>
                      </div>
                     <div class="input-container">
-                       <button type="submit" class="edit-buttom">Guardar producto</button>
+                       <button type="submit" class="button">Guardar cambios</button>
                     </div>   
 
 					

@@ -40,11 +40,11 @@ input.form-input{
     padding: 5px;
     transition: all 450ms;
     font-family: 'Raleway' , sans-serif;
-    background:rgb(60 149 131 / 38%);
+    background:rgba(255, 255, 255, 0.959);
 }
 
 input:hover.form-input{
-    background-color:rgb(247, 220, 111, .5) ;
+    background-color:rgba(245, 187, 61, 0.829) ;
     width: 315px;
 }
 
@@ -61,7 +61,7 @@ label#ultima_coleccion{
 }
 
 select.form-input{
-    width: 40px;
+    width: 30px;
     height: 30px;
     border-radius: 50%;
     text-align: center;
@@ -83,11 +83,11 @@ textarea.form-input{
     font-size: 14px;
     padding: 10px;
     transition: all 450ms;
-    background:rgb(60 149 131 / 38%);
+    background:rgba(255, 255, 255, 0.959);
 }
 
 textarea:hover.form-input{
-    background-color:rgb(247, 220, 111, .5) ;
+    background-color:rgba(245, 187, 61, 0.829) ;
     width: 315px;
 }
 
@@ -100,10 +100,10 @@ input.file-input{
     padding: 5px;
     transition: all 450ms;
     font-family: 'Raleway' , sans-serif;
-    background:rgb(60 149 131 / 38%);   
+    background:rgba(255, 255, 255, 0.959);   
 }
 
-.create-buttom{
+.button{
     text-align: center;
     margin: 20px 0px 0px 0px;
     width: 80px;
@@ -118,8 +118,8 @@ input.file-input{
     transition: all 450ms;
 }
 
-button:hover.create-buttom{
-    background-color:rgb(247, 220, 111, .5) ;
+button:hover.button{
+    background-color:rgba(245, 187, 61, 0.829) ;
 }
 
 @media (min-width: 419px) {
@@ -180,7 +180,7 @@ button:hover.create-buttom{
     }
 
     input:hover.form-input{
-        background-color:rgb(247, 220, 111, .5) ;
+        background-color:rgba(245, 187, 61, 0.829) ;
         width: 440px;
     }
 
@@ -188,7 +188,16 @@ button:hover.create-buttom{
         margin: 30px 140px 40px 140px;
     }  
     
-    
+    select.form-input{
+        transition: 350ms;
+    }
+
+    select:hover.form-input{
+        width: 50px;
+        height: 50px;
+        background-color:rgba(245, 187, 61, 0.829) ;
+    }
+
     textarea.form-input{
         font-size: 20px;
         width: 420px;
@@ -196,7 +205,7 @@ button:hover.create-buttom{
     }
 
     textarea:hover.form-input{
-        background-color:rgb(247, 220, 111, .5) ;
+        background-color:rgba(245, 187, 61, 0.829) ;
         width: 440px;    }
     
     input.file-input{

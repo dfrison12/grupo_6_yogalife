@@ -55,7 +55,7 @@ main .box{
     transition: background-color , width 0.5s;
 }
 main .box:hover{
-    background-color:rgb(247, 220, 111, .5) ;
+    background-color:rgba(245, 187, 61, 0.829);
     width: 250px;
 }
 
