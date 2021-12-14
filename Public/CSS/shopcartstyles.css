@@ -35,23 +35,25 @@ main section article div.product-detail1{
 }
 
 main section article div div.product-description{
-    display: grid;
+    align-self: auto;
+
+    
 }
 
-main section article div div div.product-images{
+/*main section article div div div.product-images{
     display: flex;
     justify-content: space-between;
     background-color: #117a653d;
     border-radius: 30px;
     box-shadow: 3px 2px 3px 0px #117a65;
-}
+}*/
 
 main section article div div div.product-images img.main-picture {
     padding: 5px;
-    width: 100%;
+    width: 40%;
     margin:auto;
     height:160px;
-    border-radius: 8px;
+    border-radius: 20px;
     opacity: 0.9;
 }
 
