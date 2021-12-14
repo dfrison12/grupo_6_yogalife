@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: #f7ecb3f8;
+    background-color: #f7ecb3db;
 }
 
 h3{
@@ -44,15 +44,14 @@ main .formSection{
 
 main .box{
     width: 220px;
-    border:n5one;
     display: block;
 	padding: 10px 0px 10px 20px;
-    margin: 0 auto;
+    margin: 15px auto;
 	border-radius:25px;
-	background:rgba(17, 122, 101, 0.3);
-    margin-top: 20px;
     border: transparent;
     font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: rgb(0, 0, 1, 0.59);
     transition: background-color , width 0.5s;
 }
 main .box:hover{
@@ -107,6 +106,12 @@ div.button button{
 div.button button:hover{
     background-color: #04614e;
     color:white;
+}
+
+label.file-input{
+    margin-top: 20px;
+    font-weight: 600;
+
 }
 
 @media (min-width: 419px){
