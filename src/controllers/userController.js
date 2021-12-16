@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const {validationResult} = require('express-validator')
 
 const userFilePath = path.join(__dirname, '../data/userDataBase.json');
 let usuario = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
@@ -16,6 +17,12 @@ const userController = {
     },
  // - Register - Formuario - Enviar datos
     createUser: (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('register', {errors: resultValidation.mapped(),oldData: req.body})
+        }
+
+
         let image
         console.log(req.files);
         if(req.files[0] != undefined){

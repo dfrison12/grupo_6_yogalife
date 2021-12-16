@@ -15,31 +15,51 @@
    
   <form class="form" action="/user/register" method="POST" enctype="multipart/form-data">
     <div id="registerForms">
-        <label for="name"></label>
-        <input type="text" class="box" id="name"   name="name" placeholder="Nombres">
-
-        <label for="lastname"></label>
-        <input type="text" class="box" id="lastname"   name="lastname" placeholder="Apellidos">
+        <label for="name">Nombre</label>
+        <input type="text" class="box" id="name"   name="name" placeholder="Nombres" value="<%= locals.oldData ? oldData.name : null%>">
+        <% if (locals.errors && errors.name) { %>
+            <p><%= errors.name.msg%></p>
+        <% } %>
+        <label for="lastname">Apellidos</label>
+        <input type="text" class="box" id="lastname"   name="lastname" placeholder="Apellidos" value="<%= locals.oldData ? oldData.lastname : null%>">
+        <% if (locals.errors && errors.lastname) { %>
+            <p><%= errors.lastname.msg%></p>
+        <% } %>
     </div>
   <h4 class="text">FECHA DE NACIMIENTO</h4>
         <label for="birthDate"></label>
         <input type="date" class="box" id="birthDate"  name="birthDate" placeholder="Seleccionar fecha de nacimiento"    min="1900-01-01"    max="2021-01-01">
-
+        <% if (locals.errors && errors.birthDate) { %>
+            <p><%= errors.birthDate.msg%></p>
+        <% } %>
    <h4 class="text">DATOS DE ACCESO</h4>
-        <label for="email"></label>
-        <input type="email" class="box" name="email" id="email" placeholder="E-mail">
-        
-        <label for="password"></label>
-        <input type="password"  name="passsword"  class="box"  id="password" placeholder="Contraseña">
-         
-        <label for="passwordConfirmation"></label>
-        <input type="passwordConfirmation"  name="passwordConfirmation"  class="box"  id="passwordConfirmation" placeholder="Confirmar contraseña">
-
+        <label for="email">Correo electronico</label>
+        <input type="email" class="box" name="email" id="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null%>">
+        <% if (locals.errors && errors.email) { %>
+            <p><%= errors.email.msg%></p>
+        <% } %>
+        <label for="password">Contraseña</label>
+        <input type="password"  name="password"  class="box"  id="password">
+        <% if (locals.errors && errors.password) { %>
+            <p><%= errors.password.msg%></p>
+        <% } %>
+        <label for="passwordConfirmation">Confirmar contraseña</label>
+        <input type="passwordConfirmation"  name="passwordConfirmation"  class="box"  id="passwordConfirmation">
+        <% if (locals.errors && errors.passwordConfirmation) { %>
+            <p><%= errors.passwordConfirmation.msg%></p>
+        <% } %>
         <label for="image" class="file-input">FOTO DE PERFIL</label>
         <input type="file" name="image" id="image" class="box">
-
-        <div class="TC">
-        <label for="T&C"><input type="checkbox"  name=" "  id="T&C"    value="Accept T&C">Acepto terminos y condiciones</label>
+        <% if (locals.errors && errors.image) { %>
+            <div class="text-danger">
+                <%= errors.image.msg %> 
+            </div>  
+        <% } %>
+        <div class="tc">
+        <label for="tyc"><input type="checkbox"  name="tyc"  id="tyc"    value="Accept T&C">Acepto terminos y condiciones</label>
+        <% if (locals.errors && errors.tyc) { %>
+            <p><%= errors.tyc.msg%></p>
+        <% } %>
         </div> 
 
         <div class="button">
@@ -47,6 +67,14 @@
         </div>
 
     </form>
+    
+    <!-- Si queresmos mostrar TODOS los errores del objeto (array mappeado) usando un ciclo for -->
+    <!-- <% if (locals.errors) { %>
+        <% for (let oneError in errors) {%>
+            <p> <%= errors[oneError].msg %></p>
+        <% } %>
+    <% } %> -->
+    
 </section>  
 
 <section class="imgSection">       
