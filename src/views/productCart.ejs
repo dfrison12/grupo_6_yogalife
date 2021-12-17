@@ -2,21 +2,26 @@
 <html lang="en">
 <head>
     <!--Head-->
-    <%- include ('./partials/head',{title:'CarritodeCompra', style:'shopcartstyles.css'}) %>
+    <%- include ('./partials/head',{title:'CarritodeCompra', style:'productCartstyles.css'}) %>
 </head>
 <body>
     <!--Header-->
     <%- include ('./partials/header')%>
 
-    <main>     
-        <section><h3>Carrito de Compras</h3>
-            <article class="shop-detail">
-                <div class="product-detail1">
+    <main>
+        <form action="#" method="POST">    
+        <div class="shop">
+            <div class=titulo-container>
+                <h3>Carrito de Compras</h3>
+            </div>
+            
+            
+                <article class="product-detail">
+                    <div class="product-images">
+                        <a href="images/productsImages/<%=prenda.img1%>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
+                    </div>
                     <div class="product-description">
                         <h1 class="product-name"><%= prenda.titulo %></h1>
-                        <div class="product-images">
-                            <a href="images/productsImages/<%=prenda.img1%>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
-                        </div>
                         <p class="price"> $ <%= prenda.precio %> </p>
                         <% if (prenda.oferta > 0) { %>
                             <p class='sale'> <%= prenda.oferta %>% off</p>
@@ -24,30 +29,18 @@
                         <p class="color"> <%= prenda.color %> </p>
                         <p class="talle"> <%= prenda.talle %> </p>
                         <p class="cantidad"> <%= prenda.cantidad %> </p>
-                            <!--<form action=# method="get">
-                            <div class="color">
-                                <label for="color"> Color: </label>
-                                <div class='color-button'>         
-                                        <input class="color" type="button" name="color" value=<%= prenda.color%>>
-                                        <img class="color" src="images/colors/<%= prenda.color_archivo%>" atl="color">
-                                </div>
-                            </div>
-                            <div class="size">
-                                <label for="talle"> Talle: </label>
-                                <div class="size-button"></div>
-                                    <input class="size" type="button" name="talle" value=<%=prenda.talle%>>       
-                            </div>
-                            <input class="amount" type="number" value="1">-->
-                                <p>¡Casi es tuyo!</p>   
-                        <button type="submit">Editar compra</button>
                     </div>    
-                </div>
-            </article>                    
+                    <div class=button-container>  
+                        <button class="delete-button" type="submit"><i class="fas fa-trash-alt icon-trash"></i></button>
+                    </div>
+                </article>
+        </div>                   
                 <div class="Cierroelcarrito">
-                    <button type="submit">Continuar comprando</button>
-                    <button type="submit">Cerrar compra</button>
+                    <button type="submit">ver mas</button>
+                    <button type="submit">Finalizar</button>
                 </div>
-        </section>            
+        </form> 
+                    
     </main>
 
     <!--Footer-->
