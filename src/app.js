@@ -24,6 +24,6 @@ app.set('view engine','ejs');
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
-app.use('/shopcart', mainRouter);
+app.use('/productCart', mainRouter);
 
 app.listen(3000, () => console.log('Servidor funcionando en puerto 3000'));

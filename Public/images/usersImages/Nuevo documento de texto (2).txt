@@ -1,0 +1,8 @@
+    main div section.product-images{
+        width: 410px;
+        height: 440px;;
+        background-color: #d7e2e0fa;
+        padding: 12px 11px 20px 14px;
+        border-radius: 20px;
+        border:#ffcd07 solid 1px;
+    }

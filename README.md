@@ -1,5 +1,5 @@
 URL del repositorio: https://github.com/dfrison12/grupo_6_yogalife.git 
-
+Enclace de Tablero de  trabajo TRELLO: https://trello.com/b/XqEP1EVu/sprin
 
 ¿Qué productos o servicios brindará nuestro sitio? ¿Quién será nuestra audienciaobjetivo? ¿Cómo ajustaremos nuestra oferta a ese público?
 Nuestro sitio estará abocado a la venta de indumentaria e accesorios para la práctica de yoga.

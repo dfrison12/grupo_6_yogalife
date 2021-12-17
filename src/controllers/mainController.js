@@ -30,7 +30,7 @@ const mainController = {
                 prenda = catalogo[i]       
                 } 
             }
-        res.render('shopcart', {'prenda':prenda},);
+        res.render('productCart', {'prenda':prenda},);
        }
 
     
