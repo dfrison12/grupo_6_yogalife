@@ -32,7 +32,7 @@ const validations = [
     check('password').notEmpty().withMessage('Debes ingresar una contraseña'),
     check('passwordConfirmation').notEmpty().withMessage('Debes ingresar una contraseña'),
     check('image').custom((value, {req}) => {
-        let file = req.file[0];
+        let file = req.files;
         let acceptedExtensions = ['.jpg','.png'];
         if (!file[0]){
             throw new Error('Tienes que subir una imagen');
