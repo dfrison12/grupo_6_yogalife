@@ -4,7 +4,7 @@
   "description": "URL del repositorio: https://github.com/dfrison12/grupo_6_yogalife.git",
   "main": "app.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd src && nodemon app.js"
   },
   "repository": {
     "type": "git",

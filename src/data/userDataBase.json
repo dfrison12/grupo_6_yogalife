@@ -17,5 +17,15 @@
         "email": "dariohfrison@gmail.com",
         "passwordConfirmation": "dariohfrison",
         "image": "user-default.jpg"
+    },
+    {
+        "id": 3,
+        "name": "dario",
+        "lastname": "frison",
+        "birthDate": "1992-11-12",
+        "email": "dariohfrison@gmail.com",
+        "password": "mannawa2010",
+        "passwordConfirmation": "mannawa2010",
+        "image": "crop_top_now_polisap04-980x1470.jpg"
     }
 ]
