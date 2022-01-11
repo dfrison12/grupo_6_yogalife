@@ -9,8 +9,8 @@ const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 //Metodos
 
 const mainController = {
-    index: (req,res) => {
-        res.render('index', {'catalogo':catalogo});
+    index: (req, res) => {
+        res.render('index', { 'catalogo': catalogo });
     },
 
     login: (req, res) => {
@@ -21,18 +21,18 @@ const mainController = {
         res.render('register')
     },
 
-    shopcart:(req, res) => {
+    shopcart: (req, res) => {
         let item = req.params.id;
         let prenda = {}
-        
-        for (let i = 0; i < catalogo.length; i++){
-            if (item == catalogo[i].id){
-                prenda = catalogo[i]       
-                } 
-            }
-        res.render('productCart', {'prenda':prenda},);
-       }
 
-    
+        for (let i = 0; i < catalogo.length; i++) {
+            if (item == catalogo[i].id) {
+                prenda = catalogo[i]
+            }
+        }
+        res.render('productCart', { 'prenda': prenda },);
+    }
+
+
 }
 module.exports = mainController;

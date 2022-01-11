@@ -3,31 +3,37 @@
 
 <!-- Head -->
 <%- include ('./partials/head',{title:'Tienda de Yoga', style:'indexStyles.css'}) %>
- 
- <body>
-        <!-- Header -->
-        <%- include ('./partials/header') %> 
-        <main>
-            <section class="every-collections">
-                <h3 class="section-title">Catalogo</h3>
-                <div class="products">
-                    <% for (let i = 0; i < catalogo.length; i++) {%>
-                            <article>
-                            <a class="article" href="/products/product-detail/<%= catalogo[i].id %>">
-                            <img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">
-                            <div class="main-article">
-                                <i class="fas fa-hamsa"></i>
-                                <p class="price"> $ <%= catalogo[i].precio %></p>
-                                <% if (catalogo[i].oferta > 0) { %>
-                                    <p class='sale'> <%= catalogo[i].oferta %>% off</p>
-                                    <% } %>
-                                <h4 class="description"><%= catalogo[i].titulo %></h4>
-                            </div>
-                            </a>
-                        </article>
-                       <% } %>               
 
-        </main>
-        <!-- Footer -->
-        <%- include('./partials/footer')%>      
-</body>
+    <body>
+        <!-- Header -->
+        <%- include ('./partials/header') %>
+            <main>
+                <section class="every-collections">
+                    <h3 class="section-title">Catalogo</h3>
+                    <div class="products">
+                        <% for (let i=0; i < catalogo.length; i++) {%>
+                            <article>
+                                <a class="article" href="/products/product-detail/<%= catalogo[i].id %>">
+                                    <img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product"
+                                        class="product_img">
+                                    <div class="main-article">
+                                        <i class="fas fa-hamsa"></i>
+                                        <p class="price"> $ <%= catalogo[i].precio %>
+                                        </p>
+                                        <% if (catalogo[i].oferta> 0) { %>
+                                            <p class='sale'>
+                                                <%= catalogo[i].oferta %>% off
+                                            </p>
+                                            <% } %>
+                                                <h4 class="description">
+                                                    <%= catalogo[i].titulo %>
+                                                </h4>
+                                    </div>
+                                </a>
+                            </article>
+                            <% } %>
+
+            </main>
+            <!-- Footer -->
+            <%- include('./partials/footer')%>
+    </body>

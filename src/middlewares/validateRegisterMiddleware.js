@@ -1,4 +1,4 @@
-const path = require ('path');
+const path = require('path');
 const { check } = require('express-validator');
 
 module.exports = [
@@ -10,15 +10,15 @@ module.exports = [
         .isEmail().withMessage('Debes ingresar un formato de correo valido'),
     check('password').notEmpty().withMessage('Debes ingresar una contraseña'),
     check('passwordConfirmation').notEmpty().withMessage('Debes ingresar una contraseña'),
-    check('image').custom((value, {req}) => {
+    check('image').custom((value, { req }) => {
         let file = req.files;
-        let acceptedExtensions = ['.jpg','.png'];
-        if (!file[0]){
+        let acceptedExtensions = ['.jpg', '.png'];
+        if (!file[0]) {
             throw new Error('Tienes que subir una imagen');
         } else {
             let fileExtensions = path.extname(file[0].originalname);
-            if(!acceptedExtensions.includes(fileExtensions)) {
-            throw new Error('extensiones admitidas jpg y png')
+            if (!acceptedExtensions.includes(fileExtensions)) {
+                throw new Error('extensiones admitidas jpg y png')
             }
         }
         return true;
