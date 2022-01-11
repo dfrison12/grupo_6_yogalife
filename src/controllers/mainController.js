@@ -10,6 +10,7 @@ const catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const mainController = {
     index: (req, res) => {
+
         res.render('index', { 'catalogo': catalogo });
     },
 

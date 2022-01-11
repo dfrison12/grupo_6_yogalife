@@ -2,72 +2,65 @@
 <html lang="en">
 <!-- Head -->
 <%- include ('./partials/head',{title:'Ingresa tu nuevo producto', style:'productsForms.css'}) %>
+<body>
+    <!-- Header -->
+    <%- include ('./partials/header') %>
 
-   <body>
-      <!-- Header -->
-      <%- include ('./partials/header') %>
-
-         <main>
-            <h2>Registrar nueva Prenda</h2>
-            <div class="form-container">
-               <form action="/products/store" method="POST" enctype="multipart/form-data">
-                  <div class="input-container">
-                     <label for="titulo" class="form-label">Prenda</label>
-                     <input type="text" id="titulo" name="titulo" class="form-input"
-                        placeholder="Ej: Claza lulea YogaFlow 5/8">
-                  </div>
-                  <div class="input-container">
-                     <label for="precio" class="form-label">Precio</label>
-                     <input type="number" id="precio" name="precio" class="form-input"
-                        placeholder="Ingresar solamente valor numerico">
-                  </div>
-                  <div class="input-container">
-                     <label for="oferta" class="form-label">Descuento en %</label>
-                     <input type="number" id="oferta" name="oferta"
-                        placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input">
-                  </div>
-                  <!-- <div class="input-container">
+ <main>
+    <h2>Registrar nueva Prenda</h2>
+    <div class="form-container">
+        <form action="/products/store" method="POST" enctype="multipart/form-data">
+        <div class="input-container">
+           <label for="titulo" class="form-label">Prenda</label>       
+            <input type="text" id="titulo" name="titulo" class="form-input" placeholder="Ej: Claza lulea YogaFlow 5/8">
+        </div>
+        <div class="input-container">
+            <label for="precio" class="form-label">Precio</label>       
+             <input type="number" id="precio" name="precio" class="form-input" placeholder="Ingresar solamente valor numerico">
+         </div>
+         <div class="input-container">
+            <label for="oferta" class="form-label">Descuento en %</label>       
+             <input type="number" id="oferta" name="oferta" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input">
+         </div>
+         <!-- <div class="input-container">
             <label for="color" class="form-label">Color</label>
             <input type="text" id="color" name="color" class="form-input"> 
          </div> -->
-                  <div class="ultima_coleccion-container">
-                     <div class="input-container" id="ultima_coleccion">
-                        <label for="ultima_coleccion" class="form-label" id="ultima_coleccion"> Pertenece a Ultima
-                           Coleccion?</label>
-                        <select name="ultima_coleccion" id="ultima_coleccion" class="form-input">
-                           <option value="true"> Si </option>
-                           <option value="false"> No </option>
-                        </select>
-                     </div>
-                  </div>
-                  <div class="input-container">
-                     <label for="descripcion" class="form-label">Descripcion</label>
-                     <textarea name="descripcion" id="descripcion" class="form-input"
-                        placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
-                  </div>
-                  <div class="input-container">
-                     <label for="img1" class="form-label">Imagen principal</label>
-                     <input type="file" name="img1" id="img1" class="file-input">
-                  </div>
-                  <div class="input-container">
-                     <label for="img2" class="form-label">Imagen complementaria 1</label>
-                     <input type="file" name="img2" id="img2" class="file-input">
-                  </div>
-                  <div class="input-container">
-                     <label for="img3" class="form-label">Imagen complementaria 2</label>
-                     <input type="file" name="img3" id="img3" class="file-input">
-                  </div>
-                  <div class="input-container">
-                     <label for="img4" class="form-label">adicional complementaria 3</label>
-                     <input type="file" name="img4" id="img4" class="file-input">
-                  </div>
-                  <div class="input-container">
-                     <button type="submit" class="button">Guardar producto</button>
-                  </div>
-               </form>
-         </main>
-         <!-- Footer -->
-         <%- include('./partials/footer')%>
-   </body>
-
+         <div class="ultima_coleccion-container">
+         <div class="input-container" id="ultima_coleccion">
+             <label for="ultima_coleccion" class="form-label" id="ultima_coleccion"> Pertenece a Ultima Coleccion?</label>
+             <select name="ultima_coleccion" id="ultima_coleccion" class="form-input">
+                 <option value="true"> Si </option>
+                 <option value="false"> No </option>
+             </select>
+         </div>
+         </div>
+         <div class="input-container">
+             <label for="descripcion" class="form-label">Descripcion</label>
+             <textarea name="descripcion" id="descripcion" class="form-input" placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
+         </div>
+         <div class="input-container">
+            <label for="img1" class="form-label">Imagen principal</label>
+            <input type="file" name="img1" id="img1" class="file-input">
+         </div>
+         <div class="input-container">
+            <label for="img2" class="form-label">Imagen complementaria 1</label>
+            <input type="file" name="img2" id="img2" class="file-input">
+         </div>
+         <div class="input-container">
+            <label for="img3" class="form-label">Imagen complementaria 2</label>
+            <input type="file" name="img3" id="img3" class="file-input">
+         </div>
+         <div class="input-container">
+            <label for="img4" class="form-label">adicional complementaria 3</label>
+            <input type="file" name="img4" id="img4" class="file-input">
+         </div>
+         <div class="input-container">
+            <button type="submit" class="button">Guardar producto</button>
+         </div>   
+        </form>
+ </main>   
+    <!-- Footer -->
+    <%- include('./partials/footer')%>
+</body>
 </html>

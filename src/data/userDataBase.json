@@ -1,12 +1,63 @@
 [
-    {
-        "id": 1,
-        "name": "Alan",
-        "lastname": "Gonzales",
-        "birthDate": "10/11/1992",
-        "email": "alan@gmail.com",
-        "passsword": "123",
-        "passwordConfirmation": "123",
-        "image": "user-default.jpg"
-    }
+ {
+  "id": 1,
+  "name": "Alan",
+  "lastname": "Gonzales",
+  "birthDate": "10/11/1992",
+  "email": "alan@gmail.com",
+  "passsword": "123",
+  "passwordConfirmation": "123",
+  "image": "user-default.jpg"
+ },
+ {
+  "id": 2,
+  "name": "belen",
+  "lastname": "mana",
+  "birthDate": "2020-12-30",
+  "email": "dariohfrison@gmail.com",
+  "password": "mannawa2010",
+  "passwordConfirmation": "dario",
+  "tyc": "Accept T&C"
+ },
+ {
+  "id": 3,
+  "name": "belen",
+  "lastname": "mana",
+  "birthDate": "2020-12-30",
+  "email": "dariohfrison@gmail.com",
+  "password": "mannawa2010",
+  "passwordConfirmation": "dario",
+  "tyc": "Accept T&C"
+ },
+ {
+  "id": 4,
+  "name": "nuevoooooddd",
+  "lastname": "mana",
+  "birthDate": "2020-12-29",
+  "email": "dariohfrison@gmail.com",
+  "password": "dario",
+  "passwordConfirmation": "dario",
+  "tyc": "Accept T&C"
+ },
+ {
+  "id": 5,
+  "name": "nuevooooofdwfsfdsf",
+  "lastname": "manafsdfsfsdfsdf",
+  "birthDate": "2020-12-30",
+  "email": "dariohfrison@gmail.com",
+  "password": "mannawa2010",
+  "passwordConfirmation": "dsadsad",
+  "tyc": "Accept T&C"
+ },
+ {
+  "id": 6,
+  "name": "javi prueba",
+  "lastname": "h",
+  "birthDate": "2020-12-29",
+  "email": "dariosnow@gmail.com",
+  "password": "$2a$10$it2EUVltJxHILcTqYQb9zerGQe9m6bq4KyLSAK1x/.NyD1XXxiZfO",
+  "passwordConfirmation": "dsa",
+  "tyc": "Accept T&C",
+  "image": "Tanya.jpg"
+ }
 ]

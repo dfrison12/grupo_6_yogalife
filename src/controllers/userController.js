@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator')
+
+const User = require('../models/User')
 
 const userFilePath = path.join(__dirname, '../data/userDataBase.json');
 let usuario = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
@@ -19,9 +22,11 @@ const userController = {
     createUser: (req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
-            return res.render('register', { errors: resultValidation.mapped(), oldData: req.body })
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
         }
-
 
         let image
         console.log(req.files);
@@ -31,7 +36,29 @@ const userController = {
             image = 'user-default.jpg'
         }
 
-        let user = {
+        let userInDB = User.findByField('email', req.body.email);
+        if (userInDB) {
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya esta registrado'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
+
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password,10),
+            image: image
+        }
+
+        let userCreated = User.create(userToCreate);
+        return res.redirect('/user/login')
+
+        /*let user = {
             id: usuario[usuario.length - 1].id + 1,
             name: req.body.name,
             lastname: req.body.lastname,
@@ -43,7 +70,7 @@ const userController = {
         }
         usuario.push(user)
         fs.writeFileSync(userFilePath, JSON.stringify(usuario, null, ''))
-        res.redirect('/')
+        res.redirect('/')*/
     }
 }
 module.exports = userController;
