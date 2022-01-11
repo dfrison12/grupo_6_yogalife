@@ -9,7 +9,6 @@ module.exports = [
         .notEmpty().withMessage('Debes completar el e-mail').bail()
         .isEmail().withMessage('Debes ingresar un formato de correo valido'),
     check('password').notEmpty().withMessage('Debes ingresar una contraseña'),
-    check('passwordConfirmation').notEmpty().withMessage('Debes ingresar una contraseña'),
     check('image').custom((value, { req }) => {
         let file = req.files;
         let acceptedExtensions = ['.jpg', '.png'];

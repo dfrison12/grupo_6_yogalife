@@ -59,5 +59,15 @@
   "passwordConfirmation": "dsa",
   "tyc": "Accept T&C",
   "image": "Tanya.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Dario",
+  "lastname": "Frison",
+  "birthDate": "2020-12-31",
+  "email": "dariohfridsadsason@gmail.com",
+  "password": "$2a$10$t2zDAIgBntuUFvaoFH6rROE0fi4sXnfjOwcOcc7/RfBs9i5xl/Zze",
+  "tyc": "Accept T&C",
+  "image": "user-default.jpg"
  }
 ]

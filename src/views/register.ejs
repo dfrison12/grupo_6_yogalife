@@ -43,11 +43,6 @@
         <% if (locals.errors && errors.password) { %>
             <p><%= errors.password.msg%></p>
         <% } %>
-        <label for="passwordConfirmation">Confirmar contraseña</label>
-        <input type="password"  name="passwordConfirmation"  class="box"  id="passwordConfirmation">
-        <% if (locals.errors && errors.passwordConfirmation) { %>
-            <p><%= errors.passwordConfirmation.msg%></p>
-        <% } %>
         <label for="image" class="file-input">FOTO DE PERFIL</label>
         <input type="file" name="image" id="image" class="box">
         <% if (locals.errors && errors.image) { %>

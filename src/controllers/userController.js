@@ -55,7 +55,7 @@ const userController = {
             image: image
         }
 
-        let userCreated = User.create(userToCreate);
+        User.create(userToCreate);
         return res.redirect('/user/login')
 
         /*let user = {
