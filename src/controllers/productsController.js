@@ -14,8 +14,8 @@ const productsController = {
 
 //-MOSTRAR CATALOGO COMPLETO
     index: (req,res) => {
-        catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('products', {'catalogo': catalogo});
+        let catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('products', {'catalogo':catalogo});
     },
 
 //-BUSCAR PRODUCTO SEGUN NOMBRE 

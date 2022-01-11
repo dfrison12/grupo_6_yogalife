@@ -1,50 +1,39 @@
-//MODULOS
+// Moodulos
 const express = require ('express');
 const router = express.Router();
-const multer = require('multer');
-const path = require('path');
 
-
+// Controller
 const productsController = require ('../controllers/productsController');
 
-//CONFIGURACION MULTER
-let multerDiskStorage = multer.diskStorage({
-    destination:(req, file, cb) => {
-        let folder = path.join(__dirname,'../../public/images/productsImages')
-        cb (null, folder)
-    },
-    filename:(req, file, cb) => {
-        let imageName = file.originalname
-        cb (null, imageName)
-    }
-});
-
-let upload =  multer({storage: multerDiskStorage});
+// Middlewares
+const upload = require ('../middlewares/multerMiddleware')
 
 
-//-MOSTRAR CATALOGO COMPLETO
+// Mostrar Catalogo Completo
 router.get('/', productsController.index);
 
-//-BUSCAR PRODUCTO SEGUN NOMBRE
+// Buscar producto
 router.get('/search', productsController.search);
 
-//-CREAR NUEVO PRODUCTO
-//--Formulario
+// CREAR NUEVO PRODUCTO
+
+// Formulario de Creacion
 router.get('/create', productsController.create)
-//--Guardar
+// Guardar Nuevo Producto
 router.post('/store', upload.any(''), productsController.store)
 
 
-//-MOSTRAR UN PRODUCTO PARTICULAR
+// MOSTRAR UN PRODUCTO PARTICULAR
 router.get('/product-detail/:id', productsController.productDetail);
 
-//-EDITAR PRODUCTO
-//--Mostrar formulario 
+// EDITAR PRODUCTO
+
+// Formulario de Edicion
 router.get('/:id/edit', productsController.edit);
-//--Actualizar cambios
+// Guardar cambios
 router.put('/:id/update',upload.any(), productsController.update);
 
-//-BORRAR PRENDA
+// ELIMINAR PRODUCTO
 router.delete('/:id/delete', productsController.destroy)
 
 

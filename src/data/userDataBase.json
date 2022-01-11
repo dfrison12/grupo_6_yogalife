@@ -1,1 +1,12 @@
-[{"id":1,"name":"Alan","lastname":"Gonzales","birthDate":"10/11/1992","email":"alan@gmail.com","passsword":"123","passwordConfirmation":"123","image":"user-default.jpg"},{"id":2,"name":"Dario","lastname":"Frison","birthDate":"1992-11-12","email":"dariohfrison@gmail.com","passwordConfirmation":"dariohfrison","image":"user-default.jpg"},{"id":3,"name":"dario","lastname":"frison","birthDate":"1992-11-12","email":"dariohfrison@gmail.com","password":"mannawa2010","passwordConfirmation":"mannawa2010","image":"crop_top_now_polisap04-980x1470.jpg"},{"id":4,"name":"Dario","lastname":"Frison","birthDate":"1992-11-12","email":"dariohfrison@gmail.com","password":"dariofrison","passwordConfirmation":"dariofrison","image":"VESTIDO-MAGIA-ANCESTRAL-NEGRO-2-980x1470.jpg"}]
+[
+    {
+        "id": 1,
+        "name": "Alan",
+        "lastname": "Gonzales",
+        "birthDate": "10/11/1992",
+        "email": "alan@gmail.com",
+        "passsword": "123",
+        "passwordConfirmation": "123",
+        "image": "user-default.jpg"
+    }
+]
