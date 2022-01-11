@@ -7,6 +7,8 @@ const userRouter = require ('./routes/userRouter')
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
+let logMiddleware = require ('./middlewares/logMiddleware');
+
 // Configuración - Define carpeta estatica
 app.use(express.static('../public'));
 
@@ -20,10 +22,15 @@ app.use(methodOverride('_method'));
 app.set('view engine','ejs');
 
 
+app.use(logMiddleware);
+
+
 //Rutas
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
 app.use('/productCart', mainRouter);
+
+
 
 app.listen(3000, () => console.log('Servidor funcionando en puerto 3000'));

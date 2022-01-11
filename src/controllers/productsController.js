@@ -14,7 +14,8 @@ const productsController = {
 
 //-MOSTRAR CATALOGO COMPLETO
     index: (req,res) => {
-        res.render('products', {'catalogo':catalogo});
+        catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render('products', {'catalogo': catalogo});
     },
 
 //-BUSCAR PRODUCTO SEGUN NOMBRE 
@@ -119,7 +120,7 @@ const productsController = {
 
         //Redefinimos la variable con los datos del  Formulario
         productToEdit = {
-            id: productToEdit.id,
+            ...productToEdit,
             ...req.body,
             talle: [1,2,3],
             color: ["bosque-encantado",

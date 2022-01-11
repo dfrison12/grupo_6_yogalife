@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require ('path');
 const { check } = require('express-validator');
+const logDBMiddleware = require ('../middlewares/logDBMiddleware')
 
 const userController = require ('../controllers/userController');
 
@@ -53,7 +54,7 @@ router.get('/login', userController.login);
 
 // - Register - Formulario
 router.get('/register', userController.register);
-router.post('/register',upload.any(), validations, userController.createUser);
+router.post('/register',upload.any(), validations, logDBMiddleware,  userController.createUser);
 
 
 module.exports = router;
