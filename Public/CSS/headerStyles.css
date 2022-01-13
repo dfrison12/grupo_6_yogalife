@@ -34,7 +34,6 @@ header.main-header{
     top: 0;
     z-index: 100;
     width: 100%;
-    opacity: 0.78;
 }
 
 header div.logo a{
@@ -142,7 +141,6 @@ header nav.main-navbar a{
     font-style:bold;
 }
 
-
 @media (min-width: 419px){
 
     /* HEADER */
@@ -203,6 +201,16 @@ header nav.main-navbar a{
         font-size: 23px;
     }
 
+    header div.user-avatar-container{
+        display: flex;
+    }
+    
+    header img.user-avatar {
+        width: 15px;
+        border-radius: 50%;
+        margin: -2px 4px 0px 0px
+    }
+    
     .burger-menu{
         display: none;
     }
@@ -233,6 +241,10 @@ header nav.main-navbar a{
         font-size: 12px;
     }
 
+    header img.user-avatar {
+        width: 18px;
+    }
+
 }
 
 @media (min-width: 1200px){
@@ -260,6 +272,11 @@ header nav.main-navbar a{
 
     header nav.main-navbar li a i{
         font-size: 16px;
+    }
+
+    header img.user-avatar {
+        width: 30px;
+        margin: -2px 8px 0px 0px;
     }
 
 }

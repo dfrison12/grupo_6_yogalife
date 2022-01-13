@@ -10,15 +10,54 @@ let usuario = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const userController = {
-    // - Login - Formulario   
-    login: function (req, res) {
+    // - Login - Formulario - Mostrar  
+    login: (req, res) => {
         res.render('login')
     },
     // - Register - Formulario - Mostrar
-    register: function (req, res) {
+    register: (req, res) => {
         res.render('register')
     },
-    // - Register - Formuario - Enviar datos
+
+    // Procesar login
+    loginProcces: (req,res) => {
+        let userToLogin = User.findByField('email',req.body.email);
+        
+        if(userToLogin) {
+            let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if (isOkPassword){
+                delete userToLogin.password
+                req.session.userLogged = userToLogin
+
+                if (req.body.rememberUser){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60})
+                }
+            
+                return res.redirect("/")
+            }
+        }
+        return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'El usuario o contraseña son invalidos'
+                }
+            },
+        });
+    },
+
+    profile: (req,res) => {
+        return res.render('userProfile',{
+            user: req.session.userLogged
+        })
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('userEmail')
+        req.session.destroy();
+        return res.redirect('/');
+    },
+
+    // Register - Formuario - Enviar datos
     createUser: (req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
@@ -51,7 +90,7 @@ const userController = {
 
         let userToCreate = {
             ...req.body,
-            password: bcryptjs.hashSync(req.body.password,10),
+            password: bcryptjs.hashSync(req.body.password,12),
             image: image
         }
 

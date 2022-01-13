@@ -25,7 +25,7 @@ body{
 	position:absolute;
     margin: 0 auto;
     padding:15px 34px;
-    background:rgba(14, 143, 121, 0.39) ;
+    background: #117A65C7 ;
     color: white;
 }
 .siginTitle{
@@ -33,18 +33,19 @@ font-family: 'Raleway', sans-serif;
  text-align: center;
  margin-top: 15px;
  margin-bottom: 50px;
- color:rgba(10, 68, 59, 0.782) ;
 }
+
 .register{
     font-family: 'Raleway', sans-serif;
     text-align: center;
     margin-top: 5px;
     color: white;
+    margin: 15px 0px 10px 0px
 
 }
 /* DIV USER + ANIMATION*/
 .formUser{
-    width: 40%;
+    width: 75%;
     border:none;
 	padding:15px 34px;
     margin: 0 auto;
@@ -68,7 +69,7 @@ font-family: 'Raleway', sans-serif;
 }
 /* DIV PASSWORD + ANIMATION*/
 .formPassword{
-    width: 38%;
+    width: 75%;
     border:none;
     margin: 0 auto;
 	padding:15px 20px;
@@ -88,6 +89,7 @@ font-family: 'Raleway', sans-serif;
     background: none;
     display: block;
     width: 100%;
+    font-size: 15px;
 }
 .password {
     border: none;
@@ -101,10 +103,18 @@ font-family: 'Raleway', sans-serif;
  margin-top: 25px;
  margin-bottom: 11px;
  color:rgba(13, 119, 102, 0.255) ;
- 
- /*buttom*/
-
 }
+
+div.rememberUser-container{
+    text-align: center;
+}
+
+input.remember-checkbox{
+    margin:0px 10px 0px 0px;
+}
+
+
+/*buttom*/
 .button {
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
@@ -151,7 +161,6 @@ button:after {
         max-width:419px;
         min-height:570px;
         position: relative;
-        
         box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
     }
     .SiginHtml{
@@ -161,7 +170,6 @@ button:after {
         position:absolute;
         margin: 0 auto;
         padding:15px 20px;
-        background:rgba(14, 143, 121, 0.39) ;
         color: white;
     }
     .formUser{
@@ -196,7 +204,6 @@ button:after {
         position:absolute;
         margin: 0 auto;
         padding:15px 20px;
-        background:rgba(14, 143, 121, 0.39) ;
         color: white;
     }
    

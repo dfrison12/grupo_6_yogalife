@@ -3,7 +3,6 @@ const { check } = require('express-validator');
 
 module.exports = [
     check('name').notEmpty().withMessage('Debes completar el nombre'),
-    check('lastname').notEmpty().withMessage('Debes completar el apellido'),
     check('birthDate').notEmpty().withMessage('Debes completar fecha de nacimiento'),
     check('email')
         .notEmpty().withMessage('Debes completar el e-mail').bail()

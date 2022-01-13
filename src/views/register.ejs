@@ -8,30 +8,37 @@
 
 <main>
 
-<section class="formSection">   
+<section class="formSection"> 
+
         <h2 class="text">REGISTRATE / <a href="/login" class="login">INGRESA</a> </h2>
-        <h4 class="text">Registrate con</h4>
-        <h4 class="text">TU NOMBRE</h4>
    
   <form class="form" action="/user/register" method="POST" enctype="multipart/form-data">
     <div id="registerForms">
-        <label for="name">Nombre</label>
+        <label for="name">Nombre y apellido</label>
         <input type="text" class="box" id="name"   name="name" placeholder="Nombres" value="<%= locals.oldData ? oldData.name : null%>">
         <% if (locals.errors && errors.name) { %>
             <p><%= errors.name.msg%></p>
         <% } %>
-        <label for="lastname">Apellidos</label>
-        <input type="text" class="box" id="lastname"   name="lastname" placeholder="Apellidos" value="<%= locals.oldData ? oldData.lastname : null%>">
-        <% if (locals.errors && errors.lastname) { %>
-            <p><%= errors.lastname.msg%></p>
-        <% } %>
     </div>
-  <h4 class="text">FECHA DE NACIMIENTO</h4>
-        <label for="birthDate"></label>
+        <label for="birthDate">Fecha de Nacimiento</label>
         <input type="date" class="box" id="birthDate"  name="birthDate" placeholder="Seleccionar fecha de nacimiento"    min="1900-01-01"    max="2021-01-01">
         <% if (locals.errors && errors.birthDate) { %>
             <p><%= errors.birthDate.msg%></p>
         <% } %>
+
+        <h4 class="text">Perfil del usuario</h4>
+        <div class="user-type">        
+            <div>
+            <input type="radio" name="userProfile" value="buy" checked>
+            Comprador
+            </div>
+            <div>
+            <input type="radio" name="userProfile" value="sell">
+            Vendedor
+            </div>
+        </div>
+
+
    <h4 class="text">DATOS DE ACCESO</h4>
         <label for="email">Correo electronico</label>
         <input type="email" class="box" name="email" id="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null%>">
@@ -51,7 +58,7 @@
             </div>  
         <% } %>
         <div class="tc">
-        <label for="tyc"><input type="checkbox"  name="tyc"  id="tyc"    value="Accept T&C">Acepto terminos y condiciones</label>
+        <label for="tyc"><input type="checkbox"  name="tyc"  id="tyc"    value="Accepted">Acepto terminos y condiciones</label>
         <% if (locals.errors && errors.tyc) { %>
             <p><%= errors.tyc.msg%></p>
         <% } %>

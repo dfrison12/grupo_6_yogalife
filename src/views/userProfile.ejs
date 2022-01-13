@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <%- include ('./partials/head',{title:'Perfil de Usuario', style:'userProfileStyles.css'}) %>
+<body>
+    <!-- Header -->
+    <%- include ('./partials/header') %> 
+
+
+    <main>
+    <div class=main>
+        <div class=profile-container>
+            <div class="tittle">
+                <h2> Bienvenido <%=user.name%> <%=user.lastname%></h2>
+            </div>
+            <div class=avatar-container>
+                <img class="avatar" src="/images/usersImages/<%=user.image%>" alt="">
+            </div>
+        </div>
+        
+        <div class=data-container>
+            <div class=data>
+                <h5><%=user.email%></h5>
+            </div>
+            <div class="logout-container">
+                <a class=logout href="/user/logout" >Salir</a>
+            </div>
+        </div>
+    </div>
+    </main>
+
+
+    <!-- Footer -->
+<%- include('./partials/footer')%>
+</body>
+</html>

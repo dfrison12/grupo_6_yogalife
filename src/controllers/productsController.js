@@ -72,10 +72,6 @@ const productsController = {
             img2: image2,
             img3: image3,
             img4: image4,
-            talle: [1, 2, 3],
-            color: ["bosque-encantado",
-                "hora-magica"],
-            color_archivo: ["bosque-encantado.jpg", "hora-magica.jpg"]
         }
 
         catalogo.push(nuevaprenda)

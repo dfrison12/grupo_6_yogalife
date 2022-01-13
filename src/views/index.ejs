@@ -14,7 +14,7 @@
                 <h3 class="section-title">Ultima colección</h3>
                 <div class="products">
                     <% for (let i = 0; i < catalogo.length; i++) {
-                        if(catalogo[i].ultima_coleccion == true){ %>
+                        if(catalogo[i].ultima_coleccion == "true"){ %>
                             <article>
                             <a class="article" href="/products/product-detail/<%= catalogo[i].id %>">
                             <img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">

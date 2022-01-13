@@ -1,73 +1,23 @@
 [
  {
   "id": 1,
-  "name": "Alan",
-  "lastname": "Gonzales",
-  "birthDate": "10/11/1992",
-  "email": "alan@gmail.com",
-  "passsword": "123",
-  "passwordConfirmation": "123",
+  "name": "Admin",
+  "lastname": "",
+  "birthDate": "1992-11-12",
+  "userProfile": "sell",
+  "email": "admin@gmail.com",
+  "password": "$2a$12$me4QFhuInQatiR.vsf6XG.9CwaXpAr8CcgH.0LxQvS.YEcCl15cXG",
+  "tyc": "Accepted",
   "image": "user-default.jpg"
  },
  {
   "id": 2,
-  "name": "belen",
-  "lastname": "mana",
-  "birthDate": "2020-12-30",
-  "email": "dariohfrison@gmail.com",
-  "password": "mannawa2010",
-  "passwordConfirmation": "dario",
-  "tyc": "Accept T&C"
- },
- {
-  "id": 3,
-  "name": "belen",
-  "lastname": "mana",
-  "birthDate": "2020-12-30",
-  "email": "dariohfrison@gmail.com",
-  "password": "mannawa2010",
-  "passwordConfirmation": "dario",
-  "tyc": "Accept T&C"
- },
- {
-  "id": 4,
-  "name": "nuevoooooddd",
-  "lastname": "mana",
-  "birthDate": "2020-12-29",
-  "email": "dariohfrison@gmail.com",
-  "password": "dario",
-  "passwordConfirmation": "dario",
-  "tyc": "Accept T&C"
- },
- {
-  "id": 5,
-  "name": "nuevooooofdwfsfdsf",
-  "lastname": "manafsdfsfsdfsdf",
-  "birthDate": "2020-12-30",
-  "email": "dariohfrison@gmail.com",
-  "password": "mannawa2010",
-  "passwordConfirmation": "dsadsad",
-  "tyc": "Accept T&C"
- },
- {
-  "id": 6,
-  "name": "javi prueba",
-  "lastname": "h",
-  "birthDate": "2020-12-29",
-  "email": "dariosnow@gmail.com",
-  "password": "$2a$10$it2EUVltJxHILcTqYQb9zerGQe9m6bq4KyLSAK1x/.NyD1XXxiZfO",
-  "passwordConfirmation": "dsa",
-  "tyc": "Accept T&C",
+  "name": "Usuario",
+  "birthDate": "1992-12-12",
+  "userProfile": "buy",
+  "email": "user@gmail.com",
+  "password": "$2a$12$x2A4DGXURuRxTGAF28ZHZexNy6dYbQxHjBOPEHn9TgM0bWJbBpcym",
+  "tyc": "Accepted",
   "image": "Tanya.jpg"
- },
- {
-  "id": 7,
-  "name": "Dario",
-  "lastname": "Frison",
-  "birthDate": "2020-12-31",
-  "email": "dariohfridsadsason@gmail.com",
-  "password": "$2a$10$t2zDAIgBntuUFvaoFH6rROE0fi4sXnfjOwcOcc7/RfBs9i5xl/Zze",
-  "tyc": "Accept T&C",
-  "image": "user-default.jpg"
  }
 ]

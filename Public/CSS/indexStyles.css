@@ -135,6 +135,7 @@ section.empresa-b{
         display: flex;
         background-color: #F7DC6F;
         width: 100%;
+        margin-top: 95px;
     }
     
     section.main-image img{

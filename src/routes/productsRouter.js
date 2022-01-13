@@ -1,12 +1,13 @@
 // Moodulos
 const express = require('express');
 const router = express.Router();
+const authMiddleware = require('../middlewares/authMiddleware')
 
 // Controller
 const productsController = require('../controllers/productsController');
 
 // Middlewares
-const upload = require('../middlewares/multerMiddleware')
+const upload = require('../middlewares/uploadProductsMiddleware')
 
 
 // Mostrar Catalogo Completo
@@ -18,9 +19,9 @@ router.get('/search', productsController.search);
 // CREAR NUEVO PRODUCTO
 
 // Formulario de Creacion
-router.get('/create', productsController.create)
+router.get('/create', authMiddleware, productsController.create)
 // Guardar Nuevo Producto
-router.post('/store', upload.any(''), productsController.store)
+router.post('/store',authMiddleware,  upload.any(''), productsController.store)
 
 
 // MOSTRAR UN PRODUCTO PARTICULAR
@@ -29,12 +30,12 @@ router.get('/product-detail/:id', productsController.productDetail);
 // EDITAR PRODUCTO
 
 // Formulario de Edicion
-router.get('/:id/edit', productsController.edit);
+router.get('/:id/edit', authMiddleware, productsController.edit);
 // Guardar cambios
-router.put('/:id/update', upload.any(), productsController.update);
+router.put('/:id/update', authMiddleware, upload.any(), productsController.update);
 
 // ELIMINAR PRODUCTO
-router.delete('/:id/delete', productsController.destroy)
+router.delete('/:id/delete', authMiddleware, productsController.destroy)
 
 
 

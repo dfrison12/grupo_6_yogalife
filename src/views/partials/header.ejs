@@ -17,12 +17,22 @@
         <ul class="left-navbar">
             <li><a href="/products">Catalogo</a></li>
             <li><a href="/#ofertas">Ofertas</a></li>
-            <li><a href="/products/create">Vender</a></li>
+            <% if (locals.isLogged) { %>
+                <li><a href="/products/create">Vender</a></li>
+                <% } %>
             <li><a href="/#empresa-b">Nosotros</a></li>
         </ul>
         <ul class="right-navbar">
-            <li><a href="/login">Ingresá <i class="far fa-laugh"></i></a></li>
+            <% if (locals.isLogged) { %> 
+            <li><a href="/user/profile"><div class="user-avatar-container"><img class="user-avatar" src="/images/usersImages/<%=locals.userLogged.image%>"><div><%=locals.userLogged.name%></div></div></a></li>
+            <% } else { %>
+            <li><a href="/user/login">Ingresá </a></li>
+            <li><a href="/user/register">Registrate </a></li>
+            <%} %>
             <li><a href="/productCart/1">Shop <i class="fas fa-dolly"></i></a></li>
+            <% if (locals.isLogged) { %>
+                <li><a href="/user/logout">Cerrar sesión </a></li>
+                <% } %>
         </ul>
     </nav>
     <div class="burger-menu">

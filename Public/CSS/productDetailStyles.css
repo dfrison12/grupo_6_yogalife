@@ -15,9 +15,22 @@ h3{
 
 p{
     font-size: 12px;
+    margin: 0px 0px 18px 0px;
+
 }
 
+h1{
+    margin: 0px 0px 18px 0px;
+    font-weight: 600;
+    font-size: xx-large;
+}
 
+h4{
+    margin: 0px 0px 10px 0px;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(16, 46, 48, 0.945);
+}
 
 
 /*MAIN*/
@@ -27,6 +40,7 @@ main div.product-detail{
     padding: 30px 20px 0px 20px;
     display: flex;
     flex-direction: column;
+    margin-top: 135px;
 
 }
 
@@ -79,10 +93,10 @@ main div div.product-description{
 }
 
 main div div.product-description .sale{
-    margin: 0px 0px 5px 0px;
-    font-size: 15px;
+    margin: 0px 0px 10px 0px;
+    font-size: 30px;
     font-weight: 600;
-    color: rgb(23, 110, 69);
+    color: rgb(4, 156, 37);
 
 }
 
@@ -117,7 +131,7 @@ div.product-description form{
     }
 
     form div.color-button img.color{
-        width: 110%;
+        width: 35px;
         height: 100%;
         border-radius: 50%;
         border: 3px rgb(165, 162, 162) solid;
@@ -125,7 +139,9 @@ div.product-description form{
         margin: 6px 3px 0px 3px;
     }
 
-
+    label{
+        margin: 10px 0px;
+    }
 
      input.size{
         width: 35px;
@@ -162,11 +178,22 @@ div.product-description form{
         width: 38px
     }
 
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+         margin: 0; 
+    }
+
+    input[type=number] { -moz-appearance:textfield; }
 
 
     form input.amount:hover, button.add:hover{
         background-color: #04614e;
         color:white;
+    }
+
+    h9{
+        margin: 20px 0px 10px 0px;
     }
 
     div.description {
@@ -191,6 +218,7 @@ div.product-description form{
 
     div.buttons-container{
         display: flex;
+        margin: 15px 0px;
     }
 
     div.edit-button{
@@ -293,9 +321,6 @@ div.product-description form{
         align-self: center;
     }
 
-    
-
-
     main div section.product-images img.main-picture{
         width: 276px;
         height: 427px;
@@ -336,14 +361,15 @@ div.product-description form{
     }
 
     section.product-description div.product-description h1{
-        font-size: 25px;
-        padding: 0px 0px 15px 0px;
-        color: rgba(41, 68, 64, 0.856);
+        font-size: 26px;
+        padding: 0px 0px 10px 0px;
+        color: rgba(16, 54, 49, 0.856);
         font-weight: 600;
+
     }
 
     section.product-description div.product-description p.price{
-        font-size: 25px;
+        font-size: 20px;
         font-weight: 600;
         padding: 5px 0px;
         color: rgba(41, 68, 64, 0.856);

@@ -7,20 +7,25 @@
         <div class="SiginHtml">
             <h2 class="siginTitle">INGRESAR</h2> 
             <div class="backForm">
-                <form method="post">
+                <form method="POST" action="/user/login">
                     <div class="formUser">
-                    <label for="User"></label>
-                    <input type="text" name="User" required="" id="User" placeholder="Usuario" class="user" style="color: white; font-weight: bold;">  
+                    <label for="email"></label>
+                    <input type="text" name="email" required id="User" placeholder="Usuario" class="user" style="color: white; font-weight: bold;">  
+                    <% if (locals.errors && errors.email) { %>
+                        <p><%= errors.email.msg%></p>
+                    <% } %>
                     </div>
                     <div class="formPassword">
                     <label for="password"></label>
                     <input type="password" name="password" required="" id="password" placeholder="Contraseña" class="password" style="color: white; font-weight: bold;">
                     </div>
-                    <h5 class="forgot"><a href="" style="text-decoration: none; color: white;" >¿Olvidaste la Contraseña?</a></h3>
-                    <h5 class="register"> O </h5>
-                    <h5 class="register"> <a href="/register" style="text-decoration: none; color: white;">¿Aun no estas registrado?.</a></h2>
-                    <button class="button" type="submit">Enviar</button>
-                   
+                    <h5 class="register"> <a href="/user/register" style="text-decoration: none; color: white;">¿Aun no estas registrado?.</a></h2>
+                    <div class="rememberUser-container">
+                        <input type="checkbox" class="remember-checkbox" name="rememberUser">Recordame
+                    </div>
+                    <div>
+                    <button class="button" type="submit">Ingresar</button>
+                    </div>
                 </form>
             </div>
             </div>
