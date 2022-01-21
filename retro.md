@@ -1,5 +1,5 @@
 
-Sprit_2:
+Sprint_2:
 
 
 Start Doing: 
@@ -25,8 +25,7 @@ Stop Doing:
 
 -Reuniones sin una coordinacion o planeacion previa.
 
-
-Sprit_3:
+Sprint_3:
 
 Start Doing: 
 
@@ -50,3 +49,77 @@ Stop Doing:
 
 -Reuniones sin una coordinacion o planeacion previa.
 -No empezar a completar el sprint antes de leer sus consignas muy analitica y detalladamente.
+
+Sprint_4:
+
+Start Doing: 
+
+-Leer las entregables del sprint para comprender cómo organizarnos.
+-Continuar con Trello como herramienta para coordinar las tareas del proyecto.
+
+More of: 
+
+-Buscar aportar ayuda y estar mas pendiente de la necesidad de los compañeros.
+-Empezar a mejorar asignacion de prioridades en cuanto a puntos del print y productos atrasados.
+
+Keep Doing : 
+
+-Seguir manteniendo reuniones utilizando discord o whatsapp como medio de comunicación.
+
+Less of: 
+
+-
+
+Stop Doing: 
+
+-Reuniones sin una coordinacion o planeacion previa.
+
+Sprint_5:
+
+Start Doing: 
+
+-
+
+More of: 
+
+-Buscar aportar ayuda y estar mas pendiente de la necesidad de los compañeros.
+-Empezar a mejorar asignacion de prioridades en cuanto a puntos del print y productos atrasados.
+
+Keep Doing : 
+
+-Seguir manteniendo reuniones utilizando discord o whatsapp como medio de comunicación.
+-Leer las entregables del sprint para comprender cómo organizarnos.
+-Continuar con Trello como herramienta para coordinar las tareas del proyecto.
+
+Less of: 
+
+-
+
+Stop Doing: 
+
+-Reuniones sin una coordinacion o planeacion previa.
+
+Sprint_6:
+
+Start Doing: 
+
+-
+
+More of: 
+
+-Buscar aportar ayuda y estar mas pendiente de la necesidad de los compañeros.
+-Empezar a mejorar asignacion de prioridades en cuanto a puntos del print y productos atrasados.
+
+Keep Doing : 
+
+-Seguir manteniendo reuniones utilizando discord o whatsapp como medio de comunicación.
+-Leer las entregables del sprint para comprender cómo organizarnos.
+-Continuar con Trello como herramienta para coordinar las tareas del proyecto.
+
+Less of: 
+
+-
+
+Stop Doing: 
+
+-Reuniones sin una coordinacion o planeacion previa.
