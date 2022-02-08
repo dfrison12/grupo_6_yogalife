@@ -1,13 +1,16 @@
+const db = require ("../database/models");
+const Op = db.Sequelize.Op;
+const  sequelize = db.sequelize
+
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator')
 
-const User = require('../models/User')
+//Aqui tienen otra forma de llamar a cada uno de los modelos
+const User = db.User;
+const UserCategory = db.UserCategory;
 
-const userFilePath = path.join(__dirname, '../data/userDataBase.json');
-let usuario = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const userController = {
     // - Login - Formulario - Mostrar  
@@ -16,39 +19,64 @@ const userController = {
     },
     // - Register - Formulario - Mostrar
     register: (req, res) => {
-        res.render('register')
+        let promCategory = UserCategory.findAll()
+        
+        Promise
+        .all([promCategory])
+        .then(([allCategoriesUser]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'register'), {allCategoriesUser})})
+        .catch(error => res.send(error))
     },
 
     // Procesar login
     loginProcces: (req,res) => {
-        let userToLogin = User.findByField('email',req.body.email);
-        
-        if(userToLogin) {
-            let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-            if (isOkPassword){
-                delete userToLogin.password
-                req.session.userLogged = userToLogin
-
-                if (req.body.rememberUser){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60})
-                }
-            
-                return res.redirect("/")
+        let userLogin = User.findOne({
+            where: {
+                email: req.body.email
             }
-        }
-        return res.render('login', {
-            errors: {
-                email: {
-                    msg: 'El usuario o contraseña son invalidos'
+        })
+        Promise
+        .all([userLogin])
+        .then((userLog) =>{
+            let userToLogin = userLog[0].dataValues
+            
+            if(userToLogin.email == req.body.email) {
+                let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+                if (isOkPassword){
+                    delete userToLogin.password
+                    req.session.userLogged = userToLogin
+    
+                    if (req.body.rememberUser){
+                        res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 60})
+                    }
+                
+                    return res.redirect("/")
                 }
-            },
-        });
+            }
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'El usuario o contraseña son invalidos'
+                    }
+                }
+            })
+        })
+        .catch(error => {
+            return res.render ('login',{
+                errors: {
+                    email: {
+                        msg: 'El usuario o contraseña son invalidos'
+                    }
+                }
+            })})
+        
     },
 
     profile: (req,res) => {
-        return res.render('userProfile',{
-            user: req.session.userLogged
-        })
+        
+        let user = req.session.userLogged
+        console.log(user)
+        return res.render('userProfile',{user})
     },
 
     logout: (req, res) => {
@@ -75,8 +103,45 @@ const userController = {
             image = 'user-default.jpg'
         }
 
-        let userInDB = User.findByField('email', req.body.email);
-        if (userInDB) {
+
+        
+        /*let userdb1 = User.findOne({
+            where: {
+                email: req.body.email}
+        })
+
+
+        Promise
+        .all([userdb1])
+        .then((user1) =>{
+            if (user1 > 0){
+                res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este Email ya esta registrado'
+                    }
+                },
+                oldData: req.body
+            })
+            }*/
+            
+         User.create({
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password),
+                    full_name: req.body.fullname,
+                    dni: req.body.dni,
+                    user_category_id: req.body.user_category_id,
+                    address: req.body.address,
+                    avatar: image
+        })
+        .then (() => {
+            return res.redirect('/user/login')
+        })
+        .catch(error => res.send(error))
+        
+
+
+        /*if (userInDB) {
             return res.render('register', {
                 errors: {
                     email: {
@@ -110,6 +175,16 @@ const userController = {
         usuario.push(user)
         fs.writeFileSync(userFilePath, JSON.stringify(usuario, null, ''))
         res.redirect('/')*/
+    },
+
+    //CONTROLLER - PARA BASE DE DATOS
+    list: (req,res)=> {
+        db.User.findAll({
+            include:[{association:"user_categories"}]
+        })
+            .then(users =>{
+                res.render("listadoUsuarios", {users:users})
+            })
     }
 }
 module.exports = userController;

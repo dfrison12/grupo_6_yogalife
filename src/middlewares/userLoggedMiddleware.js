@@ -1,18 +1,32 @@
-const User = require('../models/User')
+const db = require ("../database/models");
+const Op = db.Sequelize.Op;
+const  sequelize = db.sequelize
+
+//Aqui tienen otra forma de llamar a cada uno de los modelos
+const User = db.User;
+const UserCategory = db.UserCategory;
 
 let userLoggedMiddleware = (req, res, next) => {
 
     res.locals.isLogged = false;
 
-    let emailInCookie = req.cookies.userEmail
-    let userFromCookie = User.findByField('email',emailInCookie)
     
-    if(userFromCookie){
-        req.session.userLogged = userFromCookie;
-    };
+    User.findOne({
+        where: {
+            email: req.cookies.userEmail
+        }
+    }, {
+        include:[{association:"user_categories"}]
+    }).
+    then(userCookie =>{
+        req.session.userLogged = userCookie
+    })
+    .catch(error=>{
+        console.log(error)
+    })
 
     if (req.session && req.session.userLogged) {
-        if (req.session.userLogged.userProfile == "sell"){
+        if (req.session.userLogged.user_category_id == 2){
             res.locals.admin = true;
             res.locals.isLogged = true;
             res.locals.userLogged = req.session.userLogged
@@ -22,8 +36,11 @@ let userLoggedMiddleware = (req, res, next) => {
             res.locals.userLogged = req.session.userLogged
         }
     }
-    
+    console.log(req.session.userLogged)
     next();
-}
+    }
+    
+    
+
 
 module.exports = userLoggedMiddleware

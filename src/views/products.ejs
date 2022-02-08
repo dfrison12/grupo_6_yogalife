@@ -11,17 +11,17 @@
             <section class="every-collections">
                 <h3 class="section-title">Catalogo</h3>
                 <div class="products">
-                    <% for (let i = 0; i < catalogo.length; i++) {%>
+                    <% for (let i = 0; i < products.length; i++) {%>
                             <article>
-                            <a class="article" href="/products/product-detail/<%= catalogo[i].id %>">
-                            <img src="/images/productsImages/<%= catalogo[i].img1 %>" alt="product" class="product_img">
+                            <a class="article" href="/products/product-detail/<%= products[i].id %>">
+                            <img src="/images/productsImages/<%= products[i].image_1 %>" alt="product" class="product_img">
                             <div class="main-article">
                                 <i class="fas fa-hamsa"></i>
-                                <p class="price"> $ <%= catalogo[i].precio %></p>
-                                <% if (catalogo[i].oferta > 0) { %>
-                                    <p class='sale'> <%= catalogo[i].oferta %>% off</p>
+                                <p class="price"> $ <%= products[i].price %></p>
+                                <% if (products[i].discount > 0) { %>
+                                    <p class='sale'> <%= products[i].discount %>% off</p>
                                     <% } %>
-                                <h4 class="description"><%= catalogo[i].titulo %></h4>
+                                <h4 class="description"><%= products[i].name %></h4>
                             </div>
                             </a>
                         </article>

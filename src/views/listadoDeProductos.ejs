@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <%- include ('./partials/head',{title:'Tienda de Yoga', style:'indexStyles.css'}) %>
+ 
+ <body style="margin-top: 250px;">
+        <!-- Header -->
+        <%- include ('./partials/header') %> 
+
+    <h1>LISTADO DE PRODUCTOS</h1>
+   
+    <% for( let i = 0; i < products.length; i++ ) { %>
+        <div style="border: solid 5px black">
+       <p> <%=products[i].name%></p>
+       <p> <%=products[i].discount%></p>
+       <p> <%=products[i].categories.name%></p>
+       <img src="/images/productsImages/<%=products[i].image_1%>" alt="" style="width:70px;">
+       
+       
+       
+        <% for( let j = 0; j < products[i].colors.length; j++ ) { %>
+                <li><img src="/images/colors/<%=products[i].colors[j].color_originalname%>" alt="" style="width:70px;"> 
+                
+            <% } %>
+        <% for( let j = 0; j < products[i].colors.length; j++ ) { %>
+                <li><p><%=products[i].sizes[j].size_letter%></p>
+                
+            <% } %>
+
+        </div>
+    <% } %>
+       
+
+    <%- include('./partials/footer')%>      
+</body>
+</html>

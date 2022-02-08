@@ -124,6 +124,21 @@ label.file-input{
 
 }
 
+.select-input{
+    width: 200px;
+    height: 30px;
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    transition: all 450ms;
+    font-family: 'Raleway' , sans-serif;
+    background: rgba(255, 255, 255, 0.959);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
 @media (min-width: 419px){
     /* MAIN 420 */
 

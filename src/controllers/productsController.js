@@ -1,149 +1,142 @@
 // -- DATOS PARA TRABAJAR
-
-const { ifError } = require('assert');
-const fs = require('fs');
+const db = require ("../database/models");
+const  sequelize = db.sequelize
 const path = require('path');
-const { CLIENT_RENEG_WINDOW } = require('tls');
 
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-let catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+//Aqui tienen otra forma de llamar a cada uno de los modelos
+const Product = db.Product;
+const Category = db.Category;
+const Color = db.Color;
+const Size = db.Size
+
 
 
 const productsController = {
+    list: (req,res) => {
 
-    //-MOSTRAR CATALOGO COMPLETO
-    index: (req, res) => {
-        let catalogo = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-        res.render('products', { 'catalogo': catalogo });
+        db.Product.findAll({include:[{association:"categories"},{association:"images"},{association:"colors"},{association:"sizes"}]
+        })
+            .then(products =>{
+                res.render("products", {products:products})
+            })
+        },
+    detail: (req,res)  => {
+        let productId = req.params.id;
+        let promProduct = Product.findByPk(productId,{include: [{association:"categories"}]});
+        let promColor = Color.findAll();
+        let promSize = Size.findAll();
+
+        Promise
+        .all([promProduct, promColor, promSize])
+            .then(([productFind, allColors,allSizes]) => {
+                res.render('ProductDetail', {productFind, allColors, allSizes});
+            });
     },
+    add: (req,res) => {
+        let promCategory = Category.findAll();
+        let promColor = Category.findAll()
 
-    //-BUSCAR PRODUCTO SEGUN NOMBRE 
-    search: (req, res) => {
-        let wanted = req.query.wanted;
-        let productResults = catalogo.filter(element => element.titulo.toLowerCase().includes(wanted))
-
-        /*----- Ejemplo alternativo: Resolucion Usando un for
-        let productResults = [];
-            for (let i = 0; i < catalogo.length; i++) {
-            if (catalogo[i].titulo.includes(wantedProduct)){
-                productResults.push(catalogo[i]);
-            }
-        } */
-
-        res.render('productsResults', { "productResults": productResults })
+        Promise
+        .all([promCategory, promColor])
+        .then(([allCategories, allColors]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'productCreateForm'), {allCategories,allColors})})
+        .catch(error => res.send(error))
     },
-
-    //-MOSTRAR UN PRODUCTO PARTICULAR
-    productDetail: (req, res) => {
-        let itemId = req.params.id;
-        let prenda = {}
-
-        for (let i = 0; i < catalogo.length; i++) {
-            if (itemId == catalogo[i].id) {
-                prenda = catalogo[i]
-            }
-        }
-        res.render('productDetail', { 'prenda': prenda },);
-    },
-
-
-    //-CREAR NUEVO PRODUCTO
-    //--Formulario
-    create: (req, res) => {
-        res.render('productCreateForm')
-    },
-    //--Guardar
-    store: (req, res) => {
+    create: (req,res) => {
         let image1 = req.files[0].filename;
         let image2 = req.files[1].filename;
         let image3 = req.files[2].filename;
-        let image4 = req.files[3].filename;
+        let image4 = req.files[3].filename
 
-        console.log(req.files);
-        /* Ejemplo alternativo: en caso de querer cargar imagenes por defecto-
-        if(req.file != undefined){image = req.file.filename
-         } else {image = 'default-image.png'}*/
-
-        let nuevaprenda = {
-            id: catalogo[catalogo.length - 1].id + 1,
-            ...req.body,
-            img1: image1,
-            img2: image2,
-            img3: image3,
-            img4: image4,
-        }
-
-        catalogo.push(nuevaprenda)
-        fs.writeFileSync(productsFilePath, JSON.stringify(catalogo, null, ''))
-        res.redirect('/products')
+        Product
+        .create(
+            {
+                name: req.body.name,
+                cost: req.body.cost,
+                price: req.body.price,
+                discount: req.body.discount,
+                descriptions: req.body.descriptions,
+                category_id: req.body.category,
+                stock: req.body.stock,
+                image_1: image1,
+                image_2: image2,
+                image_3: image3,
+                image_4: image4
+            }
+        )
+        .then(()=> {
+            return res.redirect('/')})            
+        .catch(error => res.send(error))        
     },
+    edit: (req,res) => {
+        let ProductId = req.params.id;
+        let promProduct = Product.findByPk(ProductId,{include: [{association:"categories"}]});
+        let promCategory = Category.findAll();
 
-    //-EDITAR PRODUCTO
-    //--Mostrar formulario 
-    edit: (req, res) => {
-        let itemId = req.params.id;
-        let productToEdit = catalogo.find(prenda => prenda.id == itemId)
-
-        res.render('productEditForm', { productToEdit })
+        Promise
+        .all([promProduct, promCategory])
+        .then(([productFind, allCategories]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'productEditForm'), {productFind, allCategories})})
+        .catch(error => res.send(error))
     },
-    //--Actualizar cambios
-    update: (req, res) => {
-        let itemId = req.params.id;
-        let productToEdit = catalogo.find(prenda => prenda.id == itemId)
+    update: (req,res) => {
+        let productId = req.params.id;
+
+        let image1 
+        let image2
+        let image3
+        let image4
 
         req.files.forEach(file => {
             switch (file.fieldname) {
                 case "img1":
-                    productToEdit.img1 = file.originalname;
+                    image1 = file.originalname;
                     break
                 case "img2":
-                    productToEdit.img2 = file.originalname;
+                    image2 = file.originalname;
                     break
                 case "img3":
-                    productToEdit.img3 = file.originalname;
+                    image3 = file.originalname;
                     break
                 case "img4":
-                    productToEdit.img4 = file.originalname;
+                    image4 = file.originalname;
                     break
             }
 
         })
-        /*let image1 = req.files[0] ? req.files[0].filename : productToEdit.img1;
-        let image2 = req.files[1] ? req.files[1].filename : productToEdit.img2;
-        let image3 = req.files[2] ? req.files[2].filename : productToEdit.img3;
-        let image4 = req.files[3] ? req.files[3].filename : productToEdit.img4;*/
 
-        //Redefinimos la variable con los datos del  Formulario
-        productToEdit = {
-            ...productToEdit,
-            ...req.body,
-            talle: [1, 2, 3],
-            color: ["bosque-encantado",
-                "hora-magica"],
-            color_archivo: ["bosque-encantado.jpg", "hora-magica.jpg"]
-        }
-
-        let nuevasPrendas = catalogo.map(prenda => {
-            if (prenda.id == productToEdit.id) {
-                return prenda = { ...productToEdit }
-            }
-            return prenda
-        });
-        fs.writeFileSync(productsFilePath, JSON.stringify(nuevasPrendas, null, ''))
-        res.redirect('/products')
-
+        Product
+        .update(
+            {
+                name: req.body.name,
+                cost: req.body.cost,
+                price: req.body.price,
+                discount: req.body.discount,
+                descriptions: req.body.descriptions,
+                category_id: req.body.category,
+                stock: req.body.stock,
+                image_1: image1,
+                image_2: image2,
+                image_3: image3,
+                image_4: image4
+            }, {
+                where: {id: productId}
+            })
+        .then(()=> {
+            return res.redirect('/')})
+        .catch(error => res.send(error))
     },
-    //-BORRAR PRENDA
-    destroy: (req, res) => {
-        let itemId = req.params.id;
-        let catalogoFinal = catalogo.filter(prenda => prenda.id != itemId)
-        fs.writeFileSync(productsFilePath, JSON.stringify(catalogoFinal, null, ''));
-        res.redirect('/');
+    destroy: (req,res) => {
+        let productId = req.params.id;
+
+        Product
+        .destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
+        .then(()=>{
+            return res.redirect('/')})
+        .catch(error => res.send(error)) 
     }
-
-
-};
+            
+}
 
 
 module.exports = productsController;

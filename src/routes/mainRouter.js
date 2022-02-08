@@ -6,8 +6,7 @@ const mainController = require('../controllers/mainController');
 //Rutas
 
 router.get('/', mainController.index);
-router.get('/login', mainController.login);
-router.get('/register', mainController.register);
+router.get('/search', mainController.search);
 router.get('/productCart/:id', mainController.shopcart)
 
 

@@ -9,60 +9,70 @@
  <main>
     <h2>Registrar nueva Prenda</h2>
     <div class="form-container">
-        <form action="/products/store" method="POST" enctype="multipart/form-data">
-        <div class="input-container">
-           <label for="titulo" class="form-label">Prenda</label>       
-            <input type="text" id="titulo" name="titulo" class="form-input" placeholder="Ej: Claza lulea YogaFlow 5/8">
-        </div>
-        <div class="input-container">
-         <label for="coleccion" class="form-label">Coleccion</label>       
-          <input type="text" id="coleccion" name="coleccion" class="form-input" placeholder="Ej: Yoga Trip Arizona">
-      </div>
-        <div class="input-container">
-            <label for="precio" class="form-label">Precio</label>       
-             <input type="number" id="precio" name="precio" class="form-input" placeholder="Ingresar solamente valor numerico">
+        <form action="/products/create" method="POST" enctype="multipart/form-data">
+            <div class="input-container">
+               <label for="name" class="form-label">Prenda o Producto</label>       
+               <input type="text" id="titulo" name="name" class="form-input" placeholder="Ej: Claza lulea YogaFlow 5/8">
+            </div>
+            <div class="input-container">
+               <label for="category" class="form-label">Coleccion</label>
+               <select name="category" id="category" class="select-input">
+               <% for (let i = 0; i < allCategories.length; i++){%>
+                  <option value="<%=allCategories[i].id%>">
+                     <%=allCategories[i].name%>
+                  </option>
+               <%}%>
+               </select> 
+            </div>
+            <!-- <div class="input-container">
+               <label for="color" class="form-label">Color</label>
+               <% for (let i = 0; i < allColors.length; i++){%>
+                  <input type="checkbox" name="colors" value="<%=allColors[i].id%>">
+                     <%=allColors[i].color_name%>
+                  </input>
+               <%}%>
+               </select> 
+            </div> -->
+            <div class="input-container">
+               <label for="cost" class="form-label">Costo</label>       
+               <input type="number" id="precio" name="cost" class="form-input" placeholder="Ingresar solamente valor numerico">
+            </div>
+            <div class="input-container">
+               <label for="price" class="form-label">Precio</label>       
+               <input type="number" id="precio" name="price" class="form-input" placeholder="Ingresar solamente valor numerico">
+            </div>
+            <div class="input-container">
+               <label for="discount" class="form-label">Descuento en %</label>       
+               <input type="number" id="oferta" name="discount" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input">
+            </div>
+         <div class="input-container">
+             <label for="descriptions" class="form-label">Descripcion</label>
+             <textarea name="descriptions" id="description" class="form-input" placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
          </div>
          <div class="input-container">
-            <label for="oferta" class="form-label">Descuento en %</label>       
-             <input type="number" id="oferta" name="oferta" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input">
-         </div>
-         <!-- <div class="input-container">
-            <label for="color" class="form-label">Color</label>
-            <input type="text" id="color" name="color" class="form-input"> 
-         </div> -->
-         <div class="ultima_coleccion-container">
-         <div class="input-container" id="ultima_coleccion">
-             <label for="ultima_coleccion" class="form-label" id="ultima_coleccion"> Pertenece a Ultima Coleccion?</label>
-             <select name="ultima_coleccion" id="ultima_coleccion" class="form-input">
-                 <option value="true"> Si </option>
-                 <option value="false"> No </option>
-             </select>
-         </div>
-         </div>
-         <div class="input-container">
-             <label for="descripcion" class="form-label">Descripcion</label>
-             <textarea name="descripcion" id="descripcion" class="form-input" placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
+            <label for="stock" class="form-label">Stock</label>       
+            <input type="number" id="stock" name="stock" class="form-input" placeholder="Ingresar solamente valor numerico">
          </div>
          <div class="input-container">
             <label for="img1" class="form-label">Imagen principal</label>
-            <input type="file" name="img1" id="img1" class="file-input">
+            <input type="file" name="img1" id="img1" class="file-input" required>
          </div>
          <div class="input-container">
             <label for="img2" class="form-label">Imagen complementaria 1</label>
-            <input type="file" name="img2" id="img2" class="file-input">
+            <input type="file" name="img2" id="img2" class="file-input" required>
          </div>
          <div class="input-container">
             <label for="img3" class="form-label">Imagen complementaria 2</label>
-            <input type="file" name="img3" id="img3" class="file-input">
+            <input type="file" name="img3" id="img3" class="file-input" required>
          </div>
          <div class="input-container">
             <label for="img4" class="form-label">adicional complementaria 3</label>
-            <input type="file" name="img4" id="img4" class="file-input">
+            <input type="file" name="img4" id="img4" class="file-input" required>
          </div>
          <div class="input-container">
             <button type="submit" class="button">Guardar producto</button>
          </div>   
-        </form>
+        </form> 
  </main>   
     <!-- Footer -->
     <%- include('./partials/footer')%>

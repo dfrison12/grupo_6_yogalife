@@ -4,8 +4,10 @@ const session = require ('express-session');
 const cookies = require ('cookie-parser');
 
 const app = express();
+// Configuración - Define carpeta estatica
+app.use(express.static('../public'));
 
-const userLoggedMiddleware = require ('./middlewares/userLoggedMiddleware');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 // Implementacion de session
 app.use(session({
@@ -17,15 +19,12 @@ app.use(session({
 app.use(cookies());
 
 const mainRouter = require ('./routes/mainRouter')
-const productsRouter = require ('./routes/productsRouter')
+const productsRouter = require ('./routes/products')
 const userRouter = require ('./routes/userRouter')
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 
-const logMiddleware = require ('./middlewares/logMiddleware');
 
-// Configuración - Define carpeta estatica
-app.use(express.static('../public'));
 
 
 //Configutacion - Guardia de Seguridad para method POST
@@ -38,7 +37,6 @@ app.use(methodOverride('_method'));
 app.set('view engine','ejs');
 
 app.use(userLoggedMiddleware)
-app.use(logMiddleware);
 
 
 //Rutas

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Usuarios</title>
+
+</head>
+
+<body>
+
+    <h1>LISTADO DE USUARIOS</h1>
+   
+    <% for( let i = 0; i < users.length; i++ ) { %>
+    <div style="border: 5px black solid">
+       <p> <%=users[i].email%></p>
+       <p> <%=users[i].password%></p>
+       <p> <%=users[i].full_name%></p>
+       <p> <%=users[i].dni%></p>
+       <p> <%=users[i].postal_code%></p>
+       <p> <%=users[i].address%></p>
+       <p> <%=users[i].province%></p>
+       <p> <%=users[i].email%></p>
+       <p> <%=users[i].phone%></p>
+       <p> <img src="/images/usersImages/<%=users[i].avatar%>" alt="" style="width: 70px;"></p>
+       <p> <%=users[i].user_categories.category_name%></p>
+    </div>
+       
+    
+    <% } %>
+       
+
+</body>
+
+</html>

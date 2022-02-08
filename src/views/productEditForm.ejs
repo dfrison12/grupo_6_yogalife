@@ -8,58 +8,58 @@
     <main>
 	<div class="tittle-container">
 			<div class="title-container">
-				<h2 class="product-title">Estás editando: <%=productToEdit.titulo%></h2>
+				<h2 class="product-title">Estás editando: <%=productFind.name%></h2>
 			</div>
 		<div class="form-container">
-			<form action="/products/<%=productToEdit.id%>/update?_method=PUT" method="POST" enctype="multipart/form-data">
+			<form action="/products/<%=productFind.id%>/update?_method=PUT" method="POST" enctype="multipart/form-data">
 				<div class="product-detail-container">
 					<div class="input-container">
-						<label for="titulo" class="form-label">Prenda: </label>       
-                        <input type="text" id="titulo" name="titulo" class="form-input" value="<%=productToEdit.titulo%>">
+						<label for="name" class="form-label">Prenda: </label>       
+                        <input type="text" id="titulo" name="name" class="form-input" value="<%=productFind.name%>">
 					</div>
+               <div class="input-container">
+                  <label for="category" class="form-label">Coleccion</label>
+                  <select name="category" id="category" class="select-input" required>
+                  <% for (let i = 0; i < allCategories.length; i++){%>
+                     <option value="<%=allCategories[i].id%>">
+                        <%=allCategories[i].name%>
+                     </option>
+                  <%}%>
+                  </select> 
+               </div>
+               <div class="input-container">
+                  <label for="cost" class="form-label">Costo: </label>       
+                   <input type="number" id="cost" name="cost" class="form-input" value="<%=productFind.cost%>" >
+               </div>
 					<div class="input-container">
-                        <label for="precio" class="form-label">Precio: </label>       
-                         <input type="number" id="precio" name="precio" class="form-input" value="<%=productToEdit.precio%>" >
-                    </div>
+                        <label for="price" class="form-label">Precio: </label>       
+                         <input type="number" id="precio" name="price" class="form-input" value="<%=productFind.price%>" >
+               </div>
                     <div class="input-container">
-                        <label for="oferta" class="form-label">Descuento en %</label>       
-                         <input type="number" id="oferta" name="oferta" class="form-input" value="<%=productToEdit.oferta%>">
+                        <label for="discount" class="form-label">Descuento en %</label>       
+                         <input type="number" id="oferta" name="discount" class="form-input" value="<%=productFind.discount%>">
                     </div>
-                  <div class="ultima_coleccion-container">
-                    <div class="input-container" id="ultima_coleccion">
-                        <label for="ultima_coleccion" id="ultima_coleccion" class="form-label"> Pertenece a Ultima Coleccion?</label>
-                        <select name="ultima_coleccion" id="ultima_coleccion" class="form-input">
-                           <% if (productToEdit.ultima_coleccion == true) {%>
-                            <option value="true" selected> Si </option>
-                            <option value="false"> No </option>
-                           <%} else {%> 
-                              <option value="true"> Si </option>
-                              <option value="false" selected> No </option>
-                              <%}%>
-                        </select>
-                    </div>
-                  </div>
 
                     <div class="input-container">
-                        <label for="descripcion" class="form-label"> Agregue aquí una breve Descripcion:</label>
-                        <textarea name="descripcion" id="descripcion" class="form-input"><%=productToEdit.descripcion%></textarea>
+                        <label for="descriptions" class="form-label"> Agregue aquí una breve Descripcion:</label>
+                        <input name="descriptions" id="descripcion" class="form-input" value="<%=productFind.descriptions%>">
                     </div>
                     <div class="upload-img">
                     <div class="input-container">
-                       <label for="img1" class="form-label">Imagen principal</label>
-                       <input type="file" name="img1" id="img1" class="form-input" value="<%=productToEdit.img1%>" >
+                       <label for="img1" class="form-label">Imagen Principal</label>
+                       <input type="file" name="img1" id="img1" class="form-input fileselect" value="<%=productFind.image_1%>" >
                     </div>
                     <div class="input-container">
-                       <label for="img2" class="form-label">Imagen adicional</label>
-                       <input type="file" name="img2" id="img2" class="form-input" value="<%=productToEdit.img2%>">
+                       <label for="img2" class="form-label">Imagen 2</label>
+                       <input type="file" name="img2" id="img2" class="form-input fileselect" value="<%=productFind.image_2%>">
                     </div>
                     <div class="input-container">
-                       <label for="img3" class="form-label">Imagen adicional</label>
-                       <input type="file" name="img3" id="img3" class="form-input" value="<%=productToEdit.img3%>" >
+                       <label for="img3" class="form-label">Imagen 3</label>
+                       <input type="file" name="img3" id="img3" class="form-input fileselect" value="<%=productFind.image_3%>" >
                     </div>
                     <div class="input-container">
-                       <label for="img4" class="form-label">adicional adic</label>
-                       <input type="file" name="img4" id="img4" class="form-input" value="<%=productToEdit.img4%>">
+                       <label for="img4" class="form-label">Imagen 4</label>
+                       <input type="file" name="img4" id="img4" class="form-input fileselect" value="<%=productFind.image_4%>">
                     </div>
                      </div>
                     <div class="input-container">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
-<%- include ('./partials/head',{title: prenda.titulo , style:'productDetailStyles.css'}) %>
+<%- include ('./partials/head',{title: productFind.name , style:'productDetailStyles.css'}) %>
 <body>
     <!-- Header -->
     <%- include ('./partials/header') %>
@@ -10,22 +10,22 @@
       <div class="product-detail">
         <section class="product-images">
             <div class="product-images">
-                <a href="/images/productsImages/<%= prenda.img1 %>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
+                <a href="/images/productsImages/<%= productFind.image_1%>"><img class="main-picture" src="/images/productsImages/<%= productFind.image_1 %>" alt="img"></a>
                 <div class="img-box">
-                    <a href="/images/productsImages/<%= prenda.img2 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img2 %>" alt="img"></a>
-                    <a href="/images/productsImages/<%= prenda.img3 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img3 %>" alt="img"></a>
-                    <a href="/images/productsImages/<%= prenda.img4 %>"><img class="img-inbox" src="/images/productsImages/<%= prenda.img4 %>" alt="img"></a>
+                    <a href="/images/productsImages/<%= productFind.image_2 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_2 %>" alt="img"></a>
+                    <a href="/images/productsImages/<%= productFind.image_3 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_3 %>" alt="img"></a>
+                    <a href="/images/productsImages/<%= productFind.image_4 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_4 %>" alt="img"></a>
                 </div>
             </div>
         </section>
         <section class="product-description">
             <div class="product-description">
-                <h1 class="product-name"><%= prenda.titulo %></h1>
-                <h4 class=coleccion><%= prenda.coleccion %></h4>
-                <p class="price"> $ <%= prenda.precio %> </p>
+                <h1 class="product-name"><%= productFind.name %></h1>
+                <h4 class=coleccion><%= productFind.categories.name %></h4>
+                <p class="price"> $ <%= productFind.price %> </p>
 
-                <% if (prenda.oferta > 0) { %>
-                    <p class='sale'> <%= prenda.oferta %>% off</p>
+                <% if (productFind.discount > 0) { %>
+                    <p class='sale'> <%= productFind.discount %>% off</p>
                     <% } %>
 
                 <a href="/images/tabla-talles.jpg">ver tabla de talles</a>
@@ -55,9 +55,9 @@
                 <% if (locals.isLogged && locals.admin) { %>
                 <div class="buttons-container">
                     <div class="edit-button">
-                        <a class= "edit-button" href="/products/<%=prenda.id%>/edit">Editar</a>
+                        <a class= "edit-button" href="/products/<%=productFind.id%>/edit">Editar</a>
                     </div>
-                    <form class="buttons-container" action="/products/<%=prenda.id%>/delete?_method=DELETE" method="POST">
+                    <form class="buttons-container" action="/products/<%=productFind.id%>/delete?_method=DELETE" method="POST">
                     <button class= "delete-button" type="submit">Eliminar</button>
                     </form>      
                 </div>
@@ -68,7 +68,7 @@
         </div> 
         <div class="description" id="description">
             <h4>Descripción</h4>
-            <p><%= prenda.descripcion %></p>
+            <p><%= productFind.descriptions %></p>
         </div>
          
     </main>

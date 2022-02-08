@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 
 // Middlewares
-const logDBMiddleware = require('../middlewares/logDBMiddleware');
 const upload = require('../middlewares/multerMiddleware');
 const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware')
@@ -31,7 +30,9 @@ router.get('/logout', authMiddleware
 // Registro - Formulario
 router.get('/register', guestMiddleware , userController.register);
 // Registro - Proceso
-router.post('/register', upload.any(), validations, logDBMiddleware, userController.createUser);
+router.post('/register', upload.any(), validations, userController.createUser);
 
+
+router.get('/listado', userController.list);
 
 module.exports = router;

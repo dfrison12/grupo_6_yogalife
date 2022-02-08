@@ -15,14 +15,14 @@
                         productResults.forEach(function(prenda) {%>
                             <article>
                             <a class="article" href="/products/product-detail/<%= prenda.id %>">
-                            <img src="/images/productsImages/<%= prenda.img1 %>" alt="product" class="product_img">
+                            <img src="/images/productsImages/<%= prenda.image_1 %>" alt="product" class="product_img">
                             <div class="main-article">
                                 <i class="fas fa-hamsa"></i>
-                                <p class="price"> $ <%= prenda.precio %></p>
-                                <% if (prenda.oferta > 0) { %>
-                                    <p class='sale'> <%= prenda.oferta %>% off</p>
+                                <p class="price"> $ <%= prenda.price %></p>
+                                <% if (prenda.discount > 0) { %>
+                                    <p class='sale'> <%= prenda.discount %>% off</p>
                                     <% } %>
-                                <h4 class="description"><%= prenda.titulo %></h4>
+                                <h4 class="description"><%= prenda.name %></h4>
                             </div>
                             </a>
                             </article>

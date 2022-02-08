@@ -14,29 +14,30 @@
    
   <form class="form" action="/user/register" method="POST" enctype="multipart/form-data">
     <div id="registerForms">
-        <label for="name">Nombre y apellido</label>
-        <input type="text" class="box" id="name"   name="name" placeholder="Nombres" value="<%= locals.oldData ? oldData.name : null%>">
-        <% if (locals.errors && errors.name) { %>
-            <p><%= errors.name.msg%></p>
+        <label for="fullname">Nombre y apellido</label>
+        <input type="text" class="box" id="name"   name="fullname" placeholder="Nombres" value="<%= locals.oldData ? oldData.fullname : null%>">
+        <% if (locals.errors && errors.fullname) { %>
+            <p><%= errors.fullname.msg%></p>
+        <% } %>
+        <input type="text" class="box" id="dni"   name="dni" placeholder="D.N.I" value="<%= locals.oldData ? oldData.dni : null%>">
+        <% if (locals.errors && errors.dni) { %>
+            <p><%= errors.dni.msg%></p>
+        <% } %>
+        <label for="address">Direccion de Envio</label>
+        <input type="text" class="box" id="address"   name="address" placeholder="Direccion" value="<%= locals.oldData ? oldData.address : null%>">
+        <% if (locals.errors && errors.address) { %>
+            <p><%= errors.address.msg%></p>
         <% } %>
     </div>
-        <label for="birthDate">Fecha de Nacimiento</label>
-        <input type="date" class="box" id="birthDate"  name="birthDate" placeholder="Seleccionar fecha de nacimiento"    min="1900-01-01"    max="2021-01-01">
-        <% if (locals.errors && errors.birthDate) { %>
-            <p><%= errors.birthDate.msg%></p>
-        <% } %>
-
         <h4 class="text">Perfil del usuario</h4>
-        <div class="user-type">        
-            <div>
-            <input type="radio" name="userProfile" value="buy" checked>
-            Comprador
-            </div>
-            <div>
-            <input type="radio" name="userProfile" value="sell">
-            Vendedor
-            </div>
-        </div>
+        <select name="user_category_id" id="category" class="select-input" required>
+            <option value="1">
+            Usuario
+            </option>
+            <option value="2">
+            Administrador
+            </option>
+        </select>
 
 
    <h4 class="text">DATOS DE ACCESO</h4>
@@ -49,6 +50,11 @@
         <input type="password"  name="password"  class="box"  id="password">
         <% if (locals.errors && errors.password) { %>
             <p><%= errors.password.msg%></p>
+        <% } %>
+        <label for="password2">Repita la Contraseña</label>
+        <input type="password"  name="password2"  class="box"  id="password">
+        <% if (locals.errors && errors.password2) { %>
+            <p><%= errors.password2.msg%></p>
         <% } %>
         <label for="image" class="file-input">FOTO DE PERFIL</label>
         <input type="file" name="image" id="image" class="box">

@@ -11,7 +11,8 @@ body{
 
 main {
     display: flex;
-    margin-top: 180px;
+    margin-top: 275px;
+    padding: 30px;
 }
 
 div.main{
@@ -78,3 +79,14 @@ a.logout{
     width: 5px;
     background-color:none;
 }
+
+@media (min-width: 419px){
+
+    main {
+        display: flex;
+        margin-bottom: 200px;
+        padding: 30px;
+    }
+
+}
+
