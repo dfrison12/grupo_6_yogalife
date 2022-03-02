@@ -2,6 +2,7 @@
 const db = require ("../database/models");
 const  sequelize = db.sequelize
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 //Aqui tienen otra forma de llamar a cada uno de los modelos
 const Product = db.Product;
@@ -43,11 +44,43 @@ const productsController = {
         .catch(error => res.send(error))
     },
     create: (req,res) => {
-        let image1 = req.files[0].filename;
-        let image2 = req.files[1].filename;
-        let image3 = req.files[2].filename;
-        let image4 = req.files[3].filename
-
+        
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+        let errors = resultValidation.mapped();
+        let  oldData = req.bod;
+        let promCategory = Category.findAll();
+        let promColor = Category.findAll()
+        
+        Promise
+        .all([promCategory, promColor])
+        .then(([allCategories, allColors]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'productCreateForm'), {allCategories,allColors,errors,oldData})})
+        .catch(error => res.send(error))
+        }
+        else {
+            let image1 = "lulea_default.jpg"
+            let image2 = "lulea_default.jpg"
+            let image3 = "lulea_default.jpg"
+            let image4 = "lulea_default.jpg"
+    
+            req.files.forEach(file => {
+                switch (file.fieldname) {
+                    case "img1":
+                        image1 = file.originalname;
+                        break
+                    case "img2":
+                        image2 = file.originalname;
+                        break
+                    case "img3":
+                        image3 = file.originalname;
+                        break
+                    case "img4":
+                        image4 = file.originalname;
+                        break
+                }
+    
+            });
         Product
         .create(
             {
@@ -65,8 +98,9 @@ const productsController = {
             }
         )
         .then(()=> {
-            return res.redirect('/')})            
-        .catch(error => res.send(error))        
+            return res.redirect('/products')})            
+        .catch(error => res.send(error))
+        }        
     },
     edit: (req,res) => {
         let ProductId = req.params.id;
@@ -80,6 +114,24 @@ const productsController = {
         .catch(error => res.send(error))
     },
     update: (req,res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+        let errors = resultValidation.mapped();
+        let oldData = req.bod;
+    
+        let ProductId = req.params.id;
+        let promProduct = Product.findByPk(ProductId,{include: [{association:"categories"}]});
+        let promCategory = Category.findAll();
+
+        Promise
+        .all([promProduct, promCategory])
+        .then(([productFind, allCategories]) => {
+            return res.render(path.resolve(__dirname, '..', 'views', 'productEditForm'), {productFind, allCategories,errors,oldData})})
+        .catch(error => res.send(error))
+        }
+
+
+
         let productId = req.params.id;
 
         let image1 
@@ -103,7 +155,7 @@ const productsController = {
                     break
             }
 
-        })
+        });
 
         Product
         .update(

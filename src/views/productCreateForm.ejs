@@ -13,6 +13,9 @@
             <div class="input-container">
                <label for="name" class="form-label">Prenda o Producto</label>       
                <input type="text" id="titulo" name="name" class="form-input" placeholder="Ej: Claza lulea YogaFlow 5/8">
+               <% if (locals.errors && errors.name) { %>
+                  <p><%= errors.name.msg%></p>
+               <% } %>
             </div>
             <div class="input-container">
                <label for="category" class="form-label">Coleccion</label>
@@ -34,40 +37,72 @@
                </select> 
             </div> -->
             <div class="input-container">
-               <label for="cost" class="form-label">Costo</label>       
+               <label for="cost" class="form-label">Costo de Compra</label>       
                <input type="number" id="precio" name="cost" class="form-input" placeholder="Ingresar solamente valor numerico">
+               <% if (locals.errors && errors.cost) { %>
+                  <p><%= errors.cost.msg%></p>
+               <% } %>
             </div>
             <div class="input-container">
-               <label for="price" class="form-label">Precio</label>       
+               <label for="price" class="form-label">Precio de Venta</label>       
                <input type="number" id="precio" name="price" class="form-input" placeholder="Ingresar solamente valor numerico">
+               <% if (locals.errors && errors.price) { %>
+                  <p><%= errors.price.msg%></p>
+               <% } %>
             </div>
             <div class="input-container">
                <label for="discount" class="form-label">Descuento en %</label>       
-               <input type="number" id="oferta" name="discount" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input">
+               <input type="number" id="oferta" name="discount" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input" value=0>
             </div>
          <div class="input-container">
              <label for="descriptions" class="form-label">Descripcion</label>
              <textarea name="descriptions" id="description" class="form-input" placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
+             <% if (locals.errors && errors.descriptions) { %>
+               <p><%= errors.descriptions.msg%></p>
+               <% } %>
          </div>
          <div class="input-container">
             <label for="stock" class="form-label">Stock</label>       
             <input type="number" id="stock" name="stock" class="form-input" placeholder="Ingresar solamente valor numerico">
+            <% if (locals.errors && errors.stock) { %>
+               <p><%= errors.stock.msg%></p>
+               <% } %>
          </div>
          <div class="input-container">
             <label for="img1" class="form-label">Imagen principal</label>
-            <input type="file" name="img1" id="img1" class="file-input" required>
+            <input type="file" name="img1" id="img1" class="file-input" >
+            <% if (locals.errors && errors.img1) { %>
+               <div class="text-danger">
+                   <%= errors.img1.msg %> 
+               </div>  
+           <% } %>
          </div>
          <div class="input-container">
             <label for="img2" class="form-label">Imagen complementaria 1</label>
-            <input type="file" name="img2" id="img2" class="file-input" required>
+            <input type="file" name="img2" id="img2" class="file-input" >
+            <% if (locals.errors && errors.img2) { %>
+               <div class="text-danger">
+                   <%= errors.img2.msg %> 
+               </div>  
+           <% } %>
          </div>
          <div class="input-container">
             <label for="img3" class="form-label">Imagen complementaria 2</label>
-            <input type="file" name="img3" id="img3" class="file-input" required>
+            <input type="file" name="img3" id="img3" class="file-input" >
+            <% if (locals.errors && errors.img3) { %>
+               <div class="text-danger">
+                   <%= errors.img3.msg %> 
+               </div>  
+           <% } %>
          </div>
          <div class="input-container">
             <label for="img4" class="form-label">adicional complementaria 3</label>
-            <input type="file" name="img4" id="img4" class="file-input" required>
+            <input type="file" name="img4" id="img4" class="file-input" >
+            <% if (locals.errors && errors.img4) { %>
+               <div class="text-danger">
+                   <%= errors.img4.msg %> 
+               </div>  
+           <% } %>
          </div>
          <div class="input-container">
             <button type="submit" class="button">Guardar producto</button>

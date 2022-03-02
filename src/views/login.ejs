@@ -10,14 +10,17 @@
                 <form method="POST" action="/user/login">
                     <div class="formUser">
                     <label for="email"></label>
-                    <input type="text" name="email" required id="User" placeholder="Usuario" class="user" style="color: white; font-weight: bold;">  
+                    <input type="text" name="email" id="User" placeholder="Usuario" class="user" style="color: white; font-weight: bold;">  
                     <% if (locals.errors && errors.email) { %>
                         <p><%= errors.email.msg%></p>
                     <% } %>
                     </div>
                     <div class="formPassword">
                     <label for="password"></label>
-                    <input type="password" name="password" required="" id="password" placeholder="Contraseña" class="password" style="color: white; font-weight: bold;">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" class="password" style="color: white; font-weight: bold;">
+                    <% if (locals.errors && errors.password) { %>
+                        <p><%= errors.password.msg%></p>
+                    <% } %>
                     </div>
                     <h5 class="register"> <a href="/user/register" style="text-decoration: none; color: white;">¿Aun no estas registrado?.</a></h2>
                     <div class="rememberUser-container">
