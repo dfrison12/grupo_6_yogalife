@@ -23,7 +23,7 @@
         <% if (locals.errors && errors.dni) { %>
             <p><%= errors.dni.msg%></p>
         <% } %>
-        <label for="address">Direccion de Envio</label>
+        <label for="address">Direccion</label>
         <input type="text" class="box" id="address"   name="address" placeholder="Direccion" value="<%= locals.oldData ? oldData.address : null%>">
         <% if (locals.errors && errors.address) { %>
             <p><%= errors.address.msg%></p>

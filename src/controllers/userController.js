@@ -30,6 +30,15 @@ const userController = {
 
     // Procesar login
     loginProcces: (req,res) => {
+
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('login', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }
+
         let userLogin = User.findOne({
             where: {
                 email: req.body.email
@@ -75,7 +84,6 @@ const userController = {
     profile: (req,res) => {
         
         let user = req.session.userLogged
-        console.log(user)
         return res.render('userProfile',{user})
     },
 
@@ -96,25 +104,21 @@ const userController = {
         }
 
         let image
-        console.log(req.files);
         if (req.files[0] != undefined) {
             image = req.files[0].filename
         } else {
-            image = 'user-default.jpg'
+            image = 'user_default.jpg'
         }
-
+        console.log('este es el visto')
+        console.log(image)
 
         
-        /*let userdb1 = User.findOne({
+        User.findOne({
             where: {
                 email: req.body.email}
         })
-
-
-        Promise
-        .all([userdb1])
         .then((user1) =>{
-            if (user1 > 0){
+            if (user1){
                 res.render('register', {
                 errors: {
                     email: {
@@ -123,8 +127,8 @@ const userController = {
                 },
                 oldData: req.body
             })
-            }*/
-            
+            }})
+        .then(() => {
          User.create({
                     email: req.body.email,
                     password: bcryptjs.hashSync(req.body.password),
@@ -133,7 +137,7 @@ const userController = {
                     user_category_id: req.body.user_category_id,
                     address: req.body.address,
                     avatar: image
-        })
+        })})
         .then (() => {
             return res.redirect('/user/login')
         })
