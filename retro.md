@@ -1,5 +1,5 @@
 
-Sprint_2:
+------------------------Sprint_1:----------------------------
 
 
 Start Doing: 
@@ -24,8 +24,29 @@ Less of:
 Stop Doing: 
 
 -Reuniones sin una coordinacion o planeacion previa.
+------------------------Sprint_2:----------------------------
+Start Doing: 
 
-Sprint_3:
+
+-Utilizar tello como herramienta para coordinar las tareas del proyecto.
+
+More of: 
+
+
+-Empezar a mejorar asignacion de prioridades en cuanto a puntos del print y productos atrasados.
+
+Keep Doing : 
+
+-Seguir manteniendo reuniones utilizando discord o whatsapp como medio de comunicación.
+
+Less of: 
+
+-
+
+Stop Doing: 
+
+-Avance sin coordinacion
+------------------------Sprint_3:----------------------------
 
 Start Doing: 
 
@@ -50,8 +71,7 @@ Stop Doing:
 -Reuniones sin una coordinacion o planeacion previa.
 -No empezar a completar el sprint antes de leer sus consignas muy analitica y detalladamente.
 
-<<<<<<< HEAD
-Sprit_5:
+------------------------Sprint_4:----------------------------
 
 Start Doing: 
 
@@ -75,7 +95,31 @@ Stop Doing:
 
 -Reuniones sin una coordinacion o planeacion previa.
 
-Sprint_5:
+------------------------Sprint_5:----------------------------
+
+Start Doing: 
+
+-
+
+More of: 
+
+-Buscar aportar ayuda y estar mas pendiente de la necesidad de los compañeros.
+-Empezar a mejorar asignacion de prioridades en cuanto a puntos del print y productos atrasados.
+
+Keep Doing : 
+
+-Seguir manteniendo reuniones utilizando discord o whatsapp como medio de comunicación.
+-Leer las entregables del sprint para comprender cómo organizarnos.
+-Continuar con Trello como herramienta para coordinar las tareas del proyecto.
+
+Less of: 
+
+-
+
+Stop Doing: 
+
+-Reuniones sin una coordinacion o planeacion previa.
+------------------------Sprint_6:----------------------------:
 
 Start Doing: 
 
@@ -100,27 +144,27 @@ Stop Doing:
 
 -Reuniones sin una coordinacion o planeacion previa.
 
-Sprint_6:
+------------------------Sprint_7:----------------------------
 
 Start Doing: 
 
--
+-Incrementar el dialogo y trabajo en equipo para culminar el trabajo por todo lo alto
 
 More of: 
 
--Buscar aportar ayuda y estar mas pendiente de la necesidad de los compañeros.
--Empezar a mejorar asignacion de prioridades en cuanto a puntos del print y productos atrasados.
+-Sumar iniciativa individual que aporten ideas originales al trabajo
+-Trabajo grupal y reuniones semanales
 
 Keep Doing : 
 
--Seguir manteniendo reuniones utilizando discord o whatsapp como medio de comunicación.
--Leer las entregables del sprint para comprender cómo organizarnos.
--Continuar con Trello como herramienta para coordinar las tareas del proyecto.
+-Enviar info del avance por los medios de comunicacion del proyecto
+-Buena interaccion entre los integrantes
+-Solidaridad para con el compañero
 
 Less of: 
 
--
+-Evitar indivualismo
 
 Stop Doing: 
 
--Reuniones sin una coordinacion o planeacion previa.
+-Postergar
