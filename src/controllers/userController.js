@@ -109,8 +109,6 @@ const userController = {
         } else {
             image = 'user_default.jpg'
         }
-        console.log('este es el visto')
-        console.log(image)
 
         
         User.findOne({

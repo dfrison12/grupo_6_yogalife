@@ -4,7 +4,7 @@ const { check } = require ('express-validator');
 module.exports = [
     check('name')
         .notEmpty().withMessage('Debes ingresar un Titulo para la prenda')
-        .isLength({min:5}).withMessage('El titulo debe contener al menos 5 caracteres'),
+        .isLength({min:3}).withMessage('El titulo debe contener al menos 3 caracteres'),
     check('cost')
         .notEmpty().withMessage('Debes ingresar un Costo de compra'),
     check('price')

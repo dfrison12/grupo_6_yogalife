@@ -153,7 +153,14 @@ input[type="file"] {
     -moz-appearance: none;
 }
 
-
+div.errorstittle ul p, div.errorscost ul p, div.errorsprice ul p,
+div.errorsdiscount ul p, div.errorsdescription ul p, div.errorsstock ul p,
+div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul p {
+    color: rgb(197, 13, 13);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0px 0px 0px;
+}
 
 @media (min-width: 419px) {
     main div.form-container{
@@ -248,6 +255,13 @@ input[type="file"] {
     input.file-input{
         width: 420px;
         height: 35px;   
+    }
+
+    div.errorstittle ul p, div.errorscost ul p, div.errorsprice ul p,
+    div.errorsdiscount ul p, div.errorsdescription ul p, div.errorsstock ul p,
+    div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul p {
+    font-size: 18px;
+    margin: 10px 0px 0px 0px;
     }
 
 

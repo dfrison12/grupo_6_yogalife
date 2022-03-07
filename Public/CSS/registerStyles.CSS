@@ -139,6 +139,13 @@ label.file-input{
 }
 
 
+div.errorsfullname, div.errorsdni, div.errorsaddress,
+div.errorsemail, div.errorspassword, div.errorsimage, div.errorstyc{
+    color: rgb(219, 0, 0);
+    font-weight: 600;
+
+}
+
 @media (min-width: 419px){
     /* MAIN 420 */
 

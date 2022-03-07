@@ -6,6 +6,7 @@ module.exports = [
         .notEmpty().withMessage('Ingresar nombre completo')
         .isLength({min:2}).withMessage('Debe contener al menos 2 caracteres'),
     check('dni')
+        .notEmpty().withMessage('Ingresar DNI')
         .isLength({ min: 7, max:8 }).withMessage('Ingresar DNI Valido'),
     check('address')
         .notEmpty().withMessage('Ingresar una direccion'),

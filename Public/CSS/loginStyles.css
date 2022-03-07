@@ -147,6 +147,11 @@ button:after {
     transition: 0.5s;
 }
 
+div.errorsemail div.error, div.errorspassword div.error {
+    color: rgb(219, 0, 0);
+    font-size: 12px;
+    font-weight: 600;
+}
 
 @media (min-width: 419px) {
 

@@ -12,21 +12,48 @@
 
         <h2 class="text">REGISTRATE / <a href="/login" class="login">INGRESA</a> </h2>
    
-  <form class="form" action="/user/register" method="POST" enctype="multipart/form-data">
+  <form class="form" id="form" action="/user/register" method="POST" enctype="multipart/form-data">
     <div id="registerForms">
         <label for="fullname">Nombre y apellido</label>
         <input type="text" class="box" id="name"   name="fullname" placeholder="Nombres" value="<%= locals.oldData ? oldData.fullname : null%>">
+        <div class="errorsfullname">
+            <ul></ul>
+        </div>
         <% if (locals.errors && errors.fullname) { %>
-            <p><%= errors.fullname.msg%></p>
+            <div class="errorsfullname">
+                <ul>
+                    <li>
+                        <%= errors.fullname.msg%>
+                    </li>
+                </ul>
+            </div>
         <% } %>
         <input type="text" class="box" id="dni"   name="dni" placeholder="D.N.I" value="<%= locals.oldData ? oldData.dni : null%>">
+        <div class="errorsdni">
+            <ul></ul>
+        </div>
         <% if (locals.errors && errors.dni) { %>
-            <p><%= errors.dni.msg%></p>
+            <div class="errorsdni">
+                <ul>
+                    <li>
+                        <%= errors.dni.msg%>
+                    </li>
+                </ul>
+            </div>
         <% } %>
         <label for="address">Direccion</label>
         <input type="text" class="box" id="address"   name="address" placeholder="Direccion" value="<%= locals.oldData ? oldData.address : null%>">
+        <div class="errorsaddress">
+            <ul></ul>
+        </div>
         <% if (locals.errors && errors.address) { %>
-            <p><%= errors.address.msg%></p>
+            <div class="errorsaddress">
+                <ul>
+                    <li>
+                        <%= errors.address.msg%>
+                    </li>
+                </ul>
+            </div>
         <% } %>
     </div>
         <h4 class="text">Perfil del usuario</h4>
@@ -42,36 +69,79 @@
 
    <h4 class="text">DATOS DE ACCESO</h4>
         <label for="email">Correo electronico</label>
-        <input type="email" class="box" name="email" id="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null%>">
+        <input type="text" class="box" name="email" id="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null%>">
+        <div class="errorsemail">
+            <ul></ul>
+        </div>
         <% if (locals.errors && errors.email) { %>
-            <p><%= errors.email.msg%></p>
+            <div class="errorsemail">
+                <ul>
+                    <li>
+                        <%= errors.email.msg%>
+                    </li>
+                </ul>
+            </div>
         <% } %>
         <label for="password">Contraseña</label>
         <input type="password"  name="password"  class="box"  id="password">
+        <div class="errorspassword">
+            <ul></ul>
+        </div>
         <% if (locals.errors && errors.password) { %>
-            <p><%= errors.password.msg%></p>
+            <div class="errorspassword">
+                <ul>
+                    <li>
+                        <%= errors.password.msg%>
+                    </li>
+                </ul>
+            </div>
         <% } %>
         <label for="password2">Repita la Contraseña</label>
-        <input type="password"  name="password2"  class="box"  id="password">
+        <input type="password"  name="password2"  class="box"  id="passwordconfirm">
         <% if (locals.errors && errors.password2) { %>
-            <p><%= errors.password2.msg%></p>
+            <div class="errorspassword">
+                <ul>
+                    <li>
+                        <%= errors.password2.msg%>
+                    </li>
+                </ul>
+            </div>
         <% } %>
         <label for="image" class="file-input">FOTO DE PERFIL</label>
         <input type="file" name="image" id="image" class="box">
+        <div class="errorsimage">
+            <ul></ul>
+        </div>
         <% if (locals.errors && errors.image) { %>
-            <div class="text-danger">
-                <%= errors.image.msg %> 
-            </div>  
+            <div class="errorsimage">
+                <ul>
+                    <li>
+                        <%= errors.image.msg %>  
+                    </li>
+                </ul>
+            </div>
         <% } %>
         <div class="tc">
-        <label for="tyc"><input type="checkbox"  name="tyc"  id="tyc"    value="Accepted">Acepto terminos y condiciones</label>
+        <label for="tyc">
+            <input type="checkbox"  name="tyc"  id="tyc"    value="Accepted">Acepto terminos y condiciones
+            <div class="errorstyc">
+                <ul></ul>
+            </div>
+        </label>
         <% if (locals.errors && errors.tyc) { %>
-            <p><%= errors.tyc.msg%></p>
+            <div class="errorstyc">
+                <ul>
+                    <li>
+                        <%= errors.tyc.msg%>
+                    </li>
+                </ul>
+            </div>
         <% } %>
         </div> 
 
         <div class="button">
         <button type="submit">Registrar</button>
+            
         </div>
 
     </form>
@@ -93,6 +163,6 @@
 
 <!-- Footer -->
 <%- include('./partials/footer')%>       
-    
+<script src='/js/validatorRegister.js'></script>    
 </body>
 </html>

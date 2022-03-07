@@ -7,20 +7,34 @@
         <div class="SiginHtml">
             <h2 class="siginTitle">INGRESAR</h2> 
             <div class="backForm">
-                <form method="POST" action="/user/login">
+                <form method="POST" id="form" action="/user/login">
                     <div class="formUser">
-                    <label for="email"></label>
-                    <input type="text" name="email" id="User" placeholder="Usuario" class="user" style="color: white; font-weight: bold;">  
-                    <% if (locals.errors && errors.email) { %>
-                        <p><%= errors.email.msg%></p>
-                    <% } %>
+                        <label for="email"></label>
+                        <input type="text" name="email" id="email" placeholder="Usuario" class="user" style="color: white; font-weight: bold;">
+                        <div class="errorsemail">
+                            <div class="error"></div>
+                        </div>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="errorsemail">
+                                <div class="error">
+                                    <%= errors.email.msg%>
+                                </div>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="formPassword">
-                    <label for="password"></label>
-                    <input type="password" name="password" id="password" placeholder="Contraseña" class="password" style="color: white; font-weight: bold;">
-                    <% if (locals.errors && errors.password) { %>
-                        <p><%= errors.password.msg%></p>
-                    <% } %>
+                        <label for="password"></label>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" class="password" style="color: white; font-weight: bold;">
+                        <div class="errorspassword">
+                            <div class="error"></div>
+                        </div>
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="errorspassword">
+                                <div class="error">
+                                    <%= errors.password.msg%>
+                                </div>
+                            </div>
+                        <% } %>
                     </div>
                     <h5 class="register"> <a href="/user/register" style="text-decoration: none; color: white;">¿Aun no estas registrado?.</a></h2>
                     <div class="rememberUser-container">
@@ -37,6 +51,7 @@
                 
         </div>
     </div>
-    <%- include('./partials/footer')%>   
+    <%- include('./partials/footer')%>
+    <script src='/js/validatorLogin.js'></script>
 </body>
 </html>

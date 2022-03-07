@@ -9,12 +9,21 @@
  <main>
     <h2>Registrar nueva Prenda</h2>
     <div class="form-container">
-        <form action="/products/create" method="POST" enctype="multipart/form-data">
+        <form action="/products/create" id="form" method="POST" enctype="multipart/form-data">
             <div class="input-container">
                <label for="name" class="form-label">Prenda o Producto</label>       
-               <input type="text" id="titulo" name="name" class="form-input" placeholder="Ej: Claza lulea YogaFlow 5/8">
+               <input type="text" id="tittle" name="name" class="form-input" placeholder="Titulo de la prenda">
+               <div class="errorstittle">
+                  <ul></ul>
+               </div>
                <% if (locals.errors && errors.name) { %>
-                  <p><%= errors.name.msg%></p>
+                  <div class="errorstittle">
+                     <ul>
+                        <p>
+                        <%= errors.name.msg%>
+                        </p>
+                     </ul>
+                  </div>
                <% } %>
             </div>
             <div class="input-container">
@@ -38,69 +47,122 @@
             </div> -->
             <div class="input-container">
                <label for="cost" class="form-label">Costo de Compra</label>       
-               <input type="number" id="precio" name="cost" class="form-input" placeholder="Ingresar solamente valor numerico">
+               <input type="number" id="cost" name="cost" class="form-input" placeholder="Ingresar solamente valor numerico">
+               <div class="errorscost">
+                  <ul></ul>
+               </div>
                <% if (locals.errors && errors.cost) { %>
-                  <p><%= errors.cost.msg%></p>
+                  <div class="errorscost">
+                     <ul>
+                        <p><%= errors.cost.msg%></p>
+                     </ul>
+                  </div>      
                <% } %>
             </div>
             <div class="input-container">
                <label for="price" class="form-label">Precio de Venta</label>       
-               <input type="number" id="precio" name="price" class="form-input" placeholder="Ingresar solamente valor numerico">
+               <input type="number" id="price" name="price" class="form-input" placeholder="Ingresar solamente valor numerico">
+               <div class="errorsprice">
+                  <ul></ul>
+               </div>
                <% if (locals.errors && errors.price) { %>
-                  <p><%= errors.price.msg%></p>
+                  <div class="errorsprice">
+                     <ul>
+                        <p><%= errors.price.msg%></p>
+                     </ul>
+                  </div>
                <% } %>
             </div>
             <div class="input-container">
                <label for="discount" class="form-label">Descuento en %</label>       
-               <input type="number" id="oferta" name="discount" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input" value=0>
+               <input type="number" id="discount" name="discount" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input" value=0>
+               <div class="errorsdiscount">
+                  <ul></ul>
+               </div>
             </div>
-         <div class="input-container">
+            <div class="input-container">
              <label for="descriptions" class="form-label">Descripcion</label>
              <textarea name="descriptions" id="description" class="form-input" placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
+             <div class="errorsdescription">
+                <ul></ul>
+             </div>
              <% if (locals.errors && errors.descriptions) { %>
-               <p><%= errors.descriptions.msg%></p>
+               <div class="errorsdescription">
+                  <ul>
+                     <p><%= errors.descriptions.msg%></p>
+                  </ul>
+               </div>
                <% } %>
-         </div>
+            </div>
          <div class="input-container">
             <label for="stock" class="form-label">Stock</label>       
             <input type="number" id="stock" name="stock" class="form-input" placeholder="Ingresar solamente valor numerico">
+            <div class="errorsstock">
+               <ul></ul>
+            </div>
             <% if (locals.errors && errors.stock) { %>
-               <p><%= errors.stock.msg%></p>
-               <% } %>
+               <div class="errorsstock">
+                  <ul>
+                     <p><%= errors.stock.msg%></p>
+                  </ul>
+               </div>
+            <% } %>
          </div>
          <div class="input-container">
             <label for="img1" class="form-label">Imagen principal</label>
             <input type="file" name="img1" id="img1" class="file-input" >
+            <div class="errorsimg1">
+               <ul></ul>
+            </div>
             <% if (locals.errors && errors.img1) { %>
-               <div class="text-danger">
-                   <%= errors.img1.msg %> 
+               <div class="errorsimg1">
+                  <div>
+                     <ul>
+                        <p><%= errors.img1.msg %></p>
+                     </ul>
+                  </div>
                </div>  
            <% } %>
          </div>
          <div class="input-container">
             <label for="img2" class="form-label">Imagen complementaria 1</label>
             <input type="file" name="img2" id="img2" class="file-input" >
+            <div class="errorsimg2">
+               <ul></ul>
+            </div>
             <% if (locals.errors && errors.img2) { %>
-               <div class="text-danger">
-                   <%= errors.img2.msg %> 
+               <div class="errorsimg2">
+                  <ul>
+                     <p><%= errors.img2.msg %></p>
+                  </ul> 
                </div>  
            <% } %>
          </div>
          <div class="input-container">
             <label for="img3" class="form-label">Imagen complementaria 2</label>
             <input type="file" name="img3" id="img3" class="file-input" >
+            <div class="errorsimg3">
+               <ul></ul>
+            </div>
             <% if (locals.errors && errors.img3) { %>
-               <div class="text-danger">
-                   <%= errors.img3.msg %> 
+               <div class="errorsimg3">
+                   <ul>
+                      <p><%= errors.img3.msg %></p>
+                   </ul> 
                </div>  
            <% } %>
          </div>
          <div class="input-container">
             <label for="img4" class="form-label">adicional complementaria 3</label>
             <input type="file" name="img4" id="img4" class="file-input" >
+            <div class="errorsimg4">
+               <ul></ul>
+            </div>
             <% if (locals.errors && errors.img4) { %>
-               <div class="text-danger">
-                   <%= errors.img4.msg %> 
+               <div class="errorsimg4">
+                   <ul>
+                      <p><%= errors.img4.msg %></p>
+                   </ul> 
                </div>  
            <% } %>
          </div>
@@ -111,5 +173,6 @@
  </main>   
     <!-- Footer -->
     <%- include('./partials/footer')%>
+    <script src="/js/validatorProduct.js"></script>
 </body>
 </html>
