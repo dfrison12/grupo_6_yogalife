@@ -36,7 +36,6 @@ let userLoggedMiddleware = (req, res, next) => {
             res.locals.userLogged = req.session.userLogged
         }
     }
-    console.log(req.session.userLogged)
     next();
     }
     

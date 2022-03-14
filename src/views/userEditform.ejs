@@ -10,12 +10,12 @@
 
         <section class="formSection"> 
 
-        <h2 class="text">REGISTRATE / <a href="/login" class="login">INGRESA</a> </h2>
+        <h2 class="text">EDITA TUS DATOS      /<a href="/login" class="login">      PERFIL</a> </h2>
    
-        <form class="form" id="form" action="/user/register" method="POST" enctype="multipart/form-data">
+        <form class="form" id="form" action="/user/update?_method=PUT" method="POST" enctype="multipart/form-data">
             <div id="registerForms">
                 <label for="fullname">Nombre y apellido</label>
-                <input type="text" class="box" id="name"   name="fullname" placeholder="Nombres" value="<%= locals.oldData ? oldData.fullname : null%>">
+                <input type="text" class="box" id="name"   name="fullname" placeholder="Nombres" value="<%= locals.oldData ? oldData.fullname : userLogged.full_name%>">
                     <div class="errorsfullname">
                         <ul></ul>
                     </div>
@@ -28,7 +28,7 @@
                             </ul>
                         </div>
                     <% } %>
-                <input type="text" class="box" id="dni"   name="dni" placeholder="D.N.I" value="<%= locals.oldData ? oldData.dni : null%>">
+                <input type="text" class="box" id="dni"   name="dni" placeholder="D.N.I" value="<%= locals.oldData ? oldData.dni : userLogged.dni %>">
                     <div class="errorsdni">
                         <ul></ul>
                     </div>
@@ -42,7 +42,7 @@
                         </div>
                     <% } %>
                 <label for="address">Direccion</label>
-                <input type="text" class="box" id="address"   name="address" placeholder="Direccion" value="<%= locals.oldData ? oldData.address : null%>">
+                <input type="text" class="box" id="address"   name="address" placeholder="Direccion" value="<%= locals.oldData ? oldData.address : userLogged.address %>">
                     <div class="errorsaddress">
                         <ul></ul>
                     </div>
@@ -59,17 +59,27 @@
 
             <h4 class="text">Perfil del usuario</h4>
             <select name="user_category_id" id="category" class="select-input" required>
-                <option value="1">
+                <% if ( userLogged.user_category_id == 1 ) { %>
+                <option value="1" selected>
                     Usuario
                 </option>
                 <option value="2">
                     Administrador
                 </option>
+                <% } %>
+                <% if ( userLogged.user_category_id == 2 ) { %>
+                <option value="1" >
+                    Usuario
+                </option>
+                <option value="2" selected>
+                    Administrador
+                </option>
+                <% } %>
             </select>
 
             <h4 class="text">DATOS DE ACCESO</h4>
             <label for="email">Correo electronico</label>
-            <input type="text" class="box" name="email" id="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null%>">
+            <input type="text" class="box" name="email" id="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : userLogged.email %>">
                 <div class="errorsemail">
                     <ul></ul>
                 </div>
@@ -97,18 +107,6 @@
                         </ul>
                     </div>
                 <% } %>
-
-            <label for="password2">Repita la Contraseña</label>
-            <input type="password"  name="password2"  class="box"  id="passwordconfirm">
-                <% if (locals.errors && errors.password2) { %>
-                    <div class="errorspassword">
-                        <ul>
-                            <li>
-                                <%= errors.password2.msg%>
-                            </li>
-                        </ul>
-                    </div>
-                <% } %>
             <label for="image" class="file-input">FOTO DE PERFIL</label>
             <input type="file" name="image" id="image" class="box">
                 <div class="errorsimage">
@@ -122,27 +120,10 @@
                             </li>
                         </ul>
                     </div>
-                <% } %>
-            <div class="tc">
-                <label for="tyc">
-                    <input type="checkbox"  name="tyc"  id="tyc"    value="Accepted">Acepto terminos y condiciones
-                    <div class="errorstyc">
-                        <ul></ul>
-                    </div>
-                </label>
-                <% if (locals.errors && errors.tyc) { %>
-                    <div class="errorstyc">
-                        <ul>
-                            <li>
-                                <%= errors.tyc.msg%>
-                            </li>
-                        </ul>
-                    </div>
-                <% } %>
-            </div> 
+                <% } %> 
 
             <div class="button">
-            <button type="submit">Registrar</button>
+            <button type="submit" id="confirm-button">Confirmar</button>
             </div>
 
         </form>
@@ -157,6 +138,7 @@
 
     <!-- Footer -->
     <%- include('./partials/footer')%>       
-    <script src='/js/validatorRegister.js'></script>    
+    <script src='/js/validatorUserEdit.js'></script>    
+    <script src='/js/userEditForm.js'></script>    
 </body>
 </html>

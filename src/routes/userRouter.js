@@ -35,6 +35,10 @@ router.get('/register', guestMiddleware , userController.register);
 // Registro - Proceso
 router.post('/register', upload.any(), validationsRegister, userController.createUser);
 
+//Editar  Formulario
+router.get('/edit', userController.edit);
+// Guardar cambios
+router.put('/update',authMiddleware, upload.any(), userController.update);
 
 router.get('/listado', userController.list);
 

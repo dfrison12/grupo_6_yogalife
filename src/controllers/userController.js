@@ -81,8 +81,7 @@ const userController = {
         
     },
 
-    profile: (req,res) => {
-        
+    profile: (req,res) => {        
         let user = req.session.userLogged
         return res.render('userProfile',{user})
     },
@@ -127,15 +126,16 @@ const userController = {
             })
             }})
         .then(() => {
-         User.create({
-                    email: req.body.email,
-                    password: bcryptjs.hashSync(req.body.password),
-                    full_name: req.body.fullname,
-                    dni: req.body.dni,
-                    user_category_id: req.body.user_category_id,
-                    address: req.body.address,
-                    avatar: image
-        })})
+            User.create({
+                        email: req.body.email,
+                        password: bcryptjs.hashSync(req.body.password),
+                        full_name: req.body.fullname,
+                        dni: req.body.dni,
+                        user_category_id: req.body.user_category_id,
+                        address: req.body.address,
+                        avatar: image
+            })
+        })
         .then (() => {
             return res.redirect('/user/login')
         })
@@ -178,7 +178,63 @@ const userController = {
         fs.writeFileSync(userFilePath, JSON.stringify(usuario, null, ''))
         res.redirect('/')*/
     },
+    edit: (req,res) => {
+        res.render('userEditForm', {
+            user: req.session.userLogged
+        })
+    },
+    update: (req,res) => {
+        let avatar
+        
+        req.files.forEach(file => {
+            switch (file.fieldname) {
+                case "image":
+                    avatar = file.originalname;
+                    break
+            }
+        });
+        
+        User.findOne({
+            where: {
+                email: req.body.email}
+        })
+        .then((user1) =>{
+            let validation = req.body.email == req.session.userLogged.email
+            if (user1 && !validation){
+                res.render('userEditForm', {
+                errors: {
+                    email: {
+                        msg: 'Este Email ya esta registrado'
+                    }
+                },
+                oldData: req.body
+            })
+            }})
+        .then(() => {
+            User.findByPk(req.session.userLogged.id)
+            .then(function (user) {
+                user.update({
+                    email: req.body.email,
+                    password: bcryptjs.hashSync(req.body.password, 12),
+                    full_name: req.body.fullname,
+                    dni: req.body.dni,
+                    user_category_id: req.body.user_category_id,
+                    address: req.body.address,
+                    avatar: avatar
+                }).then(user => {
+                    req.session.userLogged = user;
+                    res.redirect("/user/profile")
+                }).catch(function(e){
+                    res.render('error')
+                });
 
+        })
+
+        })
+        
+        
+        
+    },
     //CONTROLLER - PARA BASE DE DATOS
     list: (req,res)=> {
         db.User.findAll({

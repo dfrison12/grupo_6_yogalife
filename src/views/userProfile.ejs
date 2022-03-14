@@ -2,37 +2,44 @@
 <html lang="en">
     <!-- Head -->
     <%- include ('./partials/head',{title:'Perfil de Usuario', style:'userProfileStyles.css'}) %>
-<body>
-    <!-- Header -->
-    <%- include ('./partials/header') %> 
+    <body>
+        <!-- Header -->
+        <%- include ('./partials/header') %> 
 
+        <main>
+            <div class=main>
+                <div class=profile-container>
+                    <div class="tittle">
+                        <h2 class="tittle">Bienvenido</h2>
+                        <h2 class="tittle"><%=user.full_name%></h2>
+                    </div>    
+                    <div class=avatar-container>
+                        <img class="avatar" src="/images/usersImages/<%=user.avatar%>" alt="">
+                    </div>
+                </div>
 
-    <main>
-    <div class=main>
-        <div class=profile-container>
-            <div class="tittle">
-                <h2> Bienvenido <%=user.full_name%></h2>
+                <div class=data-container>
+                    <div class=data>
+                        <h2 class="data-email">Email Registrado:</h2>
+                        <h4 class="data-email"><%=user.email%></h4>
+                        <h2 class="data-dni">DNI:</h2>
+                        <h4 class="data-dni"><%=user.dni%></h4>
+                        <h2 class="data-addres">Direccion:</h2>
+                        <h4 class="data-addres"><%=user.address%></h4>
+                    </div>
+                </div>
             </div>
-            <div class=avatar-container>
-                <img class="avatar" src="/images/usersImages/<%=user.avatar%>" alt="">
+            <div class="button-container">
+                <div class="logout-container">
+                <a class=logout-button href="/user/logout" >Salir</a>
+                </div>
+                <div class="edit-container">
+                <a class=edit-button href="/user/edit">Editar</a>
+                </div>
             </div>
-        </div>
-        
-        <div class=data-container>
-            <div class=data>
-                <h4> <%=user.email%></h4>
-                <h4> DNI: <%=user.dni%></h4>
-                <h4> Direccion: <%=user.address%></h4>
-            </div>
-            <div class="logout-container">
-                <a class=logout href="/user/logout" >Salir</a>
-            </div>
-        </div>
-    </div>
-    </main>
+        </main>
 
-
-    <!-- Footer -->
-<%- include('./partials/footer')%>
-</body>
+        <!-- Footer -->
+        <%- include('./partials/footer')%>
+    </body>
 </html>

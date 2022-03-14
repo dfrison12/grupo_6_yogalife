@@ -10,32 +10,33 @@ body{
 }
 
 main {
-    display: flex;
-    margin-top: 275px;
+
+    margin-top: 140px;
     padding: 30px;
 }
 
-div.main{
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
-    height: 230px
+div.profile-container{ 
+    background-color: #f5de6ddb;
+    padding: 20px 40px 20px 40px;
+    border-radius: 20px 0px;
+    border: solid 0px;
+    border-color: rgb(11 54 71);
+    margin: 0px 30px 0px 30px;
 }
 
-div.profile-container{
-    display: flex;
-    flex-direction: column;
-    padding:20px;
+div.tittle{
+    text-align: center;
 }
 
-
-
-h2{
+h2.tittle{
     font-size: 20px;
-    font-weight: 500;
-
+    color: rgb(8, 70, 70);
+    font-weight: 600;
 }
 
+div.avatar-container{
+    text-align: center;
+}
 
 img.avatar{
     max-width: 80px;
@@ -43,49 +44,103 @@ img.avatar{
 }
 
 div.data-container{
-    width: 40%;
+    width: 100%;
     padding: 20px;
-    display:flex;
-    flex-direction: column;
     
+}
+
+h2.data-email, h2.data-dni, h2.data-addres{
+    font-size: 19px;
+    color: rgb(4, 80, 76);
+    margin: 10px 0px 5px 0px;
+    text-align: center;
+}
+
+h4.data-email, h4.data-dni, h4.data-addres{
+    font-size: 15px;
+    color: rgb(9, 22, 22);
+    margin: 10px 0px 5px 0px;
+    text-align: center;
 }
 
 h5{
     margin: 5px 0px;
 }
 
-div.logout-container{
-    border: 1px solid rgb(11, 54, 71);
-    border-radius: 15px;
-    background-color: rgb(7, 97, 109);
-    padding: 5px;
-    margin-top: 10px;
-    text-align: center;
-    transition: all 250ms;
-    width: 50px;
+div.button-container{
+    display: flex;
+    justify-content: center;
+    margin: 30px 10px 10px 10px;
 }
 
-div.logout-container:hover{
+div.logout-container, div.edit-container{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(7, 97, 109);
+    padding: 12px;
+    transition: all 250ms;
+    width: 55px;
+    display: flex;
+    margin: 0px 25px 0px 25px;
+}
+
+div.logout-container:hover, div.edit-container:hover{
     background-color: rgb(0, 0, 0);
     color: #F7DC6F;
     font-weight: 800;
     transition: all 1000ms
 }
 
-a.logout{
+a.logout-button, a.edit-button{
     text-decoration: none;
+    font-size: 12px;
     font-weight: 600;
     color: white;
-    width: 5px;
+    width: 70px;
     background-color:none;
+    margin: auto;
 }
 
-@media (min-width: 419px){
+@media (min-width: 720px){
 
-    main {
+    
+    div.main{
         display: flex;
-        margin-bottom: 200px;
-        padding: 30px;
+        width: 100%;
+        justify-content: center;
+        background-color: white;
+        border-radius: 20px 0px;
+        align-items: center;
+    }
+    
+    div.profile-container{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #F7DC6F;
+        margin: 40px 60px 56px 40px;
+    }
+    
+    h2.tittle{
+        font-size: 30px;
+    }
+
+    div.data-container{
+        width: 40%;
+        padding: 20px;
+        display:flex;
+        flex-direction: column;
+        
+    }
+
+    div.logout-container, div.edit-container{
+        width: 80px;
+        border: none;
+        height: 50px;
+    }
+
+    a.logout-button, a.edit-button{
+        font-size: 19px;
     }
 
 }

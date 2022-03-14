@@ -141,7 +141,30 @@ header nav.main-navbar a{
     font-style:bold;
 }
 
-@media (min-width: 419px){
+@media (min-width: 420px){
+    header div.logo a i {
+        font-size: 50px;
+        color:#F7DC6F;
+    }
+    
+    header div.logo a h1{
+        font-size: 30px;
+        padding-left: 5px;
+        color:#F7DC6F;
+        font-variant: inherit;
+    }
+
+    a.burger-buttom {
+        height: 60px;
+        width: 60px;
+        font-size: 35px;
+    }
+
+    header div form input.search-input{
+        padding: 15px;
+    }
+
+@media (min-width: 769px){
 
     /* HEADER */
 
@@ -154,9 +177,9 @@ header nav.main-navbar a{
         flex-wrap: nowrap;
         align-items: center;
     }
-
-    header div.logo{
-        width: 30%;
+    
+    header div.logo a h1{
+        font-size: 35px;
     }
 
     header div form.search-form{
@@ -177,7 +200,7 @@ header nav.main-navbar a{
     }
 
     header nav.main-navbar li a{
-        font-size: 7px;
+        font-size: 13px;
         margin:0px 5px 10px 5px;
         transition: all 600ms;
     }
@@ -193,7 +216,7 @@ header nav.main-navbar a{
     }
 
     header nav.main-navbar li a i{
-        font-size: 6px;
+        font-size: 13px;
         transition: all 400ms;
     }
 
@@ -206,7 +229,7 @@ header nav.main-navbar a{
     }
     
     header img.user-avatar {
-        width: 15px;
+        width: 20px;
         border-radius: 50%;
         margin: -2px 4px 0px 0px
     }
@@ -215,9 +238,8 @@ header nav.main-navbar a{
         display: none;
     }
 
-}
 
-@media (min-width: 769px){
+
 
     /* HEADER 770 */
 
@@ -230,7 +252,7 @@ header nav.main-navbar a{
     }
 
     header nav.main-navbar li a{
-        font-size: 12px;
+        font-size: 20px;
     }
 
     header nav.main-navbar li a i{
@@ -242,7 +264,7 @@ header nav.main-navbar a{
     }
 
     header img.user-avatar {
-        width: 18px;
+        width: 32px;
     }
 
 }

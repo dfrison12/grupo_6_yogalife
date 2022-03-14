@@ -47,4 +47,4 @@ app.use('/productCart', mainRouter);
 
 
 
-app.listen(3000, () => console.log('Servidor funcionando en puerto 3000'));
+app.listen(3001, () => console.log('Servidor funcionando en puerto 3001'));
