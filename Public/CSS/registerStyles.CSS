@@ -25,9 +25,12 @@ p{
     font-size: 12px;
 }
 
+form.form{
+    margin: 0px 0px 50px 0px;
+}
 /* MAIN */
 main{
-    margin-top: 130px;   
+    margin-top: 200px;   
 }
 
 main .text{
@@ -89,6 +92,7 @@ main .TC{
     color: rgb(247, 220, 111, 1);
     border: none;
     transition: 0.5s;
+    margin: 0px 80px 0px 30px;
 }
 
 .submit:hover {
@@ -148,7 +152,12 @@ div.errorsemail, div.errorspassword, div.errorsimage, div.errorstyc{
 
 @media (min-width: 419px){
     /* MAIN 420 */
-
+    main{
+        margin-top: 120px;
+    }
+    #tittle-h2{
+        margin-top: 215px;
+    }
 
 }
 
@@ -178,10 +187,24 @@ div.errorsemail, div.errorspassword, div.errorsimage, div.errorstyc{
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.69;
-        border-radius: 15px;
-        margin: 50px 75px;
+        border-radius: 0px;
+        margin: 0px 75px 0px 0px;
 
-    }   
+    }
+    main .imgSection-edit{
+        width: 50%;
+        text-align: center;  
+        background-image: url(/images/img-editform.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.69;
+        margin: 0px 75px 0px 0px;
+
+    }
+    
+    #tittle-h2{
+        margin-top: 40px;
+    }
 
 
 @media (min-width: 1200px){
@@ -204,6 +227,10 @@ main .imgSection{
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+main .imgSection-edit{
+    width:40%;
+    text-aling: center;
 }   
 
 }

@@ -3,7 +3,7 @@
         <div class="logo">
             <a href="/">
                 <i class="fas fa-hamsa"></i>
-                <h1>yogalife</h1>
+                <h1>YogaLife</h1>
             </a>
             
         </div>
@@ -11,7 +11,7 @@
             <input type="text" class="search-input" name="wanted" placeholder="Busca tu coleccion favorita!">
             <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
         </form>
-        </div>
+    </div>
         
     <nav class="main-navbar">
         <ul class="left-navbar">
@@ -29,15 +29,39 @@
             <li><a href="/user/login">Ingresá </a></li>
             <li><a href="/user/register">Registrate </a></li>
             <%} %>
-            <li><a href="#">Shop <i class="fas fa-dolly"></i></a></li>
+            <li><a href="#">Carrito<i class="fas fa-dolly"></i></a></li>
             <% if (locals.isLogged) { %>
                 <li><a href="/user/logout">Cerrar sesión </a></li>
                 <% } %>
         </ul>
     </nav>
     <div class="burger-menu">
-    <a href="#" class="burger-buttom">
-        <i class="fas fa-om"></i>
-    </a>
+        <a class="burger-buttom" id="burger-button" >
+            <i class="fas fa-om"></i>
+        </a>
     </div>
+    <div class="smart-navbar smart-button" id="smart-navbar">
+        <ul class="navbar-list">
+            <% if (locals.isLogged) { %> 
+                <li><a href="/user/profile"><div class="user-avatar-container"><img class="user-avatar" src="/images/usersImages/<%=locals.userLogged.avatar%>"><div><%=locals.userLogged.name%></div></div></a></li>
+                <% } else { %>
+                <li><a href="/user/login">Ingresá </a></li>
+                <li><a href="/user/register">Registrate </a></li>
+            <%} %>
+            <li><a href="/products">Catalogo</a></li>
+            <li><a href="/#ofertas">Ofertas</a></li>
+            <li><a href="#">Carrito<i class="fas fa-dolly"></i></a></li>
+            <% if (locals.isLogged) { %>
+            <li><a href="/products/add">Vender</a></li>
+            <% } %>
+            <% if (locals.isLogged) { %>
+            <li><a href="/user/logout">Cerrar sesión </a></li>    
+            <% } %>
+            <li id ="close-button" class="close-button"><a href="javascript:void(0)" class="close-btn" onclick="closeNav()">
+                <i class="far fa-times-circle" id="close-icon"></i></a>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="/js/menu.js"></script>
 </header>

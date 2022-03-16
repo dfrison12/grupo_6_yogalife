@@ -51,6 +51,8 @@ main section.product-images div.product-images{
     background-color: #117a653d;
     border-radius: 20px;
     box-shadow: 3px 2px 3px 0px #117a65;
+    margin: auto;
+    max-width: 80%;
 }
 
 main div section.product-images img.main-picture {
@@ -75,7 +77,7 @@ main section.product-images div.img-box{
 main section.product-images div.img-box img{
     width: 100%;
     padding: 5px;
-    height: auto;
+    height: 100%;
     border-radius: 8px;
 }
 
@@ -88,7 +90,8 @@ main div div.product-description{
     box-shadow: 3px 2px 3px 0px #117a65;
     padding: 20px;
     border-radius: 15px;
-    width: 100%;
+    width: 80%;
+    margin:auto;
     height: 495px;
 }
 
@@ -285,6 +288,19 @@ div.product-description form{
         margin-top: 90px;    
     }
 
+    main div.product-detail{
+        margin-top: 180px;
+    
+    }
+
+    main section.product-images div.product-images{
+        width: 65%;
+    }
+
+    main div div.product-description{
+        width: 65%;
+    }
+
 }
 
 @media (min-width: 769px){
@@ -295,6 +311,11 @@ div.product-description form{
         margin-top: 140px;    
     }
 
+    main section.product-images div.product-images{
+        margin: none;
+        max-width: 100%;
+    }
+
     main div.product-detail{
         margin: auto;
         width: 80%;
@@ -303,6 +324,7 @@ div.product-description form{
         justify-content: space-around;
         flex-wrap: nowrap;
         padding: 0px;
+        max-width: 900px;
 
     }
 
@@ -349,6 +371,7 @@ div.product-description form{
     main div section.product-description{
         width: 60%;
         padding: 0px;
+        margin: 0px 0px 15px 0px;
     }
 
     section.product-description div.product-description{
@@ -360,6 +383,8 @@ div.product-description form{
     section.product-description div.product-description{
     background-color:  #fbeb97 ;
     padding: 35px;
+    width: 100%;
+    margin: 15px 0px 0px 0px;
     }
 
     section.product-description div.product-description h1{
@@ -398,29 +423,32 @@ div.product-description form{
         padding: 20px;
         margin: 25px 0px 15px 92px;
         border-radius: 10px;
+        margin: auto;
+        max-width: 900px;
+        min-width: 683px;
     } 
 }
 
 @media (min-width: 881px){
-    div.description {
-        margin: 25px 0px 15px 92px;
-    }
 
     section.product-description div.product-description{
         border: none;
         box-shadow: none;
         height: 555px;
+        
    }
 
 }
 
-@media (min-width: 951px){
-    div.description {
-        margin: 20px 0px 15px 137px;
-    }
+@media (min-width: 1200px){
 
     section.product-description div.product-description{
-        height: 525px;
+        max-height: 515px;
+        
    }
 
 }
+
+
+
+

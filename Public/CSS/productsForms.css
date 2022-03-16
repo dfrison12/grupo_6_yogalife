@@ -3,7 +3,7 @@ body{
 }
 
 main{
-    margin-top: 160px;
+    margin-top: 175px;
     font-family: 'Raleway' , sans-serif;
 }
 main h2 {
@@ -163,6 +163,11 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
 }
 
 @media (min-width: 419px) {
+
+    main{
+        margin-top: 210px;
+    }
+
     main div.form-container{
         padding: 10px;
         max-width: 700px;
@@ -208,6 +213,10 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
 }
 
 @media (min-width: 769px){
+
+    main{
+        margin-top: 165px;
+    }
 
 
     label.form-label {

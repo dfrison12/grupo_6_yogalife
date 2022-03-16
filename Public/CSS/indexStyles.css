@@ -112,6 +112,7 @@ main section article i{
 
 main section h3{
     margin: 20px 0px;
+    text-align: center;
 }
 
 article div.main-article{
@@ -126,30 +127,11 @@ section.empresa-b{
 }
 
 @media (min-width: 419px){
-    
-    /* MAIN 420 */
-
-    /* IMAGEN PRINCIPAL 420*/
-
-    section.main-image{
-        display: flex;
-        background-color: #F7DC6F;
-        width: 100%;
-        margin-top: 91px;
-    }
-    
-    section.main-image img{
-        width: 100%;
-        opacity: 0.88;
-        margin:auto;
-        display:block;
-    }
-
 
     /* SECCION DE ARTICULOS */
 
     main{
-        margin-top: 0;
+        margin-top: 220px;
     }
 
     main section article:hover .description{
@@ -177,6 +159,10 @@ section.empresa-b{
 
     }
 
+    h3.section-title {
+        font-size: 30px;
+    }
+
     div.products{
         display: flex;
         justify-content: space-between;
@@ -188,6 +174,26 @@ section.empresa-b{
 
 @media (min-width: 769px){
 
+    /* MAIN 720 */
+    main{
+        margin-top: 0px;
+    }
+    /* IMAGEN PRINCIPAL 720*/
+
+    section.main-image{
+        display: flex;
+        background-color: #F7DC6F;
+        width: 100%;
+        margin-top: 91px;
+    }
+    
+    section.main-image img{
+        width: 100%;
+        opacity: 0.88;
+        margin:auto;
+        display:block;
+    }
+
     /* MAIN 770 */
 
      h3.section-title{
@@ -195,6 +201,7 @@ section.empresa-b{
         font-family: 'Raleway';
         font-weight: 600;
         font-size: 40px;
+        text-align: left;
     }
 
     main section article{

@@ -21,7 +21,9 @@ div.profile-container{
     border-radius: 20px 0px;
     border: solid 0px;
     border-color: rgb(11 54 71);
-    margin: 0px 30px 0px 30px;
+    margin: auto;
+    max-width: 280px;
+    min-width: 270px;
 }
 
 div.tittle{
@@ -76,19 +78,20 @@ div.button-container{
 div.logout-container, div.edit-container{
     border: none;
     border-radius: 15px;
-    background-color: rgb(7, 97, 109);
+    background-color: rgb(7, 84, 94);
     padding: 12px;
     transition: all 250ms;
     width: 55px;
     display: flex;
     margin: 0px 25px 0px 25px;
 }
+div.logout-container a, div.edit-container a{
+    color: #F7DC6F;
+}
 
 div.logout-container:hover, div.edit-container:hover{
-    background-color: rgb(0, 0, 0);
-    color: #F7DC6F;
+    background-color: #000000;
     font-weight: 800;
-    transition: all 1000ms
 }
 
 a.logout-button, a.edit-button{
@@ -99,6 +102,14 @@ a.logout-button, a.edit-button{
     width: 70px;
     background-color:none;
     margin: auto;
+}
+
+@media (min-width: 420px){
+    
+    
+    main{
+        margin-top: 180px;
+    }
 }
 
 @media (min-width: 720px){
