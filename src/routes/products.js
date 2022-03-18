@@ -13,6 +13,8 @@ const upload = require('../middlewares/uploadProductsMiddleware')
 router.get('/', productsController.list);
 
 // CREAR NUEVO PRODUCTO
+//Carrito
+router.get('/cart', productsController.cart);
 
 // Formulario de Creacion
 router.get('/add',authMiddleware, productsController.add)

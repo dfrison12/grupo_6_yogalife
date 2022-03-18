@@ -33,6 +33,14 @@ const productsController = {
                 res.render('ProductDetail', {productFind, allColors, allSizes});
             });
     },
+    cart: (req,res) => {
+
+        db.Product.findAll({include:[{association:"categories"},{association:"images"},{association:"colors"},{association:"sizes"}]
+        })
+            .then(products =>{
+                res.render("productCart", {products:products})
+            })
+        },
     add: (req,res) => {
         let promCategory = Category.findAll();
         let promColor = Category.findAll()

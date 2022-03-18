@@ -55,14 +55,17 @@ main section.product-images div.product-images{
     max-width: 80%;
 }
 
-main div section.product-images img.main-picture {
+main div section.product-images div.main-picture {
     padding: 5px;
     width: 100%;
     margin:auto;
-    height: auto;
     border-radius: 8px;
     opacity: 0.9;
     
+}
+
+main div section.product-images div.main-picture img{
+    width: 100%;
 }
 
 main section.product-images div.img-box{
@@ -294,7 +297,7 @@ div.product-description form{
     }
 
     main section.product-images div.product-images{
-        width: 65%;
+        border: red solid 2px
     }
 
     main div div.product-description{
@@ -329,9 +332,8 @@ div.product-description form{
     }
 
     main section.product-images{
-        padding: 0px 35px 0px 25px;
+
         box-shadow: none;
-        height: 490px;
     }
 
     main section.product-images div.product-images{
@@ -345,12 +347,8 @@ div.product-description form{
         align-self: center;
     }
 
-    main div section.product-images img.main-picture{
-        width: 276px;
-        height: 427px;
-        margin: 0px;
-        padding: 0px;
-        border: 1px solid #117A65
+    main div section.product-images div.main-picture{
+        border: blue solid 5px;
 
     }
 
@@ -377,7 +375,7 @@ div.product-description form{
     section.product-description div.product-description{
          border: none;
          box-shadow: none;
-         height: 605px;
+         height: 461px;
     }
 
     section.product-description div.product-description{
@@ -385,6 +383,7 @@ div.product-description form{
     padding: 35px;
     width: 100%;
     margin: 15px 0px 0px 0px;
+    min-width: 290px;
     }
 
     section.product-description div.product-description h1{

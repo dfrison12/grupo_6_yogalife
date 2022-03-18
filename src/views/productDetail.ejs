@@ -10,7 +10,9 @@
       <div class="product-detail">
         <section class="product-images">
             <div class="product-images">
-                <a href="/images/productsImages/<%= productFind.image_1%>"><img class="main-picture" src="/images/productsImages/<%= productFind.image_1 %>" alt="img"></a>
+                <div class="main-picture">
+                    <img class="main-picture" id="image" src="/images/productsImages/<%= productFind.image_1 %>" alt="img">
+                </div>
                 <div class="img-box">
                     <a href="/images/productsImages/<%= productFind.image_2 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_2 %>" alt="img"></a>
                     <a href="/images/productsImages/<%= productFind.image_3 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_3 %>" alt="img"></a>
@@ -20,16 +22,16 @@
         </section>
         <section class="product-description">
             <div class="product-description">
-                <h1 class="product-name"><%= productFind.name %></h1>
+                <h1 class="product-name" id="product-name"><%= productFind.name %></h1>
                 <h4 class=coleccion><%= productFind.categories.name %></h4>
-                <p class="price"> $ <%= productFind.price %> </p>
+                <p class="price" id="price"><%=productFind.price%></p>
 
                 <% if (productFind.discount > 0) { %>
-                    <p class='sale'> <%= productFind.discount %>% off</p>
+                    <p class='sale' id="sale"><%=productFind.discount%></p><span>%off</span>
                     <% } %>
 
                 <a href="/images/tabla-talles.jpg">ver tabla de talles</a>
-                <form action=# method="get">
+                
                 <!-- <div class="color">
                     <label for="color"> Color: </label>
                     <div class='color-button'>             
@@ -45,14 +47,20 @@
                         
                     </div>
                 -->
-                <label for="amount"> Cantidad</label>
-                <input class="amount" name="amount" id="amount" type="number" value="1">
-
+                
+                <% if (locals.isLogged && !locals.admin) {%>
+                    <div class="cant">
+                        <label class="count">Cantidad</label>
+                        <button class="menos" id="menos" >-</button>
+                        <input id="count" type="text" value="1" style="text-align: center; width: 30px;" >
+                        <button class="menos" id="mas" >+</button>
+                    </div>
                 <h9>Agregar al carrito</h9>
-                <button class= "add" type="submit" name="send">Agregar</button>
-                                
-                </form>
-                <% if (locals.isLogged && locals.admin) { %>
+                <button class= "add" type="submit" name="send" id="add-button">Agregar</button>
+                <% } else {%>
+                    <h4 class="message-session">Inicia session para poder comprar</h4>
+                <% } %>              
+                <% if (locals.isLogged && locals.admin) {%>
                 <div class="buttons-container">
                     <div class="edit-button">
                         <a class= "edit-button" id="edit-button" href="/products/<%=productFind.id%>/edit">Editar</a>
@@ -75,6 +83,8 @@
     
     <!-- Footer -->
     <%- include('./partials/footer')%>
+    <script src="/js/addProduct.js"></script>
+    <script src="/js/counterProduct.js"></script>
     <script src="/js/productDetial.js"></script>
 </body>
 </html>

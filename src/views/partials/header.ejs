@@ -17,9 +17,6 @@
         <ul class="left-navbar">
             <li><a href="/products">Catalogo</a></li>
             <li><a href="/#ofertas">Ofertas</a></li>
-            <% if (locals.isLogged) { %>
-                <li><a href="/products/add">Vender</a></li>
-                <% } %>
             <li><a href="/#empresa-b">Nosotros</a></li>
         </ul>
         <ul class="right-navbar">
@@ -29,7 +26,12 @@
             <li><a href="/user/login">Ingresá </a></li>
             <li><a href="/user/register">Registrate </a></li>
             <%} %>
-            <li><a href="#">Carrito<i class="fas fa-dolly"></i></a></li>
+            <% if (locals.isLogged && locals.admin) { %>
+                <li><a href="/products/add">Vender</a></li>
+                <% } %>
+            <% if (locals.isLogged && !locals.admin) {%>
+            <li><a href="/products/cart">Carrito<i class="fas fa-dolly"></i></a></li>
+                <% } %>
             <% if (locals.isLogged) { %>
                 <li><a href="/user/logout">Cerrar sesión </a></li>
                 <% } %>
@@ -50,10 +52,12 @@
             <%} %>
             <li><a href="/products">Catalogo</a></li>
             <li><a href="/#ofertas">Ofertas</a></li>
-            <li><a href="#">Carrito<i class="fas fa-dolly"></i></a></li>
-            <% if (locals.isLogged) { %>
-            <li><a href="/products/add">Vender</a></li>
-            <% } %>
+            <% if (locals.isLogged && !locals.admin) {%>
+                <li><a href="/products/cart">Carrito<i class="fas fa-dolly"></i></a></li>
+                    <% } %>
+            <% if (locals.isLogged && locals.admin) { %>
+                <li><a href="/products/add">Vender</a></li>
+                <% } %>
             <% if (locals.isLogged) { %>
             <li><a href="/user/logout">Cerrar sesión </a></li>    
             <% } %>

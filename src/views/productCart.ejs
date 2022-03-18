@@ -8,40 +8,44 @@
     <!--Header-->
     <%- include ('./partials/header')%>
 
-    <main>
-        <form action="#" method="POST">    
-        <div class="shop">
-            <div class=titulo-container>
-                <h3>Carrito de Compras</h3>
-            </div>
-            
-            
-                <article class="product-detail">
-                    <div class="product-images">
-                        <a href="images/productsImages/<%=prenda.img1%>"><img class="main-picture" src="/images/productsImages/<%= prenda.img1 %>" alt="img"></a>
-                    </div>
-                    <div class="product-description">
-                        <h1 class="product-name"><%= prenda.titulo %></h1>
-                        <p class="price"> $ <%= prenda.precio %> </p>
-                        <% if (prenda.oferta > 0) { %>
-                            <p class='sale'> <%= prenda.oferta %>% off</p>
-                            <% } %>
-                        <p class="color"> <%= prenda.color %> </p>
-                        <p class="talle"> <%= prenda.talle %> </p>
-                        <p class="cantidad"> <%= prenda.cantidad %> </p>
-                    </div>    
-                    <div class=button-container>  
-                        <button class="delete-button" type="submit"><i class="fas fa-trash-alt icon-trash"></i></button>
-                    </div>
-                </article>
-        </div>                   
-                <div class="Cierroelcarrito">
-                    <button type="submit">ver mas</button>
-                    <button type="submit">Finalizar</button>
-                </div>
-        </form> 
-                    
+
+
+    <main class="contenedor-cart">
+      <h4>Carrito de compras</h4>
+
+      <div id="vacio" class="vacio"></div>
+
+      <!-- <div id="total" class="total"></div> -->
+
+      <section class="sumario-cart">
+        <h4>Resumen de compra</h4>
+        
+    
+        <div class="totales">
+          <div class="titulos">
+            <h3>TOTAL:</h3>
+          </div>
+          <div class="cantidades">
+            <h3 id="precioTotal">$</h3>
+          </div>
+        </div>
+
+        <a href="/products">
+          <button id="botonPagar" type="submit">Confirmar Pedido</button>
+        </a>
+    
+        <button id="botonBorrar" type="button" onclick="">Vaciar Carrito</button>
+      
+        <a href="/products">
+          <button type="submit">Agregar más productos</button>
+        </a>
+      </section>
+
     </main>
+
+    
+    <script src="/js/carrito.js"></script>
+
 
     <!--Footer-->
     <%- include('./partials/footer')%>
