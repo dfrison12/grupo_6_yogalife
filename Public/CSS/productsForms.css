@@ -6,6 +6,12 @@ main{
     margin-top: 175px;
     font-family: 'Raleway' , sans-serif;
 }
+
+main .formSection{
+    width: 100%;
+    text-align: center;
+}
+
 main h2 {
     text-align: center;
     color:#681368;
@@ -24,6 +30,20 @@ div.input-container{
     flex-direction: column;
 }
 
+div.cost-price-container, div.discount-stock-container{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#discount, #stock, #price, #cost{
+    width: 75px;
+    text-align: center;
+    height: 35px;
+    border-radius: 5px;
+}
+
+
+
 label.form-label {
     font-size: 15px;
     font-weight: 600;
@@ -32,6 +52,15 @@ label.form-label {
     height: 30px;
     align-self: center;
 }
+
+label.form-labelnumber {
+    width: 100px;
+    height: 42px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
 input.form-input{
     width: 260px;
     height: 30px;
@@ -76,7 +105,7 @@ select.form-input{
 }
 
 textarea.form-input{
-    width: 260px;
+    width: 270px;
     height: 130px;
     align-self: center;
     border-radius: 10px;
@@ -89,8 +118,8 @@ textarea.form-input{
 }
 
 textarea:hover.form-input{
-    background-color:F6AE99 ;
-    width: 315px;
+    background-color:white ;
+    width: 350px;
 }
 
 input.file-input{
@@ -168,12 +197,16 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
 @media (min-width: 419px) {
 
     main{
-        margin-top: 210px;
+        margin-top: 126px;
     }
 
     main div.form-container{
-        padding: 10px;
+        padding: 10px 35px;
         max-width: 700px;
+    }
+
+    main h2 {
+        margin-top: 195px;
     }
 
     label.form-label {
@@ -203,7 +236,7 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
     }
     
     textarea.form-input{
-        width: 350px;
+        width: 300px;
         height: 150px;;
         font-size: 15px;
     }
@@ -218,9 +251,24 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
 @media (min-width: 769px){
 
     main{
-        margin-top: 165px;
+        margin-top: 128px;
+        display:flex
     }
 
+
+    main .imgSection-product{
+        width: 50%;
+        text-align: center;  
+        background-image: url(/images/img-editform.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.90;
+        margin: 0px 75px 0px 0px;
+    }
+
+    main h2 {
+        margin-top: 30px;
+    }
 
     label.form-label {
         font-size: 20px;
@@ -230,14 +278,14 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
 
     input.form-input{
         font-size: 14px;
-        width: 420px;
+        width: 350px;
         height: 35px;
         font-weight: 600;
     }
 
     input:hover.form-input{
-        background-color:#F6AE99 ;
-        width: 440px;
+        background-color:#f8f8f8 ;
+        width: 360px;
     }
 
     div.ultima_coleccion-container{
@@ -256,13 +304,13 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
 
     textarea.form-input{
         font-size: 20px;
-        width: 420px;
+        width: 350px;
         height: 180px;
     }
 
     textarea:hover.form-input{
-        background-color:#F6AE99 ;
-        width: 440px;    }
+        background-color:white;
+        width: 360px;    }
     
     input.file-input{
         width: 420px;

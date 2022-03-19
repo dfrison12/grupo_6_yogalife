@@ -2,177 +2,187 @@
 <html lang="en">
 <!-- Head -->
 <%- include ('./partials/head',{title:'Ingresa tu nuevo producto', style:'productsForms.css'}) %>
-<body>
-    <!-- Header -->
-    <%- include ('./partials/header') %>
+   <body>
+      <!-- Header -->
+      <%- include ('./partials/header') %>
 
- <main>
-    <h2>Registrar nueva Prenda</h2>
-    <div class="form-container">
-        <form action="/products/create" id="form" method="POST" enctype="multipart/form-data">
-            <div class="input-container">
-               <label for="name" class="form-label">Prenda o Producto</label>       
-               <input type="text" id="tittle" name="name" class="form-input" placeholder="Titulo de la prenda">
-               <div class="errorstittle">
-                  <ul></ul>
-               </div>
-               <% if (locals.errors && errors.name) { %>
-                  <div class="errorstittle">
-                     <ul>
-                        <p>
-                        <%= errors.name.msg%>
-                        </p>
-                     </ul>
+   <main>
+      <section class="formSection">
+         <h2>Registrar nueva Prenda</h2>
+         <div class="form-container">
+            <form action="/products/create" id="form" method="POST" enctype="multipart/form-data">
+                  <div class="input-container">
+                     <label for="name" class="form-label">Prenda o Producto</label>       
+                     <input type="text" id="tittle" name="name" class="form-input" placeholder="Titulo de la prenda">
+                     <div class="errorstittle">
+                        <ul></ul>
+                     </div>
+                     <% if (locals.errors && errors.name) { %>
+                        <div class="errorstittle">
+                           <ul>
+                              <p>
+                              <%= errors.name.msg%>
+                              </p>
+                           </ul>
+                        </div>
+                     <% } %>
                   </div>
-               <% } %>
-            </div>
-            <div class="input-container">
-               <label for="category" class="form-label">Coleccion</label>
-               <select name="category" id="category" class="select-input">
-               <% for (let i = 0; i < allCategories.length; i++){%>
-                  <option value="<%=allCategories[i].id%>">
-                     <%=allCategories[i].name%>
-                  </option>
-               <%}%>
-               </select> 
-            </div>
-            <!-- <div class="input-container">
-               <label for="color" class="form-label">Color</label>
-               <% for (let i = 0; i < allColors.length; i++){%>
-                  <input type="checkbox" name="colors" value="<%=allColors[i].id%>">
-                     <%=allColors[i].color_name%>
-                  </input>
-               <%}%>
-               </select> 
-            </div> -->
-            <div class="input-container">
-               <label for="cost" class="form-label">Costo de Compra</label>       
-               <input type="number" id="cost" name="cost" class="form-input" placeholder="Ingresar solamente valor numerico">
-               <div class="errorscost">
-                  <ul></ul>
-               </div>
-               <% if (locals.errors && errors.cost) { %>
-                  <div class="errorscost">
-                     <ul>
-                        <p><%= errors.cost.msg%></p>
-                     </ul>
-                  </div>      
-               <% } %>
-            </div>
-            <div class="input-container">
-               <label for="price" class="form-label">Precio de Venta</label>       
-               <input type="number" id="price" name="price" class="form-input" placeholder="Ingresar solamente valor numerico">
-               <div class="errorsprice">
-                  <ul></ul>
-               </div>
-               <% if (locals.errors && errors.price) { %>
-                  <div class="errorsprice">
-                     <ul>
-                        <p><%= errors.price.msg%></p>
-                     </ul>
+                  <div class="input-container">
+                     <label for="category" class="form-label">Coleccion</label>
+                     <select name="category" id="category" class="select-input">
+                     <% for (let i = 0; i < allCategories.length; i++){%>
+                        <option value="<%=allCategories[i].id%>">
+                           <%=allCategories[i].name%>
+                        </option>
+                     <%}%>
+                     </select> 
                   </div>
-               <% } %>
-            </div>
-            <div class="input-container">
-               <label for="discount" class="form-label">Descuento en %</label>       
-               <input type="number" id="discount" name="discount" placeholder="Ej: para otorgar 10% off, ingresar solamente 10" class="form-input" value=0>
-               <div class="errorsdiscount">
-                  <ul></ul>
-               </div>
-            </div>
-            <div class="input-container">
-             <label for="descriptions" class="form-label">Descripcion</label>
-             <textarea name="descriptions" id="description" class="form-input" placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
-             <div class="errorsdescription">
-                <ul></ul>
-             </div>
-             <% if (locals.errors && errors.descriptions) { %>
-               <div class="errorsdescription">
-                  <ul>
-                     <p><%= errors.descriptions.msg%></p>
-                  </ul>
-               </div>
-               <% } %>
-            </div>
-         <div class="input-container">
-            <label for="stock" class="form-label">Stock</label>       
-            <input type="number" id="stock" name="stock" class="form-input" placeholder="Ingresar solamente valor numerico">
-            <div class="errorsstock">
-               <ul></ul>
-            </div>
-            <% if (locals.errors && errors.stock) { %>
-               <div class="errorsstock">
-                  <ul>
-                     <p><%= errors.stock.msg%></p>
-                  </ul>
-               </div>
-            <% } %>
-         </div>
-         <div class="input-container">
-            <label for="img1" class="form-label">Imagen principal</label>
-            <input type="file" name="img1" id="img1" class="file-input" >
-            <div class="errorsimg1">
-               <ul></ul>
-            </div>
-            <% if (locals.errors && errors.img1) { %>
-               <div class="errorsimg1">
-                  <div>
-                     <ul>
-                        <p><%= errors.img1.msg %></p>
-                     </ul>
+                  <!-- <div class="input-container">
+                     <label for="color" class="form-label">Color</label>
+                     <% for (let i = 0; i < allColors.length; i++){%>
+                        <input type="checkbox" name="colors" value="<%=allColors[i].id%>">
+                           <%=allColors[i].color_name%>
+                        </input>
+                     <%}%>
+                     </select> 
+                  </div> -->
+                  <div class="cost-price-container">
+                     <div class="input-container">
+                        <label for="cost" class="form-labelnumber">Costo de Compra</label>       
+                        <input type="number" id="cost" name="cost" class="form-input">
+                        <div class="errorscost">
+                           <ul></ul>
+                        </div>
+                        <% if (locals.errors && errors.cost) { %>
+                           <div class="errorscost">
+                              <ul>
+                                 <p><%= errors.cost.msg%></p>
+                              </ul>
+                           </div>      
+                        <% } %>
+                     </div>
+                     <div class="input-container">
+                        <label for="price" class="form-labelnumber">Precio de Venta</label>       
+                        <input type="number" id="price" name="price" class="form-input">
+                        <div class="errorsprice">
+                           <ul></ul>
+                        </div>
+                        <% if (locals.errors && errors.price) { %>
+                           <div class="errorsprice">
+                              <ul>
+                                 <p><%= errors.price.msg%></p>
+                              </ul>
+                           </div>
+                        <% } %>
+                     </div>
                   </div>
-               </div>  
-           <% } %>
+                  <div class="discount-stock-container">
+                     <div class="input-container">
+                        <label for="discount" class="form-labelnumber">Descuento</label>       
+                        <input type="number" id="discount" name="discount" class="form-input" value=0>
+                        <div class="errorsdiscount">
+                           <ul></ul>
+                        </div>
+                     </div>
+                     <div class="input-container">
+                        <label for="stock" class="form-labelnumber">Stock</label>       
+                        <input type="number" id="stock" name="stock" class="form-input">
+                        <div class="errorsstock">
+                           <ul></ul>
+                        </div>
+                        <% if (locals.errors && errors.stock) { %>
+                           <div class="errorsstock">
+                              <ul>
+                                 <p><%= errors.stock.msg%></p>
+                              </ul>
+                           </div>
+                        <% } %>
+                     </div>
+                  </div>
+                  <div class="input-container">
+                  <label for="descriptions" class="form-label">Descripcion</label>
+                  <textarea name="descriptions" id="description" class="form-input" placeholder="Ingrese aqui descripcion de su nueva prenda"></textarea>
+                  <div class="errorsdescription">
+                     <ul></ul>
+                  </div>
+                  <% if (locals.errors && errors.descriptions) { %>
+                     <div class="errorsdescription">
+                        <ul>
+                           <p><%= errors.descriptions.msg%></p>
+                        </ul>
+                     </div>
+                     <% } %>
+                  </div>
+               
+               <div class="input-container">
+                  <label for="img1" class="form-label">Imagen principal</label>
+                  <input type="file" name="img1" id="img1" class="file-input" >
+                  <div class="errorsimg1">
+                     <ul></ul>
+                  </div>
+                  <% if (locals.errors && errors.img1) { %>
+                     <div class="errorsimg1">
+                        <div>
+                           <ul>
+                              <p><%= errors.img1.msg %></p>
+                           </ul>
+                        </div>
+                     </div>  
+               <% } %>
+               </div>
+               <div class="input-container">
+                  <label for="img2" class="form-label">Miniatura 1</label>
+                  <input type="file" name="img2" id="img2" class="file-input" >
+                  <div class="errorsimg2">
+                     <ul></ul>
+                  </div>
+                  <% if (locals.errors && errors.img2) { %>
+                     <div class="errorsimg2">
+                        <ul>
+                           <p><%= errors.img2.msg %></p>
+                        </ul> 
+                     </div>  
+               <% } %>
+               </div>
+               <div class="input-container">
+                  <label for="img3" class="form-label">Miniatura 2</label>
+                  <input type="file" name="img3" id="img3" class="file-input" >
+                  <div class="errorsimg3">
+                     <ul></ul>
+                  </div>
+                  <% if (locals.errors && errors.img3) { %>
+                     <div class="errorsimg3">
+                        <ul>
+                           <p><%= errors.img3.msg %></p>
+                        </ul> 
+                     </div>  
+               <% } %>
+               </div>
+               <div class="input-container">
+                  <label for="img4" class="form-label">Miniatura 3</label>
+                  <input type="file" name="img4" id="img4" class="file-input" >
+                  <div class="errorsimg4">
+                     <ul></ul>
+                  </div>
+                  <% if (locals.errors && errors.img4) { %>
+                     <div class="errorsimg4">
+                        <ul>
+                           <p><%= errors.img4.msg %></p>
+                        </ul> 
+                     </div>  
+               <% } %>
+               </div>
+               <div class="input-container">
+                  <button type="submit" class="button">Guardar producto</button>
+               </div>   
+            </form> 
          </div>
-         <div class="input-container">
-            <label for="img2" class="form-label">Imagen complementaria 1</label>
-            <input type="file" name="img2" id="img2" class="file-input" >
-            <div class="errorsimg2">
-               <ul></ul>
-            </div>
-            <% if (locals.errors && errors.img2) { %>
-               <div class="errorsimg2">
-                  <ul>
-                     <p><%= errors.img2.msg %></p>
-                  </ul> 
-               </div>  
-           <% } %>
-         </div>
-         <div class="input-container">
-            <label for="img3" class="form-label">Imagen complementaria 2</label>
-            <input type="file" name="img3" id="img3" class="file-input" >
-            <div class="errorsimg3">
-               <ul></ul>
-            </div>
-            <% if (locals.errors && errors.img3) { %>
-               <div class="errorsimg3">
-                   <ul>
-                      <p><%= errors.img3.msg %></p>
-                   </ul> 
-               </div>  
-           <% } %>
-         </div>
-         <div class="input-container">
-            <label for="img4" class="form-label">adicional complementaria 3</label>
-            <input type="file" name="img4" id="img4" class="file-input" >
-            <div class="errorsimg4">
-               <ul></ul>
-            </div>
-            <% if (locals.errors && errors.img4) { %>
-               <div class="errorsimg4">
-                   <ul>
-                      <p><%= errors.img4.msg %></p>
-                   </ul> 
-               </div>  
-           <% } %>
-         </div>
-         <div class="input-container">
-            <button type="submit" class="button">Guardar producto</button>
-         </div>   
-        </form> 
- </main>   
-    <!-- Footer -->
-    <%- include('./partials/footer')%>
-    <script src="/js/validatorProduct.js"></script>
-</body>
+      </section>
+      <section class="imgSection-product">       
+      </section>
+   </main>   
+      <!-- Footer -->
+      <%- include('./partials/footer')%>
+      <script src="/js/validatorProduct.js"></script>
+   </body>
 </html>

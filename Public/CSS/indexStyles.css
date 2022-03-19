@@ -114,11 +114,11 @@ main section article i{
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid #F2E1C1;
-    background-color: #F2E1C1;
+    border: 1px solid #B97A95;
+    background-color: #ffffff;
     border-radius: 50%;
     position: absolute;
-    right: 124px;
+    right: 152px;
     top: -14px;   
 }
 
@@ -153,6 +153,19 @@ section.empresa-b{
     }
 
     main section article i{
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #B97A95;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        right: 85px;
+        top: -14px;   
+    }
+
+    main section article i{
         transition: all 450ms;
     }
 
@@ -183,6 +196,37 @@ section.empresa-b{
 
 
 }
+
+@media (min-width: 500px){
+    main section article i{
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #B97A95;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        right: 92px;
+        top: -14px;   
+    }
+}
+
+@media (min-width: 500px){
+    main section article i{
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #B97A95;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        right: 120px;
+        top: -14px;   
+    }
+}
+
 
 @media (min-width: 769px){
 
@@ -224,6 +268,19 @@ section.empresa-b{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+    }
+
+    main section article i{
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #B97A95;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        right: 56px;
+        top: -14px;   
     }
 
     section.empresa-b{
@@ -268,4 +325,33 @@ section.empresa-b{
 
    
 
+}
+
+@media (min-width: 800px){
+    main section article i{
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #B97A95;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        right: 60px;
+        top: -14px;   
+    }
+
+}@media (min-width: 860px){
+    main section article i{
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #B97A95;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        right: 100px;
+        top: -14px;   
+    }
 }
