@@ -320,7 +320,7 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
     div.errorstittle ul p, div.errorscost ul p, div.errorsprice ul p,
     div.errorsdiscount ul p, div.errorsdescription ul p, div.errorsstock ul p,
     div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul p {
-    font-size: 18px;
+    font-size: 12px;
     margin: 10px 0px 0px 0px;
     }
 
