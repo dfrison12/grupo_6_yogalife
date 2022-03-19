@@ -129,6 +129,7 @@ a.burger-buttom {
 
 header nav.main-navbar{
     display: none;
+    min-height: 50px;
 }
 
 header nav.main-navbar ul{
@@ -234,10 +235,11 @@ i#close-icon{
     header div form.search-form{
         width: 30%;
     }
-
+    
     header nav.main-navbar{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 10px;
     }
 
     header nav.main-navbar ul{
@@ -249,23 +251,23 @@ i#close-icon{
     }
 
     header nav.main-navbar li a{
-        font-size: 13px;
+        font-size: 17px;
         margin:0px 5px 10px 5px;
         transition: all 600ms;
     }
 
     header nav.main-navbar li a:hover{
-        font-size: 23px;
+        font-size: 18px;
         background-color: #B97A95 ;
-        padding: 10px;
+        padding: 5px;
         box-shadow: #F2E1C1 500px;
-        border-radius: 15%;
+        border-radius: 8px;
         border: #F2E1C1 solid 1px;
 
     }
 
     header nav.main-navbar li a i{
-        font-size: 13px;
+        font-size: 17px;
         transition: all 400ms;
     }
 

@@ -14,28 +14,32 @@
     </div>
         
     <nav class="main-navbar">
-        <ul class="left-navbar">
-            <li><a href="/products">Catalogo</a></li>
-            <li><a href="/#ofertas">Ofertas</a></li>
-            <li><a href="/#empresa-b">Nosotros</a></li>
-        </ul>
-        <ul class="right-navbar">
-            <% if (locals.isLogged) { %> 
-            <li><a href="/user/profile"><div class="user-avatar-container"><img class="user-avatar" src="/images/usersImages/<%=locals.userLogged.avatar%>"><div><%=locals.userLogged.name%></div></div></a></li>
-            <% } else { %>
-            <li><a href="/user/login">Ingresá </a></li>
-            <li><a href="/user/register">Registrate </a></li>
-            <%} %>
-            <% if (locals.isLogged && locals.admin) { %>
-                <li><a href="/products/add">Vender</a></li>
-                <% } %>
-            <% if (locals.isLogged && !locals.admin) {%>
-            <li><a href="/products/cart">Carrito<i class="fas fa-dolly"></i></a></li>
-                <% } %>
-            <% if (locals.isLogged) { %>
-                <li><a href="/user/logout">Cerrar sesión </a></li>
-                <% } %>
-        </ul>
+        <div class="left-navbar-container">
+            <ul class="left-navbar">
+                <li><a href="/products">Catalogo</a></li>
+                <li><a href="/#ofertas">Ofertas</a></li>
+                <li><a href="/#empresa-b">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="right-navbar-container">
+            <ul class="right-navbar">
+                <% if (locals.isLogged) { %> 
+                <li><a href="/user/profile"><div class="user-avatar-container"><img class="user-avatar" src="/images/usersImages/<%=locals.userLogged.avatar%>"><div><%=locals.userLogged.name%></div></div></a></li>
+                <% } else { %>
+                <li><a href="/user/login">Ingresá </a></li>
+                <li><a href="/user/register">Registrate </a></li>
+                <%} %>
+                <% if (locals.isLogged && locals.admin) { %>
+                    <li><a href="/products/add">Vender</a></li>
+                    <% } %>
+                <% if (locals.isLogged && !locals.admin) {%>
+                <li><a href="/products/cart">Carrito<i class="fas fa-dolly"></i></a></li>
+                    <% } %>
+                <% if (locals.isLogged) { %>
+                    <li><a href="/user/logout">Cerrar sesión </a></li>
+                    <% } %>
+            </ul>
+        </div>
     </nav>
     <div class="burger-menu">
         <a class="burger-buttom" id="burger-button" >
