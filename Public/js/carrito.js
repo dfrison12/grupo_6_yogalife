@@ -11,23 +11,25 @@ window.addEventListener("load", () => {
         let div = document.querySelector(".vacio");
         let contenido = ` <section class="checkout-cart">
               <article class="item-cart">
-                  <form action="#" method="GET">
-                      <button  type="button">
-                          <i onclick="borrarItem(${i})" class="fas fa-times"></i>
-                      </button>
-                  </form>
                   <div class="img-cart"><img src=${producto.imagen} alt=""> </div>
+                 
+                  <div class="text">
                   <div class="descripcion-cart">${producto.tituloProd}</div>
+                  <div class="count-div"><p id="count">Cantidad pedida: ${producto.inputCantidad}</p></div>         
                   <div class="precio-cart">$ ${toThousand(producto.precio)}</div>
+                  <div class="button-delete">
+                    <form action="#" method="GET">
+                        <button class= "button"  type="button">
+                            <i onclick="borrarItem(${i})"><span>Quitar</span></i>
+                        </button>
+                    </form>
+                  </div>
+                  </div>
+                  
               </article>
               <article class="cant-cart">
-                  <form action="#" method="GET">
-                      <label for="cantidad"></label>
-                      <p id="count">Cantidad pedida: ${producto.inputCantidad}</p>
-                  </form>
               </article>
           </section>`;
-  
         div.innerHTML += contenido;
       }
     }
