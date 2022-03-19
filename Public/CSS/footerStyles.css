@@ -1,7 +1,8 @@
     /* FOOTER */
 
     footer{
-        background-color: #117A65;
+        font-family: 'Raleway', sans-serif;
+        background-color: #716F81;
     }
     
     footer div{
@@ -12,19 +13,19 @@
     }
     
     footer div i{
-        color:#F7DC6F;
+        color:#F6AE99;
         font-size: 30px;
         margin-top: 30px;
     }
     
     footer div h4{
-        color: #F7DC6F;
+        color: #F6AE99;
         font-style: bold;
         margin:6px 0px;
     
     }
     footer div p{
-        color: white;
+        color: #F2E1C1;
     }
     
     footer div.footer-contact{
@@ -36,7 +37,7 @@
     }
     
     footer div span.footer-contact{
-        color: #F7DC6F;
+        color: #F6AE99;
         font-size: 15px;
         align-self: flex-start;
         max-height: 50px;
@@ -57,10 +58,10 @@
     }
     
     footer div form.new-updates input.new-updates{
-        background-color: #E9F7EF;
+        background-color: #ffffff;
         border: 1px solid #000;
         outline: none;
-        color: #666;
+        color: #B97A95;
         padding: 5px;
         border-style: none;
         border-top-left-radius: 5px;

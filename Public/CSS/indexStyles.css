@@ -5,8 +5,8 @@
 }
 
 body{
-    font-family: 'Raleway', sans-serif;
-    background-color: #f7ecb3db;
+    font-family: 'Signika', sans-serif;
+    background-color: white;
 }
 
 h3{
@@ -29,7 +29,7 @@ a.article {
     font-family: 'Raleway';
     font-weight: 500;
     font-style: italic;
-    color: rgba(41, 68, 64, 0.856);
+    color: rgba(27, 27, 27);
 }
 
 p.sale{
@@ -37,7 +37,7 @@ p.sale{
     font-family: 'Raleway';
     font-weight: 600;
     font-style: italic;
-    color: rgb(14, 143, 121);
+    color: #B97A95;
 
 
 
@@ -73,7 +73,7 @@ main{
 }
 
 main section article{
-    background-color: #ffc93e42;    
+    background-color: #F2E1C1;    
     margin: 10px 0px;
     border-radius: 8px;
     transition: 0.8s;
@@ -82,7 +82,7 @@ main section article{
 
 main section article:hover {
     
-    border: 1px solid #BBBBBB;
+    border: 1px solid #B97A95;
     transform:scale(1.1);
     cursor: pointer;
     object-fit: cover;
@@ -100,7 +100,7 @@ main section article img{
 
 main section article i,
 .discount{
-    color: #F7DC6F;
+    color: #B97A95;
 }
 
 main section article p,
@@ -114,8 +114,8 @@ main section article i{
     padding: 5px;
     width: 30px;
     height: 30px;
-    border: 1px solid #117A65;
-    background-color: #117A65;
+    border: 1px solid #F2E1C1;
+    background-color: #F2E1C1;
     border-radius: 50%;
     position: absolute;
     right: 124px;
@@ -130,7 +130,7 @@ main section h3{
 article div.main-article{
     position: relative;
     width: 100%;
-    border-top: 1px solid #117A65;
+    border-top: 1px solid #F2E1C1;
     padding: 15px;
 }
 
@@ -167,7 +167,7 @@ section.empresa-b{
     }
     
     main section article:hover {
-        box-shadow: 0px 0px 25px rgb(236, 181, 0);
+        box-shadow: 0px 0px 25px #B97A95;
 
     }
 
@@ -194,7 +194,7 @@ section.empresa-b{
 
     section.main-image{
         display: flex;
-        background-color: #F7DC6F;
+        background-color: #B97A95;
         width: 100%;
         margin-top: 91px;
     }
@@ -209,15 +209,15 @@ section.empresa-b{
     /* MAIN 770 */
 
      h3.section-title{
-        color: rgba(41, 68, 64, 0.856);
+        color: rgb(27, 27, 27);
         font-family: 'Raleway';
         font-weight: 600;
-        font-size: 40px;
+        font-size: 30px;
         text-align: left;
     }
 
     main section article{
-        width: 23%;
+        width: 19%;
     }
 
     div.products{
@@ -232,11 +232,11 @@ section.empresa-b{
     }
 
     section.empresa-b h3{
-        color: rgba(41, 68, 64, 0.856);
+        color: rgb(87 84 84);
         padding: 5px 0px 0px 0px;
         font-family: 'Raleway';
         font-weight: 600;
-        font-size: 40px;
+        font-size: 35px;
     }
 
     div.empresa-b{
@@ -246,6 +246,7 @@ section.empresa-b{
     div.empresa-b img{
         width: 73%;
         opacity: 0.84;
+        border-radius: 5px;
     }
 
     div.empresa-b p{

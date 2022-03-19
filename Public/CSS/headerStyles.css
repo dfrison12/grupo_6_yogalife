@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: #f7ecb361;
+    background-color: #ffffff;
 }
 
 h3{
@@ -29,7 +29,7 @@ div.top-header{
 }
 
 header.main-header{
-    background-color:  #117A65 ;
+    background-color:  #716F81 ;
     padding: 0px 10px;
     position: fixed;
     top: 0;
@@ -54,13 +54,13 @@ header div.logo a{
 
 header div.logo a i {
     font-size: 30px;
-    color:#F7DC6F;
+    color:#F2E1C1;
 }
 
 header div.logo a h1{
     font-size: 15px;
     padding-left: 5px;
-    color:#F7DC6F;
+    color:#F2E1C1;
     font-variant: inherit;
     margin-left: 10px;
 }
@@ -84,7 +84,7 @@ header div form.search-form{
     }
 
 header div form input.search-input{
-    background-color: #E9F7EF;
+    background-color: #F2DCBB;
     border: 1px solid #000;
     outline: none;
     color: #666;
@@ -98,7 +98,7 @@ header div form input.search-input{
 }
 
 button.search-button{
-    background-color: #E9F7EF;
+    background-color: #F2DCBB;
     border: 1px solid #000;
     color: #666;
     width: 10%;
@@ -110,13 +110,13 @@ button.search-button{
 }
 
 header div.burger-menu{
-    background-color:  #117A65 ;
+    background-color:  #716F81 ;
     padding: 20px;
 }
 
 a.burger-buttom {
     display: block;
-    background-color: #F7DC6F ;
+    background-color: #F2E1C1 ;
     border-radius: 50%;
     color: black;
     font-size: 20px;
@@ -137,7 +137,7 @@ header nav.main-navbar ul{
 
 header nav.main-navbar a{
     text-decoration: none;
-    color: #F7DC6F;
+    color: #F2E1C1;
     display: inline-block;
     padding: 5px 0px;
     font-size: 17px;
@@ -151,7 +151,7 @@ div.smart-button{
     height:0;
     width: 100%;
     z-index: 1;
-    background-color: #414f4c;
+    background-color: #716F81;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -171,7 +171,7 @@ ul.navbar-list li  {
 
 ul.navbar-list li a{
     text-decoration: none;
-    color: #F7DC6F;
+    color: #F2E1C1;
     display: inline-block;
     padding: 4px 0px;
     font-size: 15px;
@@ -185,13 +185,13 @@ i#close-icon{
 @media (min-width: 420px){
     header div.logo a i {
         font-size: 40px;
-        color:#F7DC6F;
+        color:#F2E1C1;
     }
     
     header div.logo a h1{
         font-size: 25px;
         padding-left: 5px;
-        color:#F7DC6F;
+        color:#F2E1C1;
         font-variant: inherit;
     }
 
@@ -202,7 +202,7 @@ i#close-icon{
     }
 
     div.smart-button{
-        top: 183px;
+        top: 175px;
     }
 
     header div form input.search-input{
@@ -256,11 +256,11 @@ i#close-icon{
 
     header nav.main-navbar li a:hover{
         font-size: 23px;
-        background-color: #04614e ;
+        background-color: #B97A95 ;
         padding: 10px;
-        box-shadow: #E9F7EF 500px;
+        box-shadow: #F2E1C1 500px;
         border-radius: 15%;
-        border: #F7DC6F solid 1px;
+        border: #F2E1C1 solid 1px;
 
     }
 

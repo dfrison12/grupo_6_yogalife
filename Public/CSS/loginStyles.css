@@ -4,7 +4,7 @@
 
 body{
 	color:#6a6f8c;
-	background:#f7ecb3db;
+	background:#716F81;
 	font-weight:600;
     font-size: 16px;
     font-family: 'Raleway', 'Open Sans','sans-serif';
@@ -16,7 +16,7 @@ body{
 	min-height:640px;
 	position: relative;
 	background-image: url(/images/yogalifebackground.png);
-	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.30);
+	box-shadow:0 12px 15px 0 rgba(37, 33, 33, 0.212),0 17px 50px 0 rgba(0,0,0,.30);
 }
 .SiginHtml{
 	width: 100%;
@@ -25,18 +25,23 @@ body{
 	position:absolute;
     margin: 0 auto;
     padding:15px 34px;
-    background: #117A65C7 ;
+    background: #716f81b4 ;
     color: white;
 }
 .siginTitle{
-font-family: 'Raleway', sans-serif;
+font-family: 'Signika', sans-serif;
  text-align: center;
  margin-top: 15px;
  margin-bottom: 50px;
+ color:white;
+}
+
+a{
+    text-decoration: none;
 }
 
 .register{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Signika', sans-serif;
     text-align: center;
     margin-top: 5px;
     color: white;
@@ -53,17 +58,16 @@ font-family: 'Raleway', sans-serif;
 	background:rgba(255, 255, 255, 0.13);
     margin-top: 20px;
     border: transparent;
-    font-family: 'Raleway', sans-serif;
-    transition: background-color , width 1.5s;
+    font-family: 'Signika', sans-serif;
+    transition: width 1.5s;
     
 }
 .formUser:hover{
-     background-color:rgba(14, 143, 122, 0.364) ;
      width: 100%;
 }
 
 ::placeholder {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Signika', sans-serif;
     color:rgba(248, 248, 248, 0.9);
     font-weight: bold;
 }
@@ -78,10 +82,9 @@ font-family: 'Raleway', sans-serif;
     color: beige;
     margin-top: 20px;
     border: transparent;
-    transition: background-color , width 1.5s;
+    transition: width 1.5s;
 }
 .formPassword:hover{
-    background-color:rgba(14, 143, 122, 0.364) ;
     width: 100%;
 }
 .user{
@@ -89,20 +92,21 @@ font-family: 'Raleway', sans-serif;
     background: none;
     display: block;
     width: 100%;
-    font-size: 15px;
+    font-size: 18px;
 }
 .password {
     border: none;
     background: none;
     display: block;
     width: 100%;
+    font-size: 18px;
 }
 .forgot{
-font-family: 'Raleway', sans-serif;
+font-family: 'Signika', sans-serif;
  text-align: center;
  margin-top: 25px;
  margin-bottom: 11px;
- color:rgba(13, 119, 102, 0.255) ;
+ color:#000000 ;
 }
 
 div.rememberUser-container{
@@ -117,14 +121,14 @@ input.remember-checkbox{
 /*buttom*/
 .button {
     font-weight: bold;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Signika', sans-serif;
     width: 32%; 
     border:none;
     margin-left: 35%;
     border-radius:20px;
     padding:15px 15px;
 	background:rgba(255, 255, 255, 0.205);
-    color:rgba(10, 79, 67, 0.782) ;
+    color:#F2E1C1;
     margin-top: 25px;
     border: transparent;
     transition: 0.5s;
@@ -134,7 +138,7 @@ button:hover {
     color: white;
     top: 0;
     left: 0;
-    background-color:rgba(14, 143, 122, 0.364) ;
+    background-color:#716F81 ;
     background-size: cover;
     transition: 0.5s;
 }
@@ -142,8 +146,7 @@ button:after {
     color: black;
     top: 0;
     left: 0;
-    background-color:rgba(14, 143, 122, 0.364) ;
-    background-size: cover;
+    background-color:#F6AE99;
     transition: 0.5s;
 }
 

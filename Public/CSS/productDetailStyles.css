@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
-    background-color: #f7ecb361;
+    background-color: #ffffff;
 }
 
 h3{
@@ -22,18 +22,105 @@ p{
 h1{
     margin: 0px 0px 18px 0px;
     font-weight: 600;
-    font-size: xx-large;
+    font-size: 17px;
 }
 
 h4{
     margin: 0px 0px 10px 0px;
     font-weight: 600;
     font-size: 16px;
-    color: rgba(16, 46, 48, 0.945);
+    color: #a81353;
+}
+
+#add-button, #edit-button {
+    align-items: center;
+    appearance: none;
+    background-color: #B97A95;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #F2E1C1;
+    cursor: pointer;
+    display: inline-flex;
+    height: 33px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px 20px 10px 10px;
+    margin: 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+}
+#add-button:focus, #edit-button:focus {
+    box-shadow: #D35D6E 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D35D6E 0 -3px 0 inset;
+}
+#add-button:hover, #edit-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #ADC2A9 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #316B83;
+     background-color: #ADC2A9;
+}
+
+#delete-button {
+    align-items: center;
+    appearance: none;
+    background-color: #B97A95;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #F2E1C1;
+    cursor: pointer;
+    display: inline-flex;
+    height: 33px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px 10px 10px 10px;
+    margin: 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+}
+#delete-button:focus {
+    box-shadow: #D35D6E 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D35D6E 0 -3px 0 inset;
+}
+#delete-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #E5707E 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #F2E1C1;
+     background-color: #D35D6E;
 }
 
 
 /*MAIN*/
+
+div.main-container{
+    display: flex;
+    justify-content:center
+}
 
 
 main div.product-detail{
@@ -48,7 +135,7 @@ main section.product-images div.product-images{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #117a653d;
+    background-color: #F2E1C1;
     border-radius: 3px;
     margin: auto;
     max-width: 73%;
@@ -81,20 +168,34 @@ main section.product-images div.img-box img{
     border-radius: 1px;
 }
 
+main div section.product-description div.product-description div.data-products{
+    padding: 15px 10px;
+}
+
 main div div.product-description{
-    background-color: #117a653d;
+    background-color: #F2E1C1;
     border-radius: 3px;
     margin:auto;
 }
 
-main div div.product-description .sale{
-    margin: 0px 0px 10px 0px;
-    font-size: 30px;
+span.price{
+    font-size: 18px;
     font-weight: 600;
-    color: rgb(4, 156, 37);
+    color: #ff006f;
+}
+
+main div div.product-description .sale{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(48 192 79);
+    margin: 0px 3px;
 
 }
 
+section.product-description{
+    margin: 10px 10px;
+    padding: 5px 8px;
+}
 
 
 div.product-description form{
@@ -156,6 +257,11 @@ div.product-description form{
         color:white; 
     }
 
+    div.cant{
+    width: 66%;;
+    padding: 12px 10px;
+    }
+
     form input.amount, button.add {
         text-align: center;
         margin: 5px 0px;
@@ -192,60 +298,28 @@ div.product-description form{
     }
 
     div.description {
-        border: solid pink 5px;
         text-align: center;
+        margin: 8px 3px;
     }
 
     div.description h4{
         font-weight: 600;
-        font-family: 'Raleway';
     }
 
     div.description p{
-        font-size: 15px;
+        font-size: 12px;
         font-weight: 500;
-        font-family: 'Raleway';
     }
 
 
-    div.button-container{
+    div.buttons-container{
         display: flex;
+        width: 80%;
+        align-items: baseline;
 
     }
 
-    div.edit-button{
-        text-align: center;
-        margin: 5px 0px;
-        width: 70px;
-        height: 35px;
-        border-radius: 20px;  
-        transition: all 250ms;
-        border: 3px rgb(165, 162, 162) solid;
-        background-color: #E9F7EF;    
-        padding: 6px 0px 25px 0px;
-    }
-
-    div.edit-button a {
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 14px;
-        color: black;
-        transition: all 250ms;
-        background: none
-    }
-
-    div.edit-button:hover, .edit-button a:hover{
-        background-color: #04614e;
-        color:white;
-    }
-
-    div.edit-button button.edit-button{
-        background-color: #E9F7EF;
-        padding: 7px;
-        margin: 0px 0px 0px 7px;
-        border-radius: 20px;
-    }
-
+    
     button.delete-button{
         width: 70px;
         height: 35px;
@@ -285,6 +359,10 @@ div.product-description form{
         max-width: 57%;
     }
 
+    div.button-container {
+        width: 67%;
+    }
+
 
 }
 
@@ -294,10 +372,23 @@ div.product-description form{
         max-width: 55%;
     }
 
+    div.button-container {
+        width: 63%;
+    }
+
+    
+
 @media (min-width: 500px){
     
 main section.product-images div.product-images {
-    max-width: 49%;
+    max-width: 57%;
+}
+div.button-container {
+    width: 66%;
+}
+
+div.button-container {
+    width: 55%;
 }
 
 }
@@ -307,10 +398,25 @@ main section.product-images div.product-images {
     main section.product-images div.product-images {
         max-width: 45%;
     }
-    
-    }
 
-@media (min-width: 600px){
+    div.button-container {
+        width: 49%;
+    }
+    
+}
+
+@media (min-width: 630px){
+
+
+    div.button-container {
+        width: 40%;
+    }
+    
+}
+
+
+
+@media (min-width: 700px){
 
     /* MAIN 770 */
 
@@ -321,8 +427,10 @@ main section.product-images div.product-images {
 
     main section.product-images div.product-images{
         margin: none;
+        background-color: none;
         max-width: 100%;
     }
+
 
     main div.product-detail{
         margin: auto;
@@ -331,7 +439,7 @@ main section.product-images div.product-images {
         justify-content: space-around;
         flex-wrap: nowrap;
         padding: 0px;
-        max-width: 900px;
+        max-width: 920px;
 
     }
 
@@ -340,10 +448,12 @@ main section.product-images div.product-images {
         box-shadow: none;
         display: flex;
         flex-direction: column;
+        background-color: none;
     }
 
     main section.product-images div.product-images{
         flex-direction: row;
+        background: none;
     }
 
     main section.product-images div.product-images a{
@@ -365,7 +475,7 @@ main section.product-images div.product-images {
 
     main section.product-images div.img-box div.mini-img-container{
         border-radius: 1px;
-        width: 30%;
+        width: 66%;
     }
 
     section.product-description div.product-description{
@@ -375,18 +485,36 @@ main section.product-images div.product-images {
 
     main div section.product-description{
         width: 50%;
+        margin: 0;
     }
 
     section.product-description div.product-description{
-    background-color:  #fbeb97 ;
-    padding: 35px;
-    width: 100%;
-    margin: 15px 0px 0px 0px;
-    min-width: 290px;
+        background-color: #F2E1C1;
+        width: 100%;
+        margin: 50px 0px 0px 0px;
+        min-width: 290px;
     }
 
+    h4{
+        font-size: 21px;
+    }
+
+    span.price{
+        font-size:24px;
+    }
+
+    label{
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    div.description p{
+        font-size: 16px;
+    }
+    
+
     section.product-description div.product-description h1{
-        font-size: 18px;
+        font-size: 22px;
     }
 
     section.product-description div.product-description p.price{
@@ -412,8 +540,30 @@ main section.product-images div.product-images {
         padding: 0px 0px 10px 0px;
     }
     
+    div.button-container {
+        width: 78%;
+        padding: 0px 10px;
+    }
 
 }
+
+@media (min-width: 881px){
+
+    div.button-container {
+        width: 67%;
+    }
+
+    div.description{
+        padding: 18px 9px;
+    }
+    div.description p{
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+}
+
+
 
 @media (min-width: 881px){
 

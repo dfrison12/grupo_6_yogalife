@@ -32,7 +32,7 @@
                     <h1 class="product-name" id="product-name"><%= productFind.name %></h1>
                     <h4 class=coleccion><%= productFind.categories.name %></h4>
                     <div>
-                        <span>$</span>
+                        <span class="price">$</span>
                         <span class="price" id="price"><%=productFind.price%></span>
                     </div>
 
@@ -65,13 +65,13 @@
                 <div class="button-container">
                     <% if (locals.isLogged && !locals.admin) {%>
                         <div class="cant">
-                            <label class="count">Agregar al Carrito</label>
+                            <label class="count">Cantidad</label>
                             <button class="menos" id="menos" >-</button>
                             <input id="count" type="text" value="1" style="text-align: center; width: 30px;" >
                             <button class="menos" id="mas" >+</button>
                         </div>
-                        <button class= "add" type="submit" name="send" id="add-button">Agregar</button>
-                        <% } else {%>
+                        <button class="add" id="add-button" type="submit" name="send" id="add-button">Agregar</button>
+                        <% } else if (!locals.isLogged){%>
                             <h4 class="message-session">Inicia session para poder comprar</h4>
                         <% } %>              
                         <% if (locals.isLogged && locals.admin) {%>
@@ -80,7 +80,7 @@
                                 <a class= "edit-button" id="edit-button" href="/products/<%=productFind.id%>/edit">Editar</a>
                             </div>
                             <form class="buttons-container" id="form-delete" action="/products/<%=productFind.id%>/delete?_method=DELETE" method="POST">
-                            <button class= "delete-button" type="submit">Eliminar</button>
+                            <button class= "delete-button" type="submit" id="delete-button">Eliminar</button>
                             </form>      
                         </div>
                     <% } %>

@@ -15,7 +15,7 @@
                 <div class="products">
                     <% for (let i = 0; i < products.length; i++) {
                         if(products[i].categories.id == 3){ %>
-                            <article>
+                            <article class=""article-card>
                             <a class="article" href="/products/product-detail/<%= products[i].id %>">
                             <img src="/images/productsImages/<%=products[i].image_1%>" alt="product" class="product_img">
                             <div class="main-article">
@@ -55,7 +55,7 @@
             </section>
 
             <section class="empresa-b" id="empresa-b">
-            <h3 class="empresa-b"> Empresa B</h3>
+            <h3 class="empresa-b"> ¿Quienes somos? / Empresa B</h3>
             <div class="empresa-b">
             <img src="/images/empresa-b-img-1.jpg" alt="img">
             <p>Las <span class="empresa-b">Empresas B</span> son empresas que redefinen el sentido del éxito empresarial, usando la fuerza del mercado para dar solución a problemas sociales y ambientales. Luego de pasar por un riguroso proceso de certificación, la ONG B Lab USA (Sistema B en Latinoamérica) nos ha otorgado la certificación de Empresa B a nivel global.</p>

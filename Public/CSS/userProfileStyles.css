@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Signika', sans-serif;
     background-color: #f7ecb3db;
 }
 
@@ -15,12 +15,100 @@ main {
     padding: 30px;
 }
 
+#edit-button {
+    align-items: center;
+    appearance: none;
+    background-color: #B97A95;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #F2E1C1;
+    cursor: pointer;
+    display: inline-flex;
+    height: 33px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px 20px 10px 10px;
+    margin: 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+    font-weight: 600;
+}
+#edit-button:focus {
+    box-shadow: #D35D6E 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D35D6E 0 -3px 0 inset;
+}
+#edit-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #ADC2A9 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #316B83;
+     background-color: #ADC2A9;
+}
+
+a{
+    text-decoration: none;
+}
+
+#logout-button {
+    align-items: center;
+    appearance: none;
+    background-color: #B97A95;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #F2E1C1;
+    cursor: pointer;
+    display: inline-flex;
+    height: 33px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px 10px 10px 10px;
+    margin: 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 15px;
+    font-weight: 600;
+}
+#logout-button:focus {
+    box-shadow: #D35D6E 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D35D6E 0 -3px 0 inset;
+}
+#logout-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #E5707E 0 -3px 0 inset;
+    transform: translateY(-2px);
+    color: #F2E1C1;
+     background-color: #D35D6E;
+}
+
 div.profile-container{ 
-    background-color: #f5de6ddb;
+    background-color: #9D5353;
     padding: 20px 40px 20px 40px;
     border-radius: 20px 0px;
     border: solid 0px;
-    border-color: rgb(11 54 71);
+    border-color: #9D5353; 
     margin: auto;
     max-width: 280px;
     min-width: 270px;
@@ -31,8 +119,8 @@ div.tittle{
 }
 
 h2.tittle{
-    font-size: 20px;
-    color: rgb(8, 70, 70);
+    font-size: 2px;
+    color: rgb(255, 255, 255);
     font-weight: 600;
 }
 
@@ -52,14 +140,14 @@ div.data-container{
 }
 
 h2.data-email, h2.data-dni, h2.data-addres{
-    font-size: 19px;
-    color: rgb(4, 80, 76);
+    font-size: 22px;
+    color: #716F81;
     margin: 10px 0px 5px 0px;
     text-align: center;
 }
 
 h4.data-email, h4.data-dni, h4.data-addres{
-    font-size: 15px;
+    font-size: 18px;
     color: rgb(9, 22, 22);
     margin: 10px 0px 5px 0px;
     text-align: center;
@@ -128,7 +216,6 @@ a.logout-button, a.edit-button{
         display: flex;
         flex-direction: column;
         padding: 20px;
-        background-color: #F7DC6F;
         margin: 40px 60px 56px 40px;
     }
     

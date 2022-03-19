@@ -1,5 +1,5 @@
 body{
-    background-color:#f7ecb3db;
+    background-color:#ffffff;
 }
 
 main{
@@ -8,6 +8,7 @@ main{
 }
 main h2 {
     text-align: center;
+    color:#681368;
 }
 
 main div.form-container{
@@ -40,11 +41,11 @@ input.form-input{
     padding: 5px;
     transition: all 450ms;
     font-family: 'Raleway' , sans-serif;
-    background:rgba(255, 255, 255, 0.959);
+    background:#F2E1C1;
 }
 
 input:hover.form-input{
-    background-color:rgba(245, 187, 61, 0.829) ;
+    background-color:#F6AE99 ;
     width: 315px;
 }
 
@@ -69,7 +70,7 @@ select.form-input{
     padding: 5px;
     transition: all 450ms;
     font-family: 'Raleway' , sans-serif;
-    background: rgba(255, 255, 255, 0.959);
+    background: #F2E1C1;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -84,11 +85,11 @@ textarea.form-input{
     font-size: 14px;
     padding: 10px;
     transition: all 450ms;
-    background:rgba(255, 255, 255, 0.959);
+    background:#F2E1C1;
 }
 
 textarea:hover.form-input{
-    background-color:rgba(245, 187, 61, 0.829) ;
+    background-color:F6AE99 ;
     width: 315px;
 }
 
@@ -107,20 +108,22 @@ input.file-input{
 .button{
     text-align: center;
     margin: 20px 0px 0px 0px;
-    width: 80px;
+    width: 130px;
     height: 50px;
     border-radius: 40px;
-    font-size: 12px;
+    font-size: 18px;
     transition: all 450ms;
     border: 3px rgb(165, 162, 162) solid;
-    background:rgb(60 149 131 / 38%);
-    font-weight: 600;
+    background: #F2E1C1;
     align-self: center;
     transition: all 450ms;
 }
 
 button:hover.button{
-    background-color:rgba(245, 187, 61, 0.829) ;
+    background-color:#716F81 ;
+    color: white;
+    width: 140px;
+    font-size: 19px;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -233,7 +236,7 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
     }
 
     input:hover.form-input{
-        background-color:rgba(245, 187, 61, 0.829) ;
+        background-color:#F6AE99 ;
         width: 440px;
     }
 
@@ -248,7 +251,7 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
     select:hover.form-input{
         width: 50px;
         height: 50px;
-        background-color:rgba(245, 187, 61, 0.829) ;
+        background-color:#F6AE99 ;
     }
 
     textarea.form-input{
@@ -258,7 +261,7 @@ div.errorsimg1 ul p, div.errorsimg2 ul p, div.errorsimg3 ul p, div.errorsimg4 ul
     }
 
     textarea:hover.form-input{
-        background-color:rgba(245, 187, 61, 0.829) ;
+        background-color:#F6AE99 ;
         width: 440px;    }
     
     input.file-input{

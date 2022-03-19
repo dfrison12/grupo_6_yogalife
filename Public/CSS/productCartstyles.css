@@ -1,5 +1,5 @@
 /*Color palette*/
-#F9F7CF
+#F2E1C1
 #F2DCBB
 #BBBBBB
 #AAAAAA
@@ -15,7 +15,7 @@
 main{
     margin-top: 200px;
     background-color: rgb(255, 255, 255);
-    min-height: 742px;
+    min-height: 530px;
 }
 
 /*----------Titulos---------*/
@@ -40,12 +40,12 @@ h3 {
 #botonPagar {
     align-items: center;
     appearance: none;
-    background-color: #CEAB93;
+    background-color: #B97A95;
     border-radius: 4px;
     border-width: 0;
     box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #763857;
+    color: #F2E1C1;
     cursor: pointer;
     display: inline-flex;
     height: 33px;
@@ -80,12 +80,12 @@ h3 {
 #botonBorrar {
     align-items: center;
     appearance: none;
-    background-color: #CEAB93;
+    background-color: #B97A95;
     border-radius: 4px;
     border-width: 0;
     box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #763857;
+    color: #F2E1C1;
     cursor: pointer;
     display: inline-flex;
     height: 33px;
@@ -114,18 +114,18 @@ h3 {
 #botonBorrar:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #E5707E 0 -3px 0 inset;
     transform: translateY(-2px);
-    color: #763857;
+    color: #F2E1C1;
      background-color: #D35D6E;
   }
   #botonAgregar {
     align-items: center;
     appearance: none;
-    background-color: #CEAB93;
+    background-color: #B97A95;
     border-radius: 4px;
     border-width: 0;
     box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #763857;
+    color: #F2E1C1;
     cursor: pointer;
     display: inline-flex;
     height: 33px;
@@ -164,7 +164,7 @@ h3 {
 .item-cart {
     display: flex;
     justify-content: space-between;
-    background-color: #F9F7CF;
+    background-color: #F2E1C1;
     border-radius:  10px;
     width: 90%;
     margin: 10px;
@@ -218,12 +218,12 @@ div.img-cart img {
 div.button-delete button {
     align-items: center;
     appearance: none;
-    background-color: #CEAB93;
+    background-color: #B97A95;
     border-radius: 4px;
     border-width: 0;
     box-shadow: rgb(45 35 66 / 40%) 0 2px 4px, rgb(45 35 66 / 30%) 0 7px 13px -3px, #AD8B73 0 -3px 0 inset;
     box-sizing: border-box;
-    color: #763857;
+    color: #F2E1C1;
     cursor: pointer;
     display: inline-flex;
     height: 33px;
@@ -252,7 +252,7 @@ div.button-delete button:focus {
 div.button-delete button:hover {
     box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #E5707E 0 -3px 0 inset;
     transform: translateY(-2px);
-    color: #763857;
+    color: #F2E1C1;
      background-color: #D35D6E;
   }
   div.button-delete button:active {
@@ -268,7 +268,7 @@ div.button-delete button:hover {
         justify-content: space-between;
         flex-direction: row;
         justify-content: flex-start;
-        background-color: #F9F7CF;
+        background-color: #F2E1C1;
         border-radius:  10px;
         width: 65%;
         margin: 0 0 10px 90px;
@@ -283,7 +283,7 @@ div.button-delete button:hover {
         justify-content: space-between;
         flex-direction: row;
         justify-content: flex-start;
-        background-color: #F9F7CF;
+        background-color: #F2E1C1;
         border-radius:  10px;
         max-width: 500px;
         width: 60%;

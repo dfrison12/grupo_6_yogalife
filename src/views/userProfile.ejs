@@ -7,6 +7,7 @@
         <%- include ('./partials/header') %> 
 
         <main>
+        <div class="main-container">
             <div class=main>
                 <div class=profile-container>
                     <div class="tittle">
@@ -29,13 +30,14 @@
                     </div>
                 </div>
             </div>
+        </div>
             <div class="button-container">
-                <div class="logout-container">
-                <a class=logout-button href="/user/logout" >Salir</a>
-                </div>
-                <div class="edit-container">
-                <a class=edit-button href="/user/edit">Editar</a>
-                </div>
+                <a href="/user/edit">
+                    <button class="edit-button" id="edit-button" type="submit">Editar datos</a>
+                </a>
+                <a class="logout-container" href="/user/logout">
+                <button class="logout-button" id="logout-button" >  Cerrar session  </a>
+                </button>
             </div>
         </main>
 

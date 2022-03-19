@@ -5,8 +5,8 @@
 }
 
 body{
-    font-family: 'Raleway', sans-serif;
-    background-color: #f7ecb3db;
+    font-family: 'Signika', sans-serif;
+    background-color: #ffffff;
 }
 
 h2{
@@ -30,7 +30,7 @@ form.form{
 }
 /* MAIN */
 main{
-    margin-top: 200px;   
+    margin-top: 200px; 
 }
 
 main .text{
@@ -44,7 +44,7 @@ main .login{
 }
 
 .login:hover {
-    color: rgba(17, 122, 101, 1);
+    color: #B97A95;
 }
 
 main .formSection{
@@ -60,13 +60,13 @@ main .box{
     margin: 15px auto;
 	border-radius:25px;
     border: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Signika', sans-serif;
     font-weight: 600;
     color: rgb(0, 0, 1, 0.59);
     transition: background-color , width 0.5s;
 }
 main .box:hover{
-    background-color:rgba(245, 187, 61, 0.829);
+    background-color:#F2E1C1;
     width: 250px;
 }
 
@@ -84,23 +84,22 @@ main .TC{
 }
 .submit {
     font-weight: bold;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Signika', sans-serif;
     width: 200px; 
     border-radius:20px;
     padding:15px 15px;
-	background:rgba(17, 122, 101, 0.7);
-    color: rgb(247, 220, 111, 1);
+	background:#716F81;
+    color: #F2E1C1;
     border: none;
     transition: 0.5s;
     margin: 0px 80px 0px 30px;
 }
 
 .submit:hover {
-    color: white;
     top: 0;
     left: 0;
-    background-color: rgba(247, 220, 111, 1);
-    color: rgba(17, 122, 101, 1);
+    background-color: #716F81;
+    color: rgb(255, 255, 255);
     background-size: cover;
     
 }
@@ -118,8 +117,9 @@ div.button button{
 }
 
 div.button button:hover{
-    background-color: #04614e;
+    background-color: #716F81;
     color:white;
+    width: 110px;
 }
 
 label.file-input{
