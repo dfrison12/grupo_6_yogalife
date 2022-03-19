@@ -197,7 +197,6 @@ div.img-cart img {
     margin: 10px 5px 0px 10px;
 }
 .descripcion-cart {
-    border: 1px solid yellow;
     margin: 10px 0 10px 20px;
     color: rgb(90, 90, 90); font-size: 20px;
     font-family: 'Signika', sans-serif;
@@ -211,7 +210,6 @@ div.img-cart img {
 }
 
 .precio-cart {
-    border: 1px solid blue;
     margin: 10px 5px 0px 15px;
     color: rgb(90, 90, 90); font-size: 20px;
     font-family: 'Signika', sans-serif;
