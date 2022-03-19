@@ -9,7 +9,8 @@ window.addEventListener("load", () => {
       for (let i = 0; i < carrito.length; i++) {
         let producto = carrito[i];
         let div = document.querySelector(".vacio");
-        let contenido = ` <section class="checkout-cart">
+        let contenido = 
+        `<section class="checkout-cart">
               <article class="item-cart">
                   <form action="#" method="GET">
                       <button  type="button">
@@ -26,7 +27,7 @@ window.addEventListener("load", () => {
                       <p id="count">Cantidad pedida: ${producto.inputCantidad}</p>
                   </form>
               </article>
-          </section>`;
+        </section>`;
   
         div.innerHTML += contenido;
       }

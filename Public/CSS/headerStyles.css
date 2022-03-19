@@ -184,21 +184,21 @@ i#close-icon{
 
 @media (min-width: 420px){
     header div.logo a i {
-        font-size: 50px;
+        font-size: 40px;
         color:#F7DC6F;
     }
     
     header div.logo a h1{
-        font-size: 30px;
+        font-size: 25px;
         padding-left: 5px;
         color:#F7DC6F;
         font-variant: inherit;
     }
 
     a.burger-buttom {
-        height: 55px;
-        width: 55px;
-        font-size: 30px
+        height: 50px;
+        width: 50px;
+        font-size: 22px
     }
 
     div.smart-button{
@@ -350,4 +350,5 @@ i#close-icon{
         margin: -2px 8px 0px 0px;
     }
 
+}
 }

@@ -14,70 +14,85 @@
                     <img class="main-picture" id="image" src="/images/productsImages/<%= productFind.image_1 %>" alt="img">
                 </div>
                 <div class="img-box">
-                    <a href="/images/productsImages/<%= productFind.image_2 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_2 %>" alt="img"></a>
-                    <a href="/images/productsImages/<%= productFind.image_3 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_3 %>" alt="img"></a>
-                    <a href="/images/productsImages/<%= productFind.image_4 %>"><img class="img-inbox" src="/images/productsImages/<%= productFind.image_4 %>" alt="img"></a>
+                    <div class="mini-img-container">
+                        <img class="img-inbox" src="/images/productsImages/<%= productFind.image_2 %>" alt="img">
+                    </div>
+                    <div class="mini-img-container">
+                        <img class="img-inbox" src="/images/productsImages/<%= productFind.image_3 %>" alt="img">
+                    </div>
+                    <div class="mini-img-container">
+                        <img class="img-inbox" src="/images/productsImages/<%= productFind.image_4 %>" alt="img">
+                    </div>
                 </div>
             </div>
         </section>
         <section class="product-description">
             <div class="product-description">
-                <h1 class="product-name" id="product-name"><%= productFind.name %></h1>
-                <h4 class=coleccion><%= productFind.categories.name %></h4>
-                <p class="price" id="price"><%=productFind.price%></p>
+                <div class="data-products">
+                    <h1 class="product-name" id="product-name"><%= productFind.name %></h1>
+                    <h4 class=coleccion><%= productFind.categories.name %></h4>
+                    <div>
+                        <span>$</span>
+                        <span class="price" id="price"><%=productFind.price%></span>
+                    </div>
 
-                <% if (productFind.discount > 0) { %>
-                    <p class='sale' id="sale"><%=productFind.discount%></p><span>%off</span>
+                    <% if (productFind.discount > 0) { %>
+                        <div>
+                            <span class='sale' id="sale"><%=productFind.discount%></span>
+                            <span class="sale">%off</span>
+                        </div>
                     <% } %>
 
-                <a href="/images/tabla-talles.jpg">ver tabla de talles</a>
-                
-                <!-- <div class="color">
-                    <label for="color"> Color: </label>
-                    <div class='color-button'>             
-                            <input class="color" type="button" name="color" value=ColorRojo>
-                            <img class="color" src="/images/colors/ColorRojo.jpg" atl="color">      
-                        
-                    </div>
-                </div> -->
-                <!-- <div class="size">
-                    <label for="talle"> Talle: </label>
-                    <div class="size-button"></div>           
-                            <input class="size" type="button" name="talle" value=5>       
-                        
-                    </div>
-                -->
-                
-                <% if (locals.isLogged && !locals.admin) {%>
-                    <div class="cant">
-                        <label class="count">Cantidad</label>
-                        <button class="menos" id="menos" >-</button>
-                        <input id="count" type="text" value="1" style="text-align: center; width: 30px;" >
-                        <button class="menos" id="mas" >+</button>
-                    </div>
-                <h9>Agregar al carrito</h9>
-                <button class= "add" type="submit" name="send" id="add-button">Agregar</button>
-                <% } else {%>
-                    <h4 class="message-session">Inicia session para poder comprar</h4>
-                <% } %>              
-                <% if (locals.isLogged && locals.admin) {%>
-                <div class="buttons-container">
-                    <div class="edit-button">
-                        <a class= "edit-button" id="edit-button" href="/products/<%=productFind.id%>/edit">Editar</a>
-                    </div>
-                    <form class="buttons-container" id="form-delete" action="/products/<%=productFind.id%>/delete?_method=DELETE" method="POST">
-                    <button class= "delete-button" type="submit">Eliminar</button>
-                    </form>      
+                    <a href="/images/tabla-talles.jpg">ver tabla de talles</a>
+                    
+                    <!-- <div class="color">
+                        <label for="color"> Color: </label>
+                        <div class='color-button'>             
+                                <input class="color" type="button" name="color" value=ColorRojo>
+                                <img class="color" src="/images/colors/ColorRojo.jpg" atl="color">      
+                            
+                        </div>
+                    </div> -->
+                    <!-- <div class="size">
+                        <label for="talle"> Talle: </label>
+                        <div class="size-button"></div>           
+                                <input class="size" type="button" name="talle" value=5>       
+                            
+                        </div>
+                    -->
                 </div>
-                <% } %>
-            </div>
-            
+
+                <div class="button-container">
+                    <% if (locals.isLogged && !locals.admin) {%>
+                        <div class="cant">
+                            <label class="count">Agregar al Carrito</label>
+                            <button class="menos" id="menos" >-</button>
+                            <input id="count" type="text" value="1" style="text-align: center; width: 30px;" >
+                            <button class="menos" id="mas" >+</button>
+                        </div>
+                        <button class= "add" type="submit" name="send" id="add-button">Agregar</button>
+                        <% } else {%>
+                            <h4 class="message-session">Inicia session para poder comprar</h4>
+                        <% } %>              
+                        <% if (locals.isLogged && locals.admin) {%>
+                        <div class="buttons-container">
+                            <div class="edit-button">
+                                <a class= "edit-button" id="edit-button" href="/products/<%=productFind.id%>/edit">Editar</a>
+                            </div>
+                            <form class="buttons-container" id="form-delete" action="/products/<%=productFind.id%>/delete?_method=DELETE" method="POST">
+                            <button class= "delete-button" type="submit">Eliminar</button>
+                            </form>      
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="description" id="description">
+                    <h4>Descripción</h4>
+                    <p><%= productFind.descriptions %></p>
+                </div>
+            </div> 
         </section>
         </div> 
-        <div class="description" id="description">
-            <h4>Descripción</h4>
-            <p><%= productFind.descriptions %></p>
-        </div>
          
     </main>
     
