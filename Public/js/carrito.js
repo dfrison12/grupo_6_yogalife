@@ -9,7 +9,8 @@ window.addEventListener("load", () => {
       for (let i = 0; i < carrito.length; i++) {
         let producto = carrito[i];
         let div = document.querySelector(".vacio");
-        let contenido = ` <section class="checkout-cart">
+        let contenido = 
+        `<section class="checkout-cart">
               <article class="item-cart">
                   <div class="img-cart"><img src=${producto.imagen} alt=""> </div>
                  
