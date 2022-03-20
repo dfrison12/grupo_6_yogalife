@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Signika', sans-serif;
-    background-color: #ffffff;
+    background-image: linear-gradient( 60deg,  #B97A95 50%, white 50%);
 }
 
 h2{
@@ -188,7 +188,7 @@ div.errorsemail, div.errorspassword, div.errorsimage, div.errorstyc{
         background-image: url(/images/yogalifebackground.png);
         background-repeat: no-repeat;
         background-size: cover;
-        opacity: 0.69;
+        opacity: 0.96;
         border-radius: 0px;
         margin: 0px 75px 0px 0px;
 

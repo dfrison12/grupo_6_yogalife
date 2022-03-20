@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Signika', sans-serif;
-    background-color: #f7ecb3db;
+    background-image: linear-gradient( 60deg,  #716F81 50%, white 50%);
 }
 
 main {
@@ -105,7 +105,7 @@ a{
 }
 
 div.profile-container{ 
-    background-color: #9D5353;
+    background-color: #B97A95;
     padding: 20px 40px 20px 40px;
     border-radius: 20px 0px;
     border: solid 0px;
@@ -121,7 +121,7 @@ div.tittle{
 
 h2.tittle{
     font-size: 2px;
-    color: rgb(255, 255, 255);
+    color: white;
     font-weight: 600;
 }
 
@@ -142,7 +142,7 @@ div.data-container{
 
 h2.data-email, h2.data-dni, h2.data-addres{
     font-size: 22px;
-    color: #716F81;
+    color: black;
     margin: 10px 0px 5px 0px;
     text-align: center;
 }
@@ -196,6 +196,7 @@ a.logout-button, a.edit-button{
 @media (min-width: 420px){
     
     
+    
     main{
         margin-top: 180px;
     }
@@ -208,7 +209,7 @@ a.logout-button, a.edit-button{
         display: flex;
         width: 100%;
         justify-content: center;
-        background-color: white;
+        background-color: none;
         border-radius: 20px 0px;
         align-items: center;
     }
@@ -241,6 +242,13 @@ a.logout-button, a.edit-button{
     a.logout-button, a.edit-button{
         font-size: 19px;
     }
+    h2.data-email, h2.data-dni, h2.data-addres{
+        font-size: 22px;
+        color: black;
+        margin: 10px 0px 5px 0px;
+        text-align: center;
+    }
+    
 
 }
 

@@ -6,7 +6,7 @@
 
 body{
     font-family: 'Signika', sans-serif;
-    background-color: white;
+    background-image: linear-gradient(-60deg,  #B97A95 50%, white 50%);
 }
 
 h3{
@@ -302,7 +302,7 @@ section.empresa-b{
 
     div.empresa-b img{
         width: 73%;
-        opacity: 0.84;
+        opacity: 0.96;
         border-radius: 5px;
     }
 
