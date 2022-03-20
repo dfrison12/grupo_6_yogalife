@@ -5,10 +5,36 @@
  
  <body>
         <!-- Header -->
-        <%- include ('./partials/header') %> 
-        <section class="main-image">
-            <img src="images/main-image.jpg" alt="main-image">
-        </section>
+        <%- include ('./partials/header') %>
+        <div id="conten-items-carrusel"> 
+            <div class="main-image" id="main-img-carrusel-1">
+                <div class="img-carrusel" id="tarjeta-carrusel-1"><img src="images/main-image.jpg" alt="main-image"></div>
+                <div class="flechas">
+                    <a href="#main-img-carrusel-3"><i><</i></a>
+                    <a href="#main-img-carrusel-2"><i>></i></a>
+                </div>
+                
+            </div>
+            <div class="main-image" id="main-img-carrusel-2">
+                <div class="img-carrusel" id="tarjeta-carrusel-2"><img src="images/main-image2.jpeg" alt="main-image"></div>
+                <div class="flechas">
+                    <a href="#main-img-carrusel-1"><i><</i></a>
+                    <a href="#main-img-carrusel-3"><i>></i></a>
+                </div>
+            </div>
+            <div class="main-image" id="main-img-carrusel-3">
+                <div class="img-carrusel" id="tarjeta-carrusel-3"><img src="images/main-image3.jpg" alt="main-image"></div>
+                <div class="flechas">
+                    <a href="#main-img-carrusel-2"><i><</i></a>
+                    <a href="#main-img-carrusel-1"><i>></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="conten-puntos">
+            <a href="#main-img-carrusel-1" class="">·</a>
+            <a href="#main-img-carrusel-2" class="">·</a>
+            <a href="#main-img-carrusel-3" class="">·</a>
+        </div>
         <main>
             <section class="last-collection">
                 <h3 class="section-title">Ultima colección </h3>
