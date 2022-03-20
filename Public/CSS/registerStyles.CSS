@@ -188,7 +188,7 @@ div.errorsemail, div.errorspassword, div.errorsimage, div.errorstyc{
         background-image: url(/images/yogalifebackground.png);
         background-repeat: no-repeat;
         background-size: cover;
-        opacity: 0.96;
+        opacity: 0.6;
         border-radius: 0px;
         margin: 0px 75px 0px 0px;
 
@@ -199,7 +199,7 @@ div.errorsemail, div.errorspassword, div.errorsimage, div.errorstyc{
         background-image: url(/images/img-editform.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        opacity: 0.69;
+        opacity: 1.5;
         margin: 0px 75px 0px 0px;
 
     }

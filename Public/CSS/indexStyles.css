@@ -45,10 +45,9 @@ p.sale{
 
 h3,
 .description{
-    color: rgba(41, 68, 64, 0.856);
+    color: #716F81;
     padding:5px 0px 0px 0px;
     font-family: 'Raleway';
-    font-weight: 600;
     font-size: 15px;
 }
 
@@ -147,7 +146,7 @@ section.empresa-b{
     }
 
     main section article:hover .description{
-        font-size: 25px;
+        font-size: 17px;
         font-style: initial;
         font-family: "Raleway" bold sans-serif black;
     }
@@ -234,7 +233,7 @@ section.empresa-b{
 
     /* MAIN 720 */
     main{
-        margin-top: 0px;
+        margin-top: 158px;
     }
     /* IMAGEN PRINCIPAL 720*/
 
