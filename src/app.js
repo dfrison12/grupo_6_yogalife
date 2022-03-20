@@ -4,6 +4,9 @@ const session = require ('express-session');
 const cookies = require ('cookie-parser');
 
 const app = express();
+const cors = require('cors');
+
+app.use(cors())
 // Configuración - Define carpeta estatica
 app.use(express.static('../public'));
 
@@ -23,8 +26,14 @@ const productsRouter = require ('./routes/products')
 const userRouter = require ('./routes/userRouter')
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
+//Requerimos rutas de Api
+const productsApiRouter = require('./routes/api/productsApiRouter');
+const usersApiRouter = require('./routes/api/usersApiRouter');
 
 
+//Endpoints de Apis
+app.use('/api/products', productsApiRouter);
+app.use('/api/users', usersApiRouter);
 
 
 //Configutacion - Guardia de Seguridad para method POST
@@ -47,4 +56,4 @@ app.use('/productCart', mainRouter);
 
 
 
-app.listen(process.env.PORT || 3001, () => console.log('Servidor funcionando en puerto 3001'));
+app.listen(process.env.PORT || 3000, () => console.log('Servidor funcionando en puerto 3000'));
