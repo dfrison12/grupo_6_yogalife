@@ -51,6 +51,7 @@ const productsApiController = {
                                 name: product.name,
                                 cost: product.cost,
                                 price: product.price,
+                                stock: product.stock,
                                 discount: product.discount,
                                 descriptions: product.descriptions,
                                 category: {name:product.categories.name},
@@ -81,10 +82,11 @@ const productsApiController = {
                     name: product.name,
                     cost: product.cost,
                     price: product.price,
+                    stock: product.stock,
                     discount: product.discount,
                     descriptions: product.descriptions,
                     category: {name:product.categories.name},
-                    image: "/imges/productsImages/" + product.image_1
+                    image: "/images/productsImages/" + product.image_1
                     }
                 }
             
