@@ -55,24 +55,20 @@ h2.section-title{
     color: #807e76;
 }
 
-#conten-items-carrusel {
-    display:none;
+section.main-image{
+    display: none;
 }
 
-div.conten-puntos{
-    display:none
-}
-
-section{
-    width: 90%;
-    display: block;
-    margin: auto;
+section.every-collections{
+    margin-top: 130px
 }
 
 main{
+    width: 90%;
     margin: 0 auto;
     margin-top: 160px;
-    min-height: 500px;
+    min-height: 500px
+    ;
 }
 
 main section article{
@@ -215,8 +211,6 @@ section.empresa-b{
     }
 }
 
-
-
 @media (min-width: 500px){
     main section article i{
         font-size: 16px;
@@ -237,76 +231,25 @@ section.empresa-b{
 
     /* MAIN 720 */
     main{
-        margin-top: 130px;
+        margin-top: 158px;
     }
-
     /* IMAGEN PRINCIPAL 720*/
 
-    /*------------Banner---------*/
-
-    #conten-items-carrusel {
-        display: block;
+    section.main-image{
+        display: flex;
+        background-color: #B97A95;
         width: 100%;
-        overflow: hidden;
-        margin-top: 129px;
-        width: 100%;
-        overflow: hidden;
-        height: 450px;
-    }
-
-    div.main-image{
-        width: 100%;
-        height: 450px;
-        position: relative;
+        margin-top: 91px;
     }
     
-    div.main-image div.img-carrusel {
-        height: 450px;
-        width:100%;
-    }
-    div.main-image div.img-carrusel img{
-        height: 450px;
-        width:100%;
+    section.main-image img{
+        width: 100%;
+        opacity: 0.88;
         margin:auto;
         display:block;
     }
 
-    div.main-image div.flechas {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-
-        
-    }
-    
-    div.main-image div.flechas a {
-        text-decoration: none;
-        color: white;
-        font-size: 50px;
-    }
-
-    div.conten-puntos {
-        display: flex;
-        justify-content:center;
-        margin: -30px;
-    }
-    div.conten-puntos a {
-        margin: 0px 0px 0px 0px;
-        font-size: 100px;
-        text-decoration: none;
-        color: #F6AE99
-    }
-
-
-     /*------------Banner---------*/
-
     /* MAIN 770 */
-    
 
      h3.section-title{
         color: rgb(27, 27, 27);
@@ -314,7 +257,6 @@ section.empresa-b{
         font-weight: 600;
         font-size: 30px;
         text-align: left;
-        padding:30px 0px 0px 0px;
     }
 
     main section article{
@@ -379,10 +321,12 @@ section.empresa-b{
         font-weight: 600;
         font-size: 16px;
     }
+
+   
+
 }
 
 @media (min-width: 800px){
-
     main section article i{
         font-size: 16px;
         padding: 5px;
@@ -396,12 +340,7 @@ section.empresa-b{
         top: -14px;   
     }
 
-}
-
-@media (min-width: 860px){
-
-
-
+}@media (min-width: 860px){
     main section article i{
         font-size: 16px;
         padding: 5px;
@@ -415,7 +354,3 @@ section.empresa-b{
         top: -14px;   
     }
 }
-
-
-
-
